@@ -74,7 +74,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       wget https://files.phpmyadmin.net/phpMyAdm...
       unzip phpMyAdmin-4.8.5-all-languages.zip
 
-    1.6-Create a new virtual host for accessing to phpmyadmin
+   1.6-Create a new virtual host for accessing to phpmyadmin
+    
       nano /etc/nginx/sites-available/phpmyadmin
       server {
           listen 9000;
@@ -94,13 +95,14 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
              deny all;
           }
       }
-      ln -s /etc/nginx/sites-available/phpmyadmin /etc/nginx/sites-enabled
+     ln -s /etc/nginx/sites-available/phpmyadmin /etc/nginx/sites-enabled
       - Restart Nginx:
       nginx -t
       service nginx restart
       netstat -plnt
-      3306 is of mysql service
-      9000 of the phpmyadmin site
+      
+     3306 is of mysql service
+     9000 of the phpmyadmin site
 
 # Step 2: Install and configure Magento 2.3.2
 
