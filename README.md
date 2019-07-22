@@ -1,11 +1,19 @@
 # Magento2x-Ubuntu-Nginx
+
 How to install Magento 2.3 on Ubuntu with Nginx.
 
- [instruction](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/instruction.text) for  detailed informations. 
- 
+Development Environment:
+
+     Magento 2.3.x
+     nginx/1.14.x
+     PHP 7.2.x
+     MySQL 5.7
+     Ubuntu 18.04
+  
  
  I am going to show everybody the best practice, How to install Magento 2.3x on Ubuntu with Nginx.
-I will show everybody steps by step to install Magento 2.3x on Ubuntu 18.04 with Nginx 1.10.x, PHP 7.2.x and MySQL 5.7.
+ I will show everybody steps by step to install Magento 2.3x on Ubuntu 18.04 with Nginx 1.10.x, PHP 7.2.x and MySQL 5.7.
+ 
 
 Okie, let's go.Let's do this practice, you need to follow steps by step:
 
