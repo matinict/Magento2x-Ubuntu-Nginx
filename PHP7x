@@ -1,0 +1,56 @@
+
+
+#Install PHP 7.3 on Ubuntu
+
+PHP 7.2 stable version has been released. Use the following set of commands to enable PPA for PHP 7.2 in your Ubuntu system and install it. You can use this version for production use also.
+
+      sudo apt-get install software-properties-common
+      sudo add-apt-repository ppa:ondrej/php
+      sudo apt-get update
+      sudo apt-get install -y php7.3
+      Now use the following command to check installed php version on your system.
+      php -v 
+
+
+
+#Install PHP 7.2 on Ubuntu
+
+PHP 7.2 stable version has been released. Use the following set of commands to enable PPA for PHP 7.2 in your Ubuntu system and install it. You can use this version for production use also.
+
+      sudo apt-get install software-properties-common
+      sudo add-apt-repository ppa:ondrej/php
+      sudo apt-get update
+      sudo apt-get install -y php7.2
+      Now use the following command to check installed php version on your system.
+
+      php -v 
+
+
+
+
+
+
+#Install PHP 7.1 on Ubuntu
+
+Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and install PHP 7.1 version.
+
+      sudo apt-get install software-properties-common
+      sudo add-apt-repository ppa:ondrej/php
+      sudo apt-get update
+      sudo apt-get install -y php7.1
+      php -v 
+
+
+
+#Install PHP 7.0 on Ubuntu
+
+Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and install PHP 7.0 version.
+
+        sudo apt-get install python-software-properties
+        sudo add-apt-repository ppa:ondrej/php
+        sudo apt-get update
+        sudo apt-get install -y php7.0
+        Now use the following command to check installed php version on your system.
+        php -v 
+
+
