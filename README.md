@@ -13,7 +13,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
 
     - cat /etc/*release (check your current Ubuntu version)
     I have Ubuntu 18.04 on my localhost.
-    - You can check the requirements system for Magento 2.3 in the link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html    
+    - You can check the requirements system for Magento 2.3 in the 
+    link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html    
     
    # 1.1- Install the softwares: [Advanced Nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
     
@@ -31,6 +32,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       apt-get update
       apt-cache search php7.2
       apt-get install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap php-xdebug php-imagick
+      
       php -v
       - Install PHP 7.2 FPM:
       apt-get install php7.2-fpm
