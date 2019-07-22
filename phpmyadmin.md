@@ -6,11 +6,12 @@ MySQL is the most popular open source Relational Database Management System (RDB
 
 Install MySQL using the apt command below.
 
-sudo apt install mysql-server mysql-client -y
+    sudo apt install mysql-server mysql-client -y
+
 After the MySQL installation is complete, start the MySQL service and enable it to launch everytime at system boot.
 
-systemctl start mysql
-systemctl enable mysql
+    systemctl start mysql
+    systemctl enable mysql
 
 
  
@@ -23,7 +24,7 @@ In this step, we will install and configure phpmyadmin under the LEMP (Linux, Ng
 
 Install PHPMyAdmin using the apt command below.
 
-sudo apt install phpmyadmin -y
+    sudo apt install phpmyadmin -y
 
 During the installation, it will ask you about the web server configuration for phpmyadmin.
 
@@ -48,9 +49,10 @@ we need to add the configuration to the virtual host configuration file.
 
 Go to the '/etc/nginx' configuration directory, and edit the default virtual host file.
 
-  cd /etc/nginx/
-  vim sites-available/default     or
-  sudo vim /etc/nginx/sites-available/default
+    cd /etc/nginx/
+    vim sites-available/default     
+    or
+    sudo vim /etc/nginx/sites-available/default
 
 
 Paste the following Nginx configuration for phpmyadmin inside the 'server {...}' bracket.
@@ -77,8 +79,8 @@ Save and exit.
 
 Test the nginx configuration and restart the nginx service.
 
-nginx -t
-systemctl reload nginx
+    nginx -t
+    systemctl reload nginx
 And we've added the Nginx configuration for phpmyadmin.
 
 
@@ -88,31 +90,31 @@ In this tutorial, we will be using non-root MySQL user for phpmyadmin. We will c
 
 Login to the MySQL shell.
 
-mysql -u root -p
+    mysql -u root -p
 
 Now create a new user using the MySQL queries below.
 
-create user phpmyadmin@'localhost' identified by 'PhpMyAdmin@123';
-grant all privileges on *.* to phpmyadmin@'localhost' identified by 'PhpMyAdmin@123';
-flush privileges;
-exit;
+    create user phpmyadmin@'localhost' identified by 'PhpMyAdmin@123';
+    grant all privileges on *.* to phpmyadmin@'localhost' identified by 'PhpMyAdmin@123';
+    flush privileges;
+    exit;
 
 Testing
 Test PHP Files
-Go to the web-root directory '/var/www/html' and create a new phpinfo file.
+Go to the web-root directory '/var/www/html/phpinfo' and create a new phpinfo file.
 
-cd /var/www/html/
-vim info.php
-Paste the phpinfo script below.
+    
+    vim /var/www/html/info.php
+    Paste the phpinfo script below.
 
-<?php
-phpinfo();
-?>
-Save and exit.
+    <?php
+    phpinfo();
+    ?>
+    Save and exit.
 
 Now open the web browser and type the server IP address as shown below. Replace the IP with your server ip.
 
-http://localhost/info.php
+    http://localhost/info.php
 
 And below is all information about PHP server configuration.
 
