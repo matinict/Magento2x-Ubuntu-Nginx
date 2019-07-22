@@ -54,3 +54,9 @@ Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and
         php -v 
 
 
+How to change the PHP version?
+
+            $ sudo update-alternatives --config php
+            or
+            $ sudo update-alternatives -set php /usr/bin/php7.2
+
