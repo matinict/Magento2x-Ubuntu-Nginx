@@ -165,9 +165,9 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
 
     php bin/magento setup:upgrade
 
+# Step Next: 
+          --Multiple Subdomain of Nginx Server
 
-
- 
 # Instruction *
  
  ** If Any Command not work or errror something use # sudo { sudo apt-get update }
