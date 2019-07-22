@@ -15,7 +15,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
     I have Ubuntu 18.04 on my localhost.
     - You can check the requirements system for Magento 2.3 in the link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html    
     
-    1.1- Install the softwares: [nginx](docs/https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
+   # 1.1- Install the softwares: [nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
     
     
       apt-get update
