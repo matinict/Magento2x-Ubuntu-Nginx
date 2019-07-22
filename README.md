@@ -15,7 +15,9 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
     I have Ubuntu 18.04 on my localhost.
     - You can check the requirements system for Magento 2.3 in the link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html    
     
-    1.1- Install the softwares: [Advanced Nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
+    1.1- Install the softwares: [nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
+    
+    
       apt-get update
       apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
       - Install the Nginx 1.10.x: 
@@ -135,10 +137,15 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
 # Ref##
 
   https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html
+  
   https://devdocs.magento.com/guides/v2.3/install-gde/composer.html
+  
   https://linuxconfig.org/how-to-setup-the-nginx-web-server-on-ubuntu-18-04-bionic-beaver-linux
+  
   https://www.howtoforge.com/tutorial/how-to-install-nginx-with-php-and-mysql-lemp-on-ubuntu-1804/
+  
   https://www.simicart.com/blog/magento-2-composer/
+  
   https://www.youtube.com/watch?v=cf0q0AfkKQw
   
 
