@@ -151,6 +151,10 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   
     cd /var/www/html/magento2.3.2
     php bin/magento sampledata:deploy
+     Authentication required (repo.magento.com): if ask cmd
+     Username: xxxxx
+     Pasward: xxx
+
     php bin/magento setup:upgrade
 
 
