@@ -195,6 +195,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   
   https://www.youtube.com/watch?v=whzgC8Lc6IA
   
+  https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+  
   https://medium.com/@chiragpatel_52497/install-magento-2-x-on-ubuntu-18-04-with-nginx-mariadb-php-7-1-programming-school-e13476bb0c3f
   
   https://devdocs.magento.com/guides/v2.3/install-gde/install/sample-data-after-composer.html
