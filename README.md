@@ -133,5 +133,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   https://linuxconfig.org/how-to-setup-the-nginx-web-server-on-ubuntu-18-04-bionic-beaver-linux
   https://www.howtoforge.com/tutorial/how-to-install-nginx-with-php-and-mysql-lemp-on-ubuntu-1804/
   https://www.simicart.com/blog/magento-2-composer/
+  https://www.youtube.com/watch?v=cf0q0AfkKQw
+  
 
  
