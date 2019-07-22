@@ -52,7 +52,9 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       composer --version
       
       
-   # 1.4- Install MySQL 5.7  [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
+   # 1.4- Install MySQL 5.7  
+   
+   [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
     
     
       apt-get install -y mysql-server mysql-client
@@ -136,7 +138,20 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
     - cd /var/www/html/magento2.3.2
     php bin/magento setup:static-content:deploy -f
     
+ 
+ 
+ 
+# Sample Data Install using Composer:  
+
+   [More Details sampledata](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/sampledata.md) 
   
+    cd /var/www/html/magento2.3.2
+    php bin/magento sampledata:deploy
+    php bin/magento setup:upgrade
+
+
+
+ 
 # Instruction *
  
  ** If Any Command not work or errror something use # sudo { sudo apt-get update }
@@ -156,5 +171,12 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   
   https://www.youtube.com/watch?v=cf0q0AfkKQw
   
+  https://devdocs.magento.com/guides/v2.3/install-gde/install/sample-data-after-composer.html
 
- 
+  https://www.cloudways.com/blog/how-to-install-sample-data-in-magento-2/
+  
+
+ Thank you for watching guide. If you have any questions about this practice, 
+ please feel free to leave a comment or hangout:matinict@gmail.com.
+ Please do not hesitate to contact me, if you need me to join your Magento project.
+ My rate is $20/hour in Magento 1 and $25/hour in Magento 2.
