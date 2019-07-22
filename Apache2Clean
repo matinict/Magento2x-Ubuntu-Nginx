@@ -1,0 +1,13 @@
+
+
+sudo service apache2 stop
+
+$ sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+$ sudo apt-get autoremove
+Finally, check if there is any configuration files or manual pages belonging to Apache2, which are still not removed.
+
+$ whereis apache2
+apache2: /etc/apache2
+In this example, /etc/apache2 directory still exists. Since this directory (as well as any configuration files in it) is no longer necessary, go ahead and remove it manually.
+
+$ sudo rm -rf /etc/apache2
