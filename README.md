@@ -46,16 +46,23 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       press ctrl + O for saving or Ctrl+x
       service php7.2-fpm start
       
-    1.3- Install MySQL 5.7
+           
+    1.3- Install Composer:
+      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+      composer --version
+      
+      
+    # 1.4- Install MySQL 5.7  [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
+    
       apt-get install -y mysql-server mysql-client
       enter the password for the root user: giaphugroup
       service mysql start
       mysql_secure_installation
       SHOW VARIABLES LIKE "%version%";
-    1.4- Install Composer:
-      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-      composer --version
-      
+       
+       sudo mysql -u root -p
+
+          
     1.5- Install phpMyAdmin
       Create the new folder named phpmyadmin in the path /var/www/html/
       mkdir phpmyadmin
