@@ -9,18 +9,20 @@ I will show everybody steps by step to install Magento 2.3x on Ubuntu 18.04 with
 
 Okie, let's go.Let's do this practice, you need to follow steps by step:
 
-# Step 1: Installing the server.
+# Step 1: Installing the server. 
 
     - cat /etc/*release (check your current Ubuntu version)
     I have Ubuntu 18.04 on my localhost.
-    - You can check the requirements system for Magento 2.3 in the link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html
-    1.1- Install the softwares: 
+    - You can check the requirements system for Magento 2.3 in the link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html    
+    
+    1.1- Install the softwares: [Advanced Nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
       apt-get update
       apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
       - Install the Nginx 1.10.x: 
       apt-get -y install nginx
       service nginx start
       nginx -v
+      
     1.2- Install PHP 7.2.x and the required PHP extensions: 
       apt-get install software-properties-common
       add-apt-repository ppa:ondrej/php
@@ -32,23 +34,27 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       apt-get install php7.2-fpm
       nano /etc/php/7.2/fpm/php.ini
       press ctrl + w for searching
+      press ctrl + shift+v for past &  Enter Search
+       
       memory_limit = 2G
       max_execution_time = 3600
       max_input_time = 1800
       upload_max_filesize = 10M
       zlib.output_compression = On
-      press ctrl + O for saving.
+      press ctrl + O for saving or Ctrl+x
       service php7.2-fpm start
+      
     1.3- Install MySQL 5.7
       apt-get install -y mysql-server mysql-client
       enter the password for the root user: giaphugroup
       service mysql start
       mysql_secure_installation
       SHOW VARIABLES LIKE "%version%";
-      - Install Composer:
+    1.4- Install Composer:
       curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       composer --version
-    1.4- Install phpMyAdmin
+      
+    1.5- Install phpMyAdmin
       Create the new folder named phpmyadmin in the path /var/www/html/
       mkdir phpmyadmin
 
@@ -56,7 +62,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       wget https://files.phpmyadmin.net/phpMyAdm...
       unzip phpMyAdmin-4.8.5-all-languages.zip
 
-    1.5-Create a new virtual host for accessing to phpmyadmin
+    1.6-Create a new virtual host for accessing to phpmyadmin
       nano /etc/nginx/sites-available/phpmyadmin
       server {
           listen 9000;
