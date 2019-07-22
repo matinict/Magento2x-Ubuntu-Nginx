@@ -171,6 +171,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
           
          /etc/nginx/sites-available/default. Let's take a look at it:
          *** Remove below code from all site except default otherwise show error**
+         $ cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+         $ sudo nano /etc/nginx/sites-available/default
          
          upstream fastcgi_backend {
                server unix:/run/php/php7.2-fpm.sock;
