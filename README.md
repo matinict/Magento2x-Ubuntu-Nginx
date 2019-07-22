@@ -153,19 +153,9 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
  
  
  
-# Step 3: Sample Data Install using Composer:  
 
-   [More Details sampledata](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/sampledata.md) 
-  
-    cd /var/www/html/magento2.3.2
-    php bin/magento sampledata:deploy
-     Authentication required (repo.magento.com): if ask cmd
-     Username: xxxxx
-     Pasward: xxx
 
-    php bin/magento setup:upgrade
-
-# Step Next: Nginx server blocks (Virtual Hosts)
+# Step 3: Nginx server blocks (Virtual Hosts)
           --Multiple Subdomain of Nginx Server
           
           
@@ -283,7 +273,17 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
           [In your browser Complete Install]
 
           
+# Step 4: Sample Data Install using Composer:  
 
+   [More Details sampledata](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/sampledata.md) 
+  
+    cd /var/www/html/magento.lan
+    php bin/magento sampledata:deploy
+     Authentication required (repo.magento.com): if ask cmd
+     Username: xxxxx
+     Pasward: xxx
+
+    php bin/magento setup:upgrade
           
           
           
@@ -325,7 +325,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   https://www.cloudways.com/blog/how-to-install-sample-data-in-magento-2/
   
 
-   Thank you for watching guide. If you have any questions about this practice, 
+   Thank you for watching guide.If you have any questions about this practice, 
    please feel free to leave a comment or hangout:matinict@gmail.com.
    Please do not hesitate to contact me don't worry about charge I try to help free on my little knowledge,
    if you need me to join your Magento project especially extension developer.
