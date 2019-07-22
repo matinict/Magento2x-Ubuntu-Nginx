@@ -52,7 +52,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       composer --version
       
       
-    # 1.4- Install MySQL 5.7  [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
+   # 1.4- Install MySQL 5.7  [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
+    
     
       apt-get install -y mysql-server mysql-client
       enter the password for the root user: giaphugroup
