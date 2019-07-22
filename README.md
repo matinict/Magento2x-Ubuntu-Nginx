@@ -176,7 +176,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   https://www.cloudways.com/blog/how-to-install-sample-data-in-magento-2/
   
 
- Thank you for watching guide. If you have any questions about this practice, 
- please feel free to leave a comment or hangout:matinict@gmail.com.
- Please do not hesitate to contact me, if you need me to join your Magento project.
- My rate is $20/hour in Magento 1 and $25/hour in Magento 2.
+   Thank you for watching guide. If you have any questions about this practice, 
+   please feel free to leave a comment or hangout:matinict@gmail.com.
+   Please do not hesitate to contact me don't worry about charge I try to help free on my little knowledge,
+   if you need me to join your Magento project especially extension developer.
+   My rate is $20/hour in Magento 1 and $25/hour in Magento 2.
