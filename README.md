@@ -119,7 +119,12 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
     - Install Magento 2.3.2: http://localhost:86
     - cd /var/www/html/magento2.3.2
     php bin/magento setup:static-content:deploy -f
+    
   
+# Instruction *
+ 
+ ** If Any Command not work or errror something use # sudo { sudo apt-get update }
+
 
 # Ref##
 
