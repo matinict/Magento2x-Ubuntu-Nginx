@@ -30,7 +30,9 @@ During the installation, it will ask you about the web server configuration for 
 Choose none option and move the cursor to 'OK'.
 
 For the phpmyadmin database configuration, choose 'Yes'.
+
 And type new 'STRONG' phpmyadmin admin such as 'PhpMyAdmin@123'.
+
 Repeat the 'PhpMyAdmin@123' password.
 
 
@@ -41,30 +43,34 @@ And the phpmyadmin installation is complete.
 After the phpmyadmin installation, we need to configure phpmyadmin to run under 
 the Nginx web server and configure the MySQL user phpmyadmin access.
 
-In order to run phpmyadmin under the Nginx web server, we need to add the configuration to the virtual host configuration file.
+In order to run phpmyadmin under the Nginx web server, 
+we need to add the configuration to the virtual host configuration file.
 
 Go to the '/etc/nginx' configuration directory, and edit the default virtual host file.
 
-cd /etc/nginx/
-vim sites-available/default
+  cd /etc/nginx/
+  vim sites-available/default     or
+  sudo vim /etc/nginx/sites-available/default
+
+
 Paste the following Nginx configuration for phpmyadmin inside the 'server {...}' bracket.
 
-location /phpmyadmin {
-    root /usr/share/;
-    index index.php;
-    try_files $uri $uri/ =404;
+    location /phpmyadmin {
+        root /usr/share/;
+        index index.php;
+        try_files $uri $uri/ =404;
 
-location ~ ^/phpmyadmin/(doc|sql|setup)/ {
-    deny all;
-    }
+    location ~ ^/phpmyadmin/(doc|sql|setup)/ {
+        deny all;
+        }
 
-location ~ /phpmyadmin/(.+\.php)$ {
-    fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
-    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    include fastcgi_params;
-    include snippets/fastcgi-php.conf;
+    location ~ /phpmyadmin/(.+\.php)$ {
+        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        include snippets/fastcgi-php.conf;
+        }
     }
-}
 
 
 Save and exit.
