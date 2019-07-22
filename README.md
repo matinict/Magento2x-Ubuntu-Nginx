@@ -179,13 +179,23 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
   
   https://devdocs.magento.com/guides/v2.3/install-gde/composer.html
   
+  https://www.server-world.info/en/note?os=Ubuntu_18.04&p=nginx&f=1
+  
   https://linuxconfig.org/how-to-setup-the-nginx-web-server-on-ubuntu-18-04-bionic-beaver-linux
   
   https://www.howtoforge.com/tutorial/how-to-install-nginx-with-php-and-mysql-lemp-on-ubuntu-1804/
   
   https://www.simicart.com/blog/magento-2-composer/
   
+  https://youtu.be/Z34udaRg4mE
+  
+  https://www.youtube.com/watch?v=HGWGiSuarfU
+  
   https://www.youtube.com/watch?v=cf0q0AfkKQw
+  
+  https://www.youtube.com/watch?v=whzgC8Lc6IA
+  
+  https://medium.com/@chiragpatel_52497/install-magento-2-x-on-ubuntu-18-04-with-nginx-mariadb-php-7-1-programming-school-e13476bb0c3f
   
   https://devdocs.magento.com/guides/v2.3/install-gde/install/sample-data-after-composer.html
 
