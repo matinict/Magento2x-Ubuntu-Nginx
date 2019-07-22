@@ -143,7 +143,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
  
  
  
-# Sample Data Install using Composer:  
+# Step 3: Sample Data Install using Composer:  
 
    [More Details sampledata](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/sampledata.md) 
   
@@ -182,4 +182,4 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
    please feel free to leave a comment or hangout:matinict@gmail.com.
    Please do not hesitate to contact me don't worry about charge I try to help free on my little knowledge,
    if you need me to join your Magento project especially extension developer.
-   My rate is $20/hour in Magento 1 and $25/hour in Magento 2.
+   My rate is $20/hour in Magento 1 and $25/hour in Magento 2x.
