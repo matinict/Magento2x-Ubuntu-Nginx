@@ -250,7 +250,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
 
           }
           
-          $sudo nano /etc/nginx/sites-available/matin.lan 
+          $sudo nano /etc/nginx/sites-available/magento.lan 
           server {
               listen 80;
               server_name www.magento.lan;
