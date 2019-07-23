@@ -34,7 +34,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       service nginx start
       nginx -v
       
-    1.2- Install PHP 7.2.x and the required PHP extensions: 
+   # 1.2- Install PHP 7.2.x and the required PHP extensions: 
+   
       apt-get install software-properties-common
       add-apt-repository ppa:ondrej/php
       apt-get update
@@ -57,7 +58,8 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
       service php7.2-fpm start
       
            
-    1.3- Install Composer:
+   # 1.3- Install Composer:
+    
       curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       composer --version
       
@@ -67,52 +69,75 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
    [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
     
     
-      apt-get install -y mysql-server mysql-client
-      enter the password for the root user: giaphugroup
-      service mysql start
-      mysql_secure_installation
-      SHOW VARIABLES LIKE "%version%";
-       
-       sudo mysql -u root -p
+           
+     Install MySQL using the apt command below:
+          sudo apt install mysql-server mysql-client -y
+          enter the password for the root user: giaphugroup
+          service mysql start
+          mysql_secure_installation
+          SHOW VARIABLES LIKE "%version%"; 
+          sudo mysql -u root -p
+ 
+     After the MySQL installation is complete, start the MySQL service and enable it to launch everytime at system boot.
+          systemctl start mysql
+          systemctl enable mysql
 
           
-    1.5- Install phpMyAdmin
-      Create the new folder named phpmyadmin in the path /var/www/html/
-      mkdir phpmyadmin
+   # 1.5- Install phpMyAdmin
+   
+    install PHPMyAdmin using the apt command below.
+     sudo apt install phpmyadmin -y
+     During the installation, it will ask you about the web server configuration for phpmyadmin.
+     Choose none option and move the cursor to: 'OK'.
+     For the phpmyadmin database configuration: choose 'Yes'
+     And type new 'STRONG' phpmyadmin admin such as 'Hakaselabs001@#'.
 
-      Download phpMyAdmin: 
-      wget https://files.phpmyadmin.net/phpMyAdm...
-      unzip phpMyAdmin-4.8.5-all-languages.zip
+     Enter a password: "PhpMyAdmin@123"
+     Repeat the "PhpMyAdmin@123" password.
 
-   1.6-Create a new virtual host for accessing to phpmyadmin
+   # 1.6-Create a new virtual host for accessing to phpmyadmin
     
-      nano /etc/nginx/sites-available/phpmyadmin
-      server {
-          listen 9000;
-          root /var/www/html/phpmyadmin/phpMyAdmin-4.8.5-all-languages;
-          server_name localhost;
-          index index.php index.html index.htm;
+        
+         sudo  vim /etc/nginx/sites-available/default
+         Paste the following Nginx configuration for phpmyadmin inside the 'server {...}' bracket.
 
-          location / {
-             try_files $uri $uri/ /index.php?$args;
-          }
+     location /phpmyadmin {
+         root /usr/share/;
+         index index.php;
+         try_files $uri $uri/ =404;
 
-          location ~ \.php$ {
-             include snippets/fastcgi-php.conf;
-             fastcgi_pass unix:/run/php/php7.2-fpm.sock;
-          }
-          location ~ /\.ht {
-             deny all;
-          }
-      }
-     ln -s /etc/nginx/sites-available/phpmyadmin /etc/nginx/sites-enabled
-      - Restart Nginx:
-      nginx -t
-      service nginx restart
-      netstat -plnt
-      
-     3306 is of mysql service
-     9000 of the phpmyadmin site
+     location ~ ^/phpmyadmin/(doc|sql|setup)/ {
+         deny all;
+         }
+
+     location ~ /phpmyadmin/(.+\.php)$ {
+         fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+         include fastcgi_params;
+         include snippets/fastcgi-php.conf;
+         }
+     }
+     Save and exit.
+     
+      Test the nginx configuration and restart the nginx service.
+     nginx -t
+     systemctl reload nginx
+     And we've added the Nginx configuration for phpmyadmin.
+     Login to the MySQL shell.
+
+     mysql -u root -p
+     Now create a new user using the MySQL queries below.
+
+     create user phpmyadmin@'localhost' identified by 'PhpMyAdmin@123';
+     grant all privileges on *.* to phpmyadmin@'localhost' identified by 'PhpMyAdmin@123';
+     flush privileges;
+     exit;
+
+     Test Login PhpMyAdmin
+     On the web browser, type the following phpmyadmin URL (replace the IP with your server IP).
+
+     http://127.0.0.1/phpmyadmin/
+
 
 # Step 2: Install and configure Magento 2.3.2
 
