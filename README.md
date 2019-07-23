@@ -319,6 +319,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
 # Instruction *
  
  ** If Any Command not work or errror something use # sudo { sudo apt-get update }
+ ** Sometime network & System issue some apt may not work properly check errorlog
 
 
 # Ref##
