@@ -35,3 +35,10 @@
       [ 3] 443/tcp (v6)               ALLOW IN    Anywhere (v6)
       [ 4] 80/tcp (v6)                ALLOW IN    Anywhere (v6)
       
+# Permission 
+
+
+sudo mkdir /var/www/html/mysite
+sudo chown $USER:www-data /var/www/html/mysite
+sudo chmod g+s /var/www/html/mysite
+sudo chmod o-rwx /var/www/html/mysite
