@@ -312,7 +312,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
 
     php bin/magento setup:upgrade
           
-          
+   [https://marketplace.magento.com/customer/accessKeys/ login then copy Public & private Key]
           
 
 
