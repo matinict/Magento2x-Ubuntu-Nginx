@@ -139,21 +139,21 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
      http://127.0.0.1/phpmyadmin/
 
 
-# Step 2: Install and configure Magento 2.3.2
+# Step 2: Install and configure Magento 2.3.x
 
     - Create the Magento authentication keys: https://marketplace.magento.com/
     - Create the new database named magento2_3_0: http://localhost:9000
     - cd /var/www/html
     -composer create-project --repository=https://repo.magento.com/ magento/project-community-edition <install-directory-name>
-    [ composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.2 magento2.3.2]
+    [ composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.x magento2.3.x]
     - cd magento2.3.2
     find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
     find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
     chown -R :www-data .
     chmod u+x bin/magento
     php bin/magento setup:di:compile
-    - Create a new virtual host for accessing to the Magento2.3.2 site
-    nano /etc/nginx/sites-available/magento2.3.2
+    - Create a new virtual host for accessing to the Magento2.3.x site
+    nano /etc/nginx/sites-available/magento2.3.x
     upstream fastcgi_backend {
         server unix:/run/php/php7.2-fpm.sock;
     }
