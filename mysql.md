@@ -2,8 +2,11 @@
 
 ### How to Create a New User 
 
+```
+   # sudo mysql -u root -p
    CREATE USER 'matin'@'localhost' IDENTIFIED BY 'matin@123';
    CREATE USER 'matin'@'127.0.0.1' IDENTIFIED BY 'matin@123';
+  ```
 
 ### At this point newuser has no permissions to do anything with the databases.
 
