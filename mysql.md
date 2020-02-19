@@ -62,3 +62,27 @@ GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 ```
    mysqldump -u matin -p matin@123 ihwdb > ihwdb2019.sql
 ```
+
+## Export Import
+
+
+- Log in to your server using SSH.
+
+- At the command prompt, type the following command to create a new database. Replace username with the MySQL username, and replace new_dbname with the new database name that you want to use:
+
+      mysql -u username -p -e "CREATE DATABASE new_dbname"
+
+- To export the old database to a file, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database that you want to rename:
+
+      mysqldump -u username -p old_dbname > dbexport.sql
+
+- To import the data from the old database into the new database that you created in step 1, type the following command. Replace username with the MySQL username, and replace new_dbname with the name of the new database:
+
+      mysql -u username -p new_dbname < dbexport.sql
+
+- To delete the old database, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database to delete:
+
+      mysql -u username -p -e "DROP DATABASE old_dbname"
+
+- This step is optional. You do not have to delete the old database.
+You can now use the new database named new_dbname, which contains all of the tables and data from the old database.
