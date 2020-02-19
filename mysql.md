@@ -38,43 +38,27 @@ To create a database user, type the following command. Replace username with the
 GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 
 
-
-### import a database with MySQL from terminal?
-
  
-  ``` 
-    Prompt for password:
-    mysql -u <username> -p <databasename> < <filename.sql>
 
+## Export Import  In Server Using SSH/Terminal
+
+
+- Log in to your server using SSH.At the command prompt, type the following command to create a new database. Replace username with the MySQL username, and replace new_dbname with the new database name that you want to use:
+
+
+      mysql -u username -p -e "CREATE DATABASE new_dbname"
+
+- To export the old database to a file, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database that you want to rename:
+Prompt for password:
+
+    mysql -u <username> -p <databasename> < <filename.sql>
     Enter password directly (not secure):
     mysql -u <username> -p<PlainPassword> <databasename> < <filename.sql>
 
     Example:
 
-    mysql -u c -p ihwqdb1 < database_porto2_3.2.1.sql
-    mysql -u matin -p matin@12 ihwqdb1 < database_porto2_3.2.1.sql
-  ```
-  
-  
-  
-  
-### Ex
-```
-   mysqldump -u matin -p matin@123 ihwdb > ihwdb2019.sql
-```
-
-## Export Import
-
-
-- Log in to your server using SSH.
-
-- At the command prompt, type the following command to create a new database. Replace username with the MySQL username, and replace new_dbname with the new database name that you want to use:
-
-      mysql -u username -p -e "CREATE DATABASE new_dbname"
-
-- To export the old database to a file, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database that you want to rename:
-
       mysqldump -u username -p old_dbname > dbexport.sql
+      mysqldump -u matin -p matin@123 ihwdb > ihwdb2019.sql
 
 - To import the data from the old database into the new database that you created in step 1, type the following command. Replace username with the MySQL username, and replace new_dbname with the name of the new database:
 
@@ -83,6 +67,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 - To delete the old database, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database to delete:
 
       mysql -u username -p -e "DROP DATABASE old_dbname"
+      
 
-- This step is optional. You do not have to delete the old database.
-You can now use the new database named new_dbname, which contains all of the tables and data from the old database.
+- This step is optional. You do not have to delete the old database.You can now use the new database named new_dbname, which contains all of the tables and data from the old database.
