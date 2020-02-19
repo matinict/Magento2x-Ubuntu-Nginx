@@ -42,3 +42,26 @@
     sudo chown $USER:www-data /var/www/html/mysite
     sudo chmod g+s /var/www/html/mysite
     sudo chmod o-rwx /var/www/html/mysite
+    
+    
+##  How to see a list of www-data members
+
+    grep ^www-data /etc/group
+
+Sample outputs: www-data:x:33:
+
+## How do I add an existing user named matin to group Apache group www-data?
+Simply run the following command to add an existing user to an existing group:
+
+       sudo adduser {USER-NAME-HERE} {GROUP-NAME-HERE}
+       sudo adduser matin www-data
+         
+ ## Add a new user to the www-data group
+In this example, add a new user called matin to the www-data group, enter:
+
+    sudo useradd -g www-data matin
+ 
+### set the password for matin user ###
+    sudo passwd matin
+
+ 
