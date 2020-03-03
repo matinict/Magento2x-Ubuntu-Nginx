@@ -62,7 +62,7 @@ sudo ufw status
 3. Obtaining an SSL Certificate using certbot:
 
 ```
-sudo certbot --nginx -d yourdomain.com
+sudo certbot --nginx -d magento.lan
 ```
 
 Certbot will ask your email and if you are willing to redirect all requests to HTTPS. Choose No redirect, we will add it later in our configuration.
