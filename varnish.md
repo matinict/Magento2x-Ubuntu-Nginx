@@ -2,6 +2,7 @@
 
 ## Varnish with Apache 
 
+```
 apt-get install varnish -y
 gedit /etc/default/varnish & >/dev/null
 DAEMON_OPTS=""-a:80 \
@@ -28,8 +29,12 @@ systemctl restart varnish.service;
 
 curl -l http:ip
 curl -l http://192.168.0.105
+```
 
-### Check
-
+### Check varnish
+```
 varnishd -V
 varnishhist
+```
+
+
