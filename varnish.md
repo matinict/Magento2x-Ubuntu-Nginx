@@ -200,7 +200,7 @@ Or
 
 ```
 sudo systemctl restart varnish
-``
+```
 
 3. How to clear varnish cache for specific URL
 You can clear cache for specific page on your website using varnishadm:
