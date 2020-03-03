@@ -15,16 +15,7 @@ sudo apt-get install python-certbot-nginx
 
 ```
 
-Generate Strong Diffie-Hellman Group
-You should also generate a strong Diffie-Hellman group to strengthen security. This command will generate a 2048-bit group:
-
-```
-sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
-```
-
-It may take a few minutes until you have a strong DH group at located /etc/ssl/certs/dhparam.pem. We will be linking to this path later on, but for now, it is good that you have it ready.
-
-It is now installed and ready to use. Certbot will look for server block with server name directive that matches your domain in your Nginx configuration to automatically configure SSL.
+ 
 
 1.1. Create Server Block
 
@@ -70,6 +61,9 @@ sudo ufw status
 
 ```
 sudo certbot --nginx -d magento.lan
+
+or 
+sudo certbot --nginx -d www.magento.lan
 ```
 
 Certbot will ask your email and if you are willing to redirect all requests to HTTPS. Choose No redirect, we will add it later in our configuration.
