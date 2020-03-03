@@ -4,18 +4,13 @@
 
 First of all we need an SSL certificate to handle HTTPS requests. We will use free Let’s Encrypt certificates. To obtain an SSL certificate we need to install the Certbot software on your server.
 
-1. Install Certbot
-
-Add certbot repository:
+1. Install Certbot: Add Certbot’s repository & Install Nginx package with apt:
 
 ```
-sudo add-apt-repository ppa:certbot/certbot
-```
-
-Install Certbot’s Nginx package with apt:
-```
+sudo add-apt-repository ppa:certbot/certbot 
 sudo apt install python-certbot-nginx
 ```
+
 It is now installed and ready to use. Certbot will look for server block with server name directive that matches your domain in your Nginx configuration to automatically configure SSL.
 
 1.1. Create Server Block
