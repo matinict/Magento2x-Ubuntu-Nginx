@@ -6,7 +6,22 @@
 sudo apt-get install varnish -y
 
 ```
-- Config Magento Admin
+
+After that you need to start Varnish. Use following commands to start Varnish and launch it at system boot:
+
+```
+systemctl start varnish
+systemctl enable varnish
+```
+By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend.
+You can check if Varnish is running and its port using netstat command:
+
+```
+netstat -plntu
+```
+
+
+## Config Magento Admin
 From your Magento Admin dashboard click on the STORES==> Configuration -> ADVANCED -> System -> Full Page Cache Unselected Use system value and from the Caching Application list==> select Varnish Cache (Recommended)==>save the configuration, click on the Varnish Configuration link and click on the Export VCL for Varnish 4 button. The varnish.vcl file which we will use will be exported in the directory /var/www/myMagentoSite.com/var/.
 
 Flush the Magento cache with:
@@ -149,7 +164,23 @@ curl -l http:ip
 curl -l http://192.168.0.105
 ```
 
-### Check varnish
+### Check/Test Varnish 
+
+How to check if varnish is working? Well, you should notice with your naked eyes that your website is now loading much faster.  If you need tools,  you can use following commands to test Varnish:
+
+1. View Varnish access log with varnishncsa command:
+
+```
+varnishncsa
+```
+Start the command and access your website via web browser.
+
+2. If you want detailed view for each request use varnishlog command:
+
+```
+varnishlog
+```
+
 ```
 varnishd -V
 varnishhist
@@ -251,8 +282,10 @@ Do not forget to flush the cache:
   ```
 
 ## Ref:
+- [devdocs.magento](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html)
 - [youtube1](https://www.youtube.com/watch?v=tYAOeS88qTQ)
 - [rosehosting](https://www.rosehosting.com/blog/magento-2-with-redis-varnish-and-nginx-as-ssl-termination/)
+- [olegnax](https://olegnax.com/speed-up-magento-2-with-varnish-and-nginx-as-ssl-termination-on-ubuntu/)
 
  
 
