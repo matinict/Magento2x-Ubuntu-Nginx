@@ -50,6 +50,7 @@ If you have the ufw firewall enabled you’ll need allow HTTPS traffic & check t
 
 ```
 sudo ufw allow https
+sudo ufw enable
 sudo ufw status
 ```
 
