@@ -9,32 +9,31 @@ First of all we need an SSL certificate to handle HTTPS requests. We will use fr
 ```
 sudo add-apt-repository ppa:certbot/certbot 
 sudo apt install python-certbot-nginx
+
 ```
 
 It is now installed and ready to use. Certbot will look for server block with server name directive that matches your domain in your Nginx configuration to automatically configure SSL.
 
 1.1. Create Server Block
 
-You should already have server block for your domain /etc/nginx/sites-available/yourdomain.com with some basic configuration like server_name directive and Magento 2 root folder i.e.:
+You should already have server block for your domain /etc/nginx/sites-available/magento.lan with some basic configuration like server_name directive and Magento 2 root folder i.e.:
 
 ```
 upstream fastcgi_backend {
      server  unix:/run/php/php7.2-fpm.sock;
 }
 server {
-    server_name yourdomain.com;
+    server_name magento.lan
     listen 80;
-    set $MAGE_ROOT /var/www/yourmagentofolder;
-    include /var/www/yourmagentofolder/nginx.conf.sample;
+    set $MAGE_ROOT /var/www/magento.lan;
+    include /var/www/magento.lan/nginx.conf.sample;
 }
 ```
 
-* nginx.conf.sample is Nginx configuration file which comes with Magento.  You check how to install and configure Magento 2 on Nginx on Magento official website.
-
-If you have just created server block you need enable it:
+* nginx.conf.sample is Nginx configuration file which comes with Magento.  You check how to install and configure Magento 2 on Nginx on Magento official website. If you have just created server block you need enable it:
 
 ```
-sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/magento.lan /etc/nginx/sites-enabled/
 ```
 
 Test nginx configuration If everything is ok reload nginx :
@@ -47,15 +46,10 @@ sudo systemctl reload nginx
 Now Certbot will be able to find server block to add SSL configuration.
 
 2. Allow HTTPS Through the Firewall.
-If you have the ufw firewall enabled you’ll need allow HTTPS traffic.
+If you have the ufw firewall enabled you’ll need allow HTTPS traffic & check the status using this command:
 
 ```
 sudo ufw allow https
-```
-
-You can then check the status using this command:
-
-```
 sudo ufw status
 ```
 
@@ -71,23 +65,23 @@ If Certbot will be able to find server block and verify that you are the owner o
 
 ```
  - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/yourdomain.com/fullchain.pem
+   /etc/letsencrypt/live/magento.lan/fullchain.pem
    Your key file has been saved at:
-   /etc/letsencrypt/live/yourdomain.com/privkey.pem
+   /etc/letsencrypt/live/magento.lan/privkey.pem
    ...
  ```
 You should have something like this in your server block after certificate is added:
 
 ```
 server {
-    server_name yourdomain.com;
+    server_name magento.lan;
     listen 80;
-    set $MAGE_ROOT /var/www/yourmagentofolder;
-    include /var/www/yourmagentofolder/nginx.conf.sample;
+    set $MAGE_ROOT /var/www/magento.lan;
+    include /var/www/magento.lan/nginx.conf.sample;
 
     listen 443 ssl;
-    ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/magento.lan/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/magento.lan/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
