@@ -37,15 +37,10 @@ If you have just created server block you need enable it:
 sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
 ```
 
-and test nginx configuration:
-
+Test nginx configuration If everything is ok reload nginx :
+ 
 ```
 sudo nginx -t
-```
-
-If everything is ok reload nginx :
-
-```
 sudo systemctl reload nginx
 ```
 
