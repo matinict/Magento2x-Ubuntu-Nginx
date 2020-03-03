@@ -185,6 +185,25 @@ varnishlog
 varnishd -V
 varnishhist
 ```
+
+## Final verification
+Now that you’re using the default.vcl generated for you by Magento, you can perform some final verifications to make sure Varnish is working.
+
+Verify HTTP response headers Use curl or another utility to view HTTP response headers when you visit any Magento page in a web browser.
+
+First, make sure you are using Magento’s developer mode; otherwise, you won’t see the headers.
+
+For example,
+
+curl -I -v --location-trusted 'http://magento.lan'
+Important headers:
+
+X-Magento-Cache-Control: max-age=86400, public, s-maxage=86400
+Age: 0
+X-Magento-Cache-Debug: MISS
+This value is also acceptable: X-Magento-Cache-Debug: HIT.
+
+
 ### Clear Varnish Cache
 
 1. Clear Varnish Cache with Magento 2
@@ -209,6 +228,9 @@ You can clear cache for specific page on your website using varnishadm:
 varnishadm -T 127.0.0.1:6082 -S /etc/varnish/secret ban "req.http.host == https://yourdomain.com && req.url == /somepage/"
 ```
 This will clear cache for https://yourdomain.com/somepage/
+
+
+
 
 
 ## Install and configure Redis caching
