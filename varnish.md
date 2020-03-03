@@ -28,3 +28,8 @@ systemctl restart varnish.service;
 
 curl -l http:ip
 curl -l http://192.168.0.105
+
+### Check
+
+varnishd -V
+varnishhist
