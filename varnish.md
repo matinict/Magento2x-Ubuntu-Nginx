@@ -185,6 +185,31 @@ varnishlog
 varnishd -V
 varnishhist
 ```
+### Clear Varnish Cache
+
+1. Clear Varnish Cache with Magento 2
+If you set varnish backend port and hosts correctly in Magento settings as described above in this article, then when you clean, flush, or refresh the Magento cache, Varnish purges as well. How Magento cache clearing works with Varnish
+
+2. Clear entire Varnish Cache
+In order to clear entire Varnish cache, you can simply restart Varnish:
+
+```
+sudo service varnish restart
+```
+Or
+
+```
+sudo systemctl restart varnish
+``
+
+3. How to clear varnish cache for specific URL
+You can clear cache for specific page on your website using varnishadm:
+
+```
+varnishadm -T 127.0.0.1:6082 -S /etc/varnish/secret ban "req.http.host == https://yourdomain.com && req.url == /somepage/"
+```
+This will clear cache for https://yourdomain.com/somepage/
+
 
 ## Install and configure Redis caching
 Redis is a key-value in memory data store and we will use it to replace the default Magento 2 Zend_Cache_Backend_File backend cache.  Install Redis by running the following command:
@@ -282,7 +307,8 @@ Do not forget to flush the cache:
   ```
 
 ## Ref:
-- [devdocs.magento](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html)
+- [devdocs.magento.varnish.config](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html)
+- [devdocs.magento.varnish.use](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/use-varnish-cache.html)
 - [youtube1](https://www.youtube.com/watch?v=tYAOeS88qTQ)
 - [rosehosting](https://www.rosehosting.com/blog/magento-2-with-redis-varnish-and-nginx-as-ssl-termination/)
 - [olegnax](https://olegnax.com/speed-up-magento-2-with-varnish-and-nginx-as-ssl-termination-on-ubuntu/)
