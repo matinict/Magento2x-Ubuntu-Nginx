@@ -7,8 +7,11 @@ First of all we need an SSL certificate to handle HTTPS requests. We will use fr
 1. Install Certbot: Add Certbot’s repository & Install Nginx package with apt:
 
 ```
-sudo add-apt-repository ppa:certbot/certbot 
-sudo apt install python-certbot-nginx
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
 
 ```
 
@@ -103,7 +106,7 @@ After we have installed SSL certificates we need to configure Magento 2 to use s
 
 ## Ref
 - [cloudbooklet](https://www.cloudbooklet.com/secure-nginx-with-lets-encrypt-ubuntu-18-04-google-cloud/)
-
 - [olegnax](https://olegnax.com/speed-up-magento-2-with-varnish-and-nginx-as-ssl-termination-on-ubuntu/)
+- [medium](https://medium.com/@mhagemann/how-to-secure-nginx-with-certbot-on-ubuntu-16-10-4a66956cd49c)
 
 
