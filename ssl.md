@@ -101,4 +101,9 @@ After we have installed SSL certificates we need to configure Magento 2 to use s
 
 
 
+## Ref
+- [cloudbooklet](https://www.cloudbooklet.com/secure-nginx-with-lets-encrypt-ubuntu-18-04-google-cloud/)
+
+- [olegnax](https://olegnax.com/speed-up-magento-2-with-varnish-and-nginx-as-ssl-termination-on-ubuntu/)
+
 
