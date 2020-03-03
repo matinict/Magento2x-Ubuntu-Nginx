@@ -10,8 +10,8 @@ sudo apt-get install varnish -y
 After that you need to start Varnish. Use following commands to start Varnish and launch it at system boot:
 
 ```
-systemctl start varnish
-systemctl enable varnish
+sudo systemctl start varnish
+sudo systemctl enable varnish
 ```
 By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend.
 You can check if Varnish is running and its port using netstat command:
