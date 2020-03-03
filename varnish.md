@@ -1,6 +1,4 @@
-
-
-## Varnish with Apache 
+## Varnish Install
 
 ```
 apt-get install varnish -y
@@ -14,6 +12,21 @@ backend default{
   .port = "8080";
 
 }
+```
+
+
+
+
+
+## Varnish with NGINX
+
+
+
+
+
+## Varnish with Apache 
+
+``` 
 
 systemctl restart apache2.service;
 systemctl restart varnish.service;
@@ -37,4 +50,10 @@ varnishd -V
 varnishhist
 ```
 
+
+
+## Ref:
+- [1](https://www.youtube.com/watch?v=tYAOeS88qTQ)
+
+ 
 
