@@ -1,6 +1,8 @@
 
+# Magento 2x Command
 
+## Delete all cache file
 
-## Clean Cache
-
-  rm -rf var/cache/* generated/code/* var/view_preprocessed/* var/page_cache/* pub/static/frontend/* pub/static/adminhtml/*
+```
+rm -rf var/cache/* generated/code/* var/view_preprocessed/* var/page_cache/* var/report/* pub/static/frontend/* pub/static/adminhtml/* 
+```
