@@ -34,27 +34,6 @@ php bin/magento cache:flush
 sudo rm -f /etc/varnish/default.vcl
 sudo ln -sf /var/www/myMagentoSite.com/var/varnish.vcl /etc/varnish/default.vcl
 ```
-- To change the varnish port from 6081 to 80, we need to edit the systemd service configuration.
-
-Create a new customexec.conf file
-```
-sudo mkdir -p /etc/systemd/system/varnish.service.d
-sudo nano /etc/systemd/system/varnish.service.d/customexec.conf
-```
-
-paste the following:
-
-```
-[Service]
-ExecStart=
-ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
-```
-
-- Reload systemd units
-
-```
-sudo systemctl daemon-reload
-```
 
 
 
@@ -135,6 +114,29 @@ https://myMagentoSite.com/admin
 
 
 ## Varnish with Apache 
+
+
+- To change the varnish port from 6081 to 80, we need to edit the systemd service configuration.
+
+Create a new customexec.conf file
+```
+sudo mkdir -p /etc/systemd/system/varnish.service.d
+sudo nano /etc/systemd/system/varnish.service.d/customexec.conf
+```
+
+paste the following:
+
+```
+[Service]
+ExecStart=
+ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
+```
+
+- Reload systemd units
+
+```
+sudo systemctl daemon-reload
+```
 
 ``` 
 
