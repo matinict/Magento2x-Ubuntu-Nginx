@@ -58,11 +58,12 @@ Prompt for password:
     Example:
 
       mysqldump -u username -p old_dbname > dbexport.sql
-      mysqldump -u matin -p matin@123 ihwdb > ihwdb2019.sql
+      mysqldump -u matin -p matin@123 mydb > ihwdb2019.sql
 
 - To import the data from the old database into the new database that you created in step 1, type the following command. Replace username with the MySQL username, and replace new_dbname with the name of the new database:
 
-      mysql -u username -p new_dbname < dbexport.sql
+      mysql -u username -p new_dbname < dbimport.sql
+      mysql -u matin -pmatin@123 mydb < mydbfile.sql
 
 - To delete the old database, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database to delete:
 
