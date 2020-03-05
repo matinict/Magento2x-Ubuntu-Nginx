@@ -63,13 +63,58 @@ php bin/magento setup:upgrade -f
   php -dmemory_limit=8G bin/magento setup:static-content:deploy -f en_US -t Magento/backend
   
  ```
- ## Reindex
+ ## Themes
  
-  ```
-  php  bin/magento index:reindex
-  php -d memory_limit=2G bin/magento index:reindex
-  ```
-  
+ ```
+ If you want pub/static files while installing or updating database then use following command:
+php bin/magento setup:upgrade --keep-generated
+Static Content Deploy(use -f for force deploy on 2.2.x or later):
+php bin/magento setup:static-content:deploy
+Static Content Deploy For Particular Language:
+php bin/magento setup:static-content:deploy en_US
+Static Content Deploy For Magento Backend Theme Using Command Line (Working on 2.1.1 or later)
+php bin/magento setup:static-content:deploy --theme="Magento/backend"
+Static Content Deploy For Specific Themes (Working on 2.1.1 or later)
+php bin/magento setup:static-content:deploy --theme Magento/luma --theme Magento/another_theme
+Exclude Themes on Static Content Deploy and does not minify HTML files Using Command Line (Working on 2.1.1 or later)
+php bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
+ ```
  
+ 
+## Cache & Reindex related commands:
+```
+Cache Clean: php bin/magento cache:clean
+Cache Flush: php bin/magento cache:flush
+View cache status: php bin/magento cache:status
+Enable Cache: php bin/magento cache:enable [cache_type]
+Disable Cache: php bin/magento cache:disable [cache_type]
+
+php  bin/magento index:reindex
+php -d memory_limit=2G bin/magento index:reindex
+```
+
+## Modes related commands:
+```
+Check Current Mode: php bin/magento deploy:mode:show
+Change To Developer Mode: php bin/magento deploy:mode:set developer
+Change To Production Mode: php bin/magento deploy:mode:set production
+```
   
+  
+## Module related commands:
+```
+php bin/magento module:status  [See all modules Status ]
+php bin/magento module:enable Namespace_Module [Enable module]
+php bin/magento module:disable Namespace_Module [Disable module]
+php bin/magento module:uninstall Namespace_Module [Uninstall Module]
+```
+ 
+## Other Commands:
+
+```
+php bin/magento setup:di:compile [Run the single-tenant Compiler]
+php bin/magento admin:user:unlock adminusername [Unlock Admin User]
+php bin/magento cron:install --force [Use --force to rewrite an existing Magento crontab.]
+crontab -l [view the crontab, enter the following command as the Magento file system owner. ]
+php bin/magento cron:remove [Remove Magento crontab]
   
