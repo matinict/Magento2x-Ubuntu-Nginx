@@ -49,8 +49,10 @@ rm -rf var/cache/* generated/code/* var/view_preprocessed/* var/page_cache/* var
 
 ## Upgrade
 
+```
 php bin/magento setup:upgrade
 php bin/magento setup:upgrade -f
+```
 
 
 
