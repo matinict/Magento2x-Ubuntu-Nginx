@@ -38,7 +38,13 @@ php bin/magento setup:static-content:deploy --force --area frontend --theme ***/
 php bin/magento setup:static-content:deploy --theme Magento/luma --theme Magento/another_theme
 
 ```
+If enabling production mode has broken all the shop pages. Run below commands in sequence.
 
+ ```
+ php bin/magento setup:upgrade
+ php bin/magento setup:static-content:deploy
+ php bin/magento indexer:reindex
+ ```
 
 ## Delete all cache file
 
@@ -65,7 +71,7 @@ php bin/magento setup:upgrade -f
   php -dmemory_limit=8G bin/magento setup:static-content:deploy -f en_US -t Magento/backend
   
  ```
- ## Themes
+## Themes
  
  ```
  If you want pub/static files while installing or updating database then use following command:
