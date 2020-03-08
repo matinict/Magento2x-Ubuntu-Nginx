@@ -44,6 +44,9 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
 Ref:
 - [devdocs](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-overview.html)
 - [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html)
+- [es-config-nginx](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html)
+- [es-config-apache](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-apache.html)
+- [es-configure-magento](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html)
 
 
 
