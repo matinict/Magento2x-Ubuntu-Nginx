@@ -48,7 +48,8 @@ Ref:
 - [es-config-apache](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-apache.html)
 - [es-configure-magento](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html)
 - [tigren](https://www.tigren.com/magento-2-elasticsearch/)
-- [PrankoVideo](https://youtu.be/ES3XIzWiffo)
+- [Max Pronko](https://youtu.be/ES3XIzWiffo)
+- [Magento-2-Elasticsearch-important](https://www.quora.com/What-is-Magento-2-Elasticsearch-Is-it-really-important)
 
 
 
