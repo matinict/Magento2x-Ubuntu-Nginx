@@ -28,7 +28,7 @@ git push -u origin master
 ```
 
 
-#GitLab Command line instructions
+## Git basic Command line instructions
 !!==================================================================!!
 
 	Git global setup
@@ -82,6 +82,7 @@ git push -u origin master
 	git remote add origin https://gitlab.com/matinict/pondit_laravel30.git
 	git remote add origin https://gitlab.com/matinict/pondit_laravel30.git
 	php		[Credential. Download Fresh copy from repository]
+	
 	Upload New File Local to Remote:
 	====================================
 	git status 	[check status After Create new file ]
@@ -90,6 +91,7 @@ git push -u origin master
 	//git diff --staged  	[Check different ]
 	git commit -m "Test file Comment Here" 	[Commit with massge ]
 	git push -u origin master 	[Upload File to remote repository]
+	
 	Update Edit/ Modified  File Local to Remote:
 	============================================
 	git status 	[check status After Create new file ]
@@ -99,12 +101,16 @@ git push -u origin master
 	FORCE OVERWRITE OF LOCAL FILE WITH WHAT'S IT ORIGIN REPO:
 	git fetch [Overwrite only one file from remote repository]
 	git reset --hard origin/master   [Overwrite only one file from remote repository]
+	
 	Git Update Local from remote
 	=========================================================
 	git pull origin master
+	
+	
 	To exit (g)Vim type:
 	==========================
 	EscZZ or Esc:wq Return.
+	
 ## Clear already committed files but included in .gitignore
 	
 - Remove everything from the index (the files will stay in the file system) 
