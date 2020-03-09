@@ -36,7 +36,7 @@ git push -u origin master
 	git config --global user.email "matinict@gmail.com"
 
 	Create a new repository
-	git clone https://github.com/harriswebworks/edco.git
+	git clone https://gitlab.com/matinict/laravelcrud.git
 	cd laravelcrud
 	touch README.md
 	git add README.md
