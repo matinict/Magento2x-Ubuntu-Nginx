@@ -126,7 +126,7 @@ git push -u origin master
 	```
 	git push origin master
 	```
-## Branch Commands Used:
+## Git Branching and Merging:
 
 ```
 Retrieve/Clone a repo = git clone (URL)
