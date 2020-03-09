@@ -101,3 +101,16 @@ git push -u origin master
 	To exit (g)Vim type:
 	==========================
 	EscZZ or Esc:wq Return.
+## Clear already committed files but included in .gitignore
+	
+- Remove everything from the index (the files will stay in the file system) 
+	git rm -r --cached .
+
+- Re-add everything (they'll be added in the current state, changes included)
+	git add .
+
+- Commit, if anything changed. You should see only deletions
+	git commit -m 'Remove all files that are in the .gitignore'
+
+- Update the remote
+	git push origin master
