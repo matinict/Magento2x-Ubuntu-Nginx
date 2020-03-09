@@ -135,23 +135,23 @@ git push -u origin master
 ## Git Branching and Merging:
 
 ```
-Retrieve/Clone a repo = git clone (URL)
-List remotes = git remote (-v for detail)
-Commit graph = git log --all --decorate --oneline --graph
-Checkout a branch = git checkout
-Create and checkout a branch = git checkout -b (branch name)
-Retrieve/download from a remote = git fetch (remote name)
-merge branch or tracking-branch = git merge (branch or tracking branch name)
-Show status = git status
-Upload to a remote = git push (remote name) (branch name)
-stage an edit = git add (filename)
-make a commit = git commit -m "description"
-stage and commit = git commit -a -m "description"
-List local branches = git branch
-List remote branches = git branch -r
-List both local and remote branches = git branch -a
+git clone (URL)   [Retrieve/Clone a repo]
+git remote (-v for detail)  [List remotes]
+git log --all --decorate --oneline --graph  [Commit graph]
+git checkout  [Checkout a branch]
+git checkout -b (branch name)   [Create and checkout a branch]
+git fetch (remote name)  [Retrieve/download from a remote]
+git merge (branch or tracking branch name)  [merge branch or tracking-branch]
+git status  [Show status]
+git push (remote name) (branch name)  [Upload to a remote]
+git add (filename)  [stage an edit] 
+git commit -m "description"   [make a commit ]
+git commit -a -m "description"  [stage and commit ]
+git branch  [List local branches]
+git branch -r  [List remote branches] 
+git branch -a  [List both local and remote branches]
 
-git log =  git history
+git log   [git history]
 git log --all --decorate --oneline --graph = commit history graph
 git branch (branch-name) = create a branch
 git checkout (branch-name) = checkout a branch/move head pointer
