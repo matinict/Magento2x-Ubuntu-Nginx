@@ -134,6 +134,19 @@ git push -u origin master
 	```
 ## Git Branching and Merging:
 
+### Git: merge 'develop' in to 'master'
+
+	```
+	git diff master..develop
+	git status [On branch develop]
+	git checkout master [if develop change to master]
+	git status [On branch master]
+	git merge develop
+	git push -u origin master
+	
+	```
+### Others
+
 ```
 git clone (URL)   [Retrieve/Clone a repo]
 git remote (-v for detail)  [List remotes]
