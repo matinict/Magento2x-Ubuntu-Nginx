@@ -137,12 +137,15 @@ git push -u origin master
 ### Git: merge 'develop' in to 'master'
 
 	```
-	git diff master..develop
+	git diff master..develop [Develop Server]
 	git status [On branch develop]
 	git checkout master [if develop change to master]
 	git status [On branch master]
 	git merge develop
 	git push -u origin master
+	
+	git pull origin master   [master pull to live ]
+	git reset --keep HEAD@{1}  [undo latest pull ]
 	
 	```
 ### Others
