@@ -74,6 +74,8 @@ Then it means nginx or some other process is already using port 80. You can kill
  sudo service nginx start
  ``` 
 
+### nginx: [warn] could not build optimal proxy_headers_hash, you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
+
 
 
  
