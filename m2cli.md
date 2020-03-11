@@ -103,18 +103,18 @@ php -d memory_limit=2G bin/magento index:reindex
 
 ## Modes related commands:
 ```
-Check Current Mode: php bin/magento deploy:mode:show
-Change To Developer Mode: php bin/magento deploy:mode:set developer
-Change To Production Mode: php bin/magento deploy:mode:set production
+php bin/magento deploy:mode:show  [Check Current Mode:]
+php bin/magento deploy:mode:set developer [Change To Developer Mode: ]
+php bin/magento deploy:mode:set production  [Change To Production Mode: ]
 ```
   
   
-## Module related commands:
+## Module Related Commands:
 ```
 php bin/magento module:status  [See all modules Status ]
-php bin/magento module:enable Namespace_Module [Enable module]
-php bin/magento module:disable Namespace_Module [Disable module]
-php bin/magento module:uninstall Namespace_Module [Uninstall Module]
+php bin/magento module:enable Namespace_Module --clear-static-content [Enable module]
+php bin/magento module:disable Namespace_Module --clear-static-content [Disable module]
+php bin/magento module:uninstall Namespace_Module --clear-static-content [Uninstall Module]
 ```
  
 ## Other Commands:
