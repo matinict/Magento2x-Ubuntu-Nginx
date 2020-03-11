@@ -158,7 +158,7 @@ composer require magento/product-community-edition=2.3.x --no-update
 
 ```
 php bin/magento --version
-php bin/magento -V```
+php bin/magento -V
 
 ```
 
