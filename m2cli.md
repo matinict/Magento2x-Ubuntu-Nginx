@@ -15,7 +15,16 @@ php bin/magento maintenance:allow-ips --ip=192.0.0.1 --ip=192.0.0.2
 
 
  ## Production Mode Related CLI
- 
+- Admin Dashboard
+- Composer.json file
+- Composer.lock file
+- via Command Line
+- the Chrome Extension
+- from the URL
+- PHP Code
+- Magento Version Checking tool
+- Online Tools
+
  ```
  bin/magento deploy:mode:show
  
