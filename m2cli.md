@@ -153,4 +153,12 @@ composer remove magento/product-community-edition --no-update
 
 ```
 composer require magento/product-community-edition=2.3.x --no-update
-``
+```
+## Check Version Cli
+
+```
+php bin/magento --version
+php bin/magento -V```
+
+```
+
