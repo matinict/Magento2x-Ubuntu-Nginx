@@ -181,9 +181,6 @@ Start the command and access your website via web browser.
 
 ```
 varnishlog
-```
-
-```
 varnishd -V
 varnishhist
 ```
