@@ -125,4 +125,11 @@ php bin/magento admin:user:unlock adminusername [Unlock Admin User]
 php bin/magento cron:install --force [Use --force to rewrite an existing Magento crontab.]
 crontab -l [view the crontab, enter the following command as the Magento file system owner. ]
 php bin/magento cron:remove [Remove Magento crontab]
+
+
+## Create Admin user  m2 terminal
+
+```
+php bin/magento admin:user:create --admin-user=matin --admin-password=matin@123 --admin-email=matin@bdcrops.com --admin-firstname=Matin --admin-lastname=Rahman
+```
   
