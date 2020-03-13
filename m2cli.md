@@ -191,5 +191,9 @@ TRUNCATE sales_bestsellers_aggregated_yearly;
 TRUNCATE sales_bestsellers_aggregated_monthly;
 TRUNCATE sales_bestsellers_aggregated_daily;
 SET foreign_key_checks = 1;
+
+DELETE FROM session WHERE session_expires < UNIX_TIMESTAMP();
+SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM session WHERE session_expires >= NOW()
+
   ```
 
