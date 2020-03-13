@@ -173,3 +173,25 @@ php bin/magento -V
 
 ```
 
+
+## Clean m2 db
+  ```
+  SET foreign_key_checks = 0;
+  TRUNCATE customer_log;
+  TRUNCATE customer_visitor;
+  TRUNCATE report_compared_product_index;
+  TRUNCATE report_event;
+  TRUNCATE report_event_types;
+  TRUNCATE report_viewed_product_aggregated_daily;
+  TRUNCATE report_viewed_product_aggregated_monthly;
+  TRUNCATE report_viewed_product_aggregated_yearly;
+  TRUNCATE report_viewed_product_index;
+  TRUNCATE product_alert_stock;
+  TRUNCATE search_query;
+  TRUNCATE catalogsearch_fulltext_scope1;
+  TRUNCATE sales_bestsellers_aggregated_yearly;
+  TRUNCATE sales_bestsellers_aggregated_monthly;
+  TRUNCATE sales_bestsellers_aggregated_daily;
+  SET foreign_key_checks = 1;
+  ```
+
