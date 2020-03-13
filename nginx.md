@@ -72,6 +72,19 @@ Then it means nginx or some other process is already using port 80. You can kill
  ```
  sudo fuser -k 80/tcp
  sudo service nginx start
+ 
+ or
+ 
+ nginx -t -c /etc/nginx/nginx.conf
+ 
+ ps -eaf |grep nginx
+ 
+ sudo cat /var/log/nginx/error.log|less
+ 
+ //ps -eaf |grep nginx and netstat -tulpn |grep 80 a
+ //kill -9 749 
+ grep -r 'listen ' /etc/nginx/*
+ 
  ``` 
 
 ### nginx: [warn] could not build optimal proxy_headers_hash, you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
