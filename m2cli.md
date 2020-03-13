@@ -10,7 +10,7 @@ php bin/magento maintenance:enable --ip=10.10.16.1 --ip=10.10.16.2
 php bin/magento maintenance:enable --ip=none
 php bin/magento maintenance:disable
 php bin/magento maintenance:status
-php bin/magento maintenance:allow-ips --ip=192.0.0.1 --ip=192.0.0.2
+php bin/magento maintenance:allow-ips --ip=192.168.0.105 --ip=103.125.97.137
 ```
 
 
