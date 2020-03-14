@@ -11,3 +11,19 @@ apache2: /etc/apache2
 In this example, /etc/apache2 directory still exists. Since this directory (as well as any configuration files in it) is no longer necessary, go ahead and remove it manually.
 
 $ sudo rm -rf /etc/apache2
+
+
+## Restart
+```
+sudo systemctl restart httpd.service
+sudo apachectl –k restart
+apachectl –k stop
+apachectl –k graceful
+apachectl –k restart
+apachectl –k graceful–stop
+sudo systemctl start httpd.service
+sudo systemctl stop httpd.service
+sudo systemctl reload httpd.service
+```
+
+
