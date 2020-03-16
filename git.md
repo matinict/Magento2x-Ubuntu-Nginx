@@ -192,6 +192,6 @@ git stash save "(description)" = create a stash point, be more descriptive
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
 - [BranchingMergingYu](https://www.youtube.com/watch?v=FyAAIHHClqI)
-
+- [git/tutorials](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
 
 	
