@@ -187,7 +187,19 @@ git stash pop = apply most recent stash, and remove it from saved stashes
 git stash apply (stash reference) = apply a specific stash point
 git stash save "(description)" = create a stash point, be more descriptive
 ```
+## Use a .gitignore File What If I Already Have It Checked In?
+Git will not ignore the file if you've already committed it. You'll have to untrack the file first, then it will start ignoring it. You can untrack the file with this command:
 
+```
+git rm --cached FILENAME
+
+or
+
+echo debug.log >> .gitignore
+git rm --cached debug.log
+rm 'debug.log'
+git commit -m "Start ignoring debug.log"
+```
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
