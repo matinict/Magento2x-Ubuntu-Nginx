@@ -197,3 +197,9 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
 
   ```
 
+---
+id: versiune-1.0.0-doc1
+titlu: Documentul meu
+sidebar_label: Document
+original_id: doc1
+---
