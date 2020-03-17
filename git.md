@@ -111,26 +111,7 @@ git push -u origin master
 	==========================
 	EscZZ or Esc:wq Return.
 	
-## Clear already committed files but included in .gitignore
-	
-- Remove everything from the index (the files will stay in the file system) 
-	```
-	git rm -r --cached .
-	```
 
-- Re-add everything (they'll be added in the current state, changes included)
-	```
-	git add .
-	```
-
-- Commit, if anything changed. You should see only deletions
-	```
-	git commit -m 'Remove all files that are in the .gitignore'
-	```
-
-- Update the remote
-	```
-	git push origin master
 	```
 ## Git Branching and Merging:
 
@@ -187,6 +168,26 @@ git stash pop = apply most recent stash, and remove it from saved stashes
 git stash apply (stash reference) = apply a specific stash point
 git stash save "(description)" = create a stash point, be more descriptive
 ```
+## Clear already committed files but included in .gitignore
+	
+- Remove everything from the index (the files will stay in the file system) 
+	```
+	git rm -r --cached .
+	```
+
+- Re-add everything (they'll be added in the current state, changes included)
+	```
+	git add .
+	```
+
+- Commit, if anything changed. You should see only deletions
+	```
+	git commit -m 'Remove all files that are in the .gitignore'
+	```
+
+- Update the remote
+	```
+	git push origin master
 ## Use a .gitignore File What If I Already Have It Checked In?
 Git will not ignore the file if you've already committed it. You'll have to untrack the file first, then it will start ignoring it. You can untrack the file with this command:
 
