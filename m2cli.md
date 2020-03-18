@@ -37,6 +37,9 @@ php bin/magento setup:static-content:deploy [<languages>] [-t|--theme[="<theme>"
 
 php bin/magento setup:static-content:deploy --force --area frontend --theme ***/*** en_US
 php bin/magento setup:static-content:deploy --theme Magento/luma --theme Magento/another_theme
+php bin/magento setup:static-content:deploy -f --area frontend --theme Smartwave/porto_child en_CA
+
+
 
 ```
 If enabling production mode has broken all the shop pages. Run below commands in sequence.
