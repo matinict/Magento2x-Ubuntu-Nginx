@@ -197,3 +197,9 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
 
   ```
  
+## Cron 
+
+ ```
+ php bin/magento cron:run
+ 
+ ```
