@@ -202,6 +202,17 @@ rm 'debug.log'
 git commit -m "Start ignoring debug.log"
 ```
 
+## How to add / commit Directory recusively 
+
+```
+git status 	[check status After Create new file ]
+git add  app/code/Amasty/Label/*	[Add New file to repository]
+git commit -m "AmastyLabel update" 	[Commit with massge ]
+git push -u origin master 
+
+
+```
+
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
 - [BranchingMergingYu](https://www.youtube.com/watch?v=FyAAIHHClqI)
