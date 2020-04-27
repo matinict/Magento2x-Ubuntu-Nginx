@@ -207,6 +207,7 @@ git commit -m "Start ignoring debug.log"
 ```
 git status 	[check status After Create new file ]
 git add  app/code/Amasty/Label/*	[Add New file to repository]
+git add  app/code/Amasty/Label/* app/code/Bdcrops/*	[Add multiple dir]
 git commit -m "AmastyLabel update" 	[Commit with massge ]
 git push -u origin master 
 
