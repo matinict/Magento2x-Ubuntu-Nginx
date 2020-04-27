@@ -216,10 +216,12 @@ git push -u origin master
 
 ## RemoveDelete dir
 
+```
 git checkout master [Ensure you are in the default branch]
 git rm -r folder-name [rm -r command will recursively remove your folder]
 git commit -m "Remove duplicated directory" [Commit the change:]
 git push origin master [Push the change to your remote repository:]
+```
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
