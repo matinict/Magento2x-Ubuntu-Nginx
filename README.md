@@ -311,6 +311,11 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
      Pasward: xxx
 
     php bin/magento setup:upgrade
+    
+   For remove:
+   
+    php php bin/magento sampledata:remove
+
           
    [https://marketplace.magento.com/customer/accessKeys/ login then copy Public & private Key]
    
