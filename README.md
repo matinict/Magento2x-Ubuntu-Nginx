@@ -27,12 +27,18 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
    # 1.1- Install the softwares: [Advanced Nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
     
     
-      apt-get update
-      apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
+      sudo apt-get update
+      sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
       - Install the Nginx 1.10.x: 
-      apt-get -y install nginx
-      service nginx start
+      sudo apt-get -y install nginx
+      sudo service nginx start
       nginx -v
+      ## port 80. Enable this by typing:
+      sudo ufw app list
+      ## verify the change by running
+      sudo ufw allow 'Nginx HTTP'
+      ##check ip on browser
+      curl -4 icanhazip.com
       
    # 1.2- Install PHP 7.2.x and the required PHP extensions: 
    
