@@ -24,14 +24,31 @@ apt-get install -y oracle-java8-installer
 
 ## 1.3 Start & Check Status Elasticsearch:
 
+-Running with Service:
+
       sudo service elasticsearch start
       sudo service elasticsearch status
+      
+- Running with Systemd: To configure Elasticsearch to start automatically when the system boots up, run the following commands:
+
+      sudo /bin/systemctl daemon-reload
+      sudo /bin/systemctl enable elasticsearch.service
+      sudo systemctl start elasticsearch.service
+      sudo systemctl stop elasticsearch.service
+      
+      sudo journalctl -f
+      sudo journalctl --unit elasticsearch
+
+
 
 
 ## 1.4 Verify  Elasticsearch
  Elasticsearch is working by entering the following command on the server on which it is running:
+ 
 
       curl -XGET '<host>:9200/_cat/health?v&pretty'
+      
+      curl -XGET 'localhost:9200/_cat/health?v&pretty'
 
 A message similar to the following is displayed:
 
