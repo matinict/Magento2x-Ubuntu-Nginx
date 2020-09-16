@@ -24,10 +24,11 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee 
 ```
 
 
-- If not already running, start Elasticsearch:
-```
-sudo service elasticsearch start
-```
+## Start & Check Status Elasticsearch:
+
+      sudo service elasticsearch start
+      sudo service elasticsearch status
+
 
 Verify that Elasticsearch is working by entering the following command on the server on which it is running:
 ```
@@ -42,14 +43,15 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
 ```
 
 Ref:
-- [devdocs](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-overview.html)
-- [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html)
-- [es-config-nginx](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html)
-- [es-config-apache](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-apache.html)
-- [es-configure-magento](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html)
-- [tigren](https://www.tigren.com/magento-2-elasticsearch/)
-- [Max Pronko](https://youtu.be/ES3XIzWiffo)
-- [Magento-2-Elasticsearch-important](https://www.quora.com/What-is-Magento-2-Elasticsearch-Is-it-really-important)
+
+    - [devdocs](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-overview.html)
+    - [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html)
+    - [es-config-nginx](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html)
+    - [es-config-apache](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-apache.html)
+    - [es-configure-magento](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html)
+    - [tigren](https://www.tigren.com/magento-2-elasticsearch/)
+    - [Max Pronko](https://youtu.be/ES3XIzWiffo)
+    - [Magento-2-Elasticsearch-important](https://www.quora.com/What-is-Magento-2-Elasticsearch-Is-it-really-important)
 
 
 
