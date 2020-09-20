@@ -53,7 +53,7 @@ Congratulations! You have set up your development environment for the Venia stor
 
   
   
-  
+  https://youtu.be/_pUZZNBjj6Y
 
 
 ## Ref
