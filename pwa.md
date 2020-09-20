@@ -51,10 +51,11 @@ This is the address for your PWA frontend. You can still use the old address to 
 Congratulations! You have set up your development environment for the Venia storefront project.
 
 
-  
-  
-  https://youtu.be/_pUZZNBjj6Y
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_pUZZNBjj6Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
+
+
+[![M24 PWA](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/_pUZZNBjj6Y "PWA")
+
 
 ## Ref
 
