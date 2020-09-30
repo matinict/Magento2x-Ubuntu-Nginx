@@ -1,6 +1,6 @@
 
 
-#Install PHP 7.3 on Ubuntu
+# Install PHP 7.3 on Ubuntu
 
 PHP 7.2 stable version has been released. Use the following set of commands to enable PPA for PHP 7.2 in your Ubuntu system and install it. You can use this version for production use also.
 
@@ -166,10 +166,28 @@ Finally, restart Nginx and PHP-FPM service to apply all the configuration change
             systemctl restart php7.0-fpm
             systemctl restart php7.2-fpm
 Test Both Websites
+
+
+
+
+
+
 Both websites are now installed and configured run with multiple versions of PHP.
 
 Now, open your web browser and type the URL http://site1.example.com. 
 You will get the following page that indicates that your Website1 is running with PHP 7.0.
 Next, open your web browser and type the URL http://site2.example.com.
 You will get the following page that indicates that your Website2 is running with PHP 7.2.
+
+
+# Switch between Multiple PHP
+
+      sudo update-alternatives --config php
+      
+After run above command select the PHP version that you need to use.Press to keep the current choice[*], or type selection number: For example 2
+After switching below command used to restart the PHP and Nginx server.
+
+      sudo service nginx restart
+      sudo service php7.1-fpm or php7.2-fpm  restart
+
 
