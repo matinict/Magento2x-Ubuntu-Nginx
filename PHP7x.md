@@ -54,11 +54,20 @@ Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and
         php -v 
 
 
-## How to change the PHP version?
+# How to change the PHP version?
 
             $ sudo update-alternatives --config php
             or
             $ sudo update-alternatives -set php /usr/bin/php7.2
+## Switch between Multiple PHP
+
+      sudo update-alternatives --config php
+      
+After run above command select the PHP version that you need to use.Press to keep the current choice[*], or type selection number: For example 2
+After switching below command used to restart the PHP and Nginx server.
+
+      sudo service nginx restart
+      sudo service php7.1-fpm or php7.2-fpm  restart
             
             
 ## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS
@@ -180,14 +189,6 @@ Next, open your web browser and type the URL http://site2.example.com.
 You will get the following page that indicates that your Website2 is running with PHP 7.2.
 
 
-# Switch between Multiple PHP
 
-      sudo update-alternatives --config php
-      
-After run above command select the PHP version that you need to use.Press to keep the current choice[*], or type selection number: For example 2
-After switching below command used to restart the PHP and Nginx server.
-
-      sudo service nginx restart
-      sudo service php7.1-fpm or php7.2-fpm  restart
 
 
