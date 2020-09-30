@@ -68,6 +68,20 @@ After switching below command used to restart the PHP and Nginx server.
 
       sudo service nginx restart
       sudo service php7.1-fpm or php7.2-fpm  restart
+      
+      
+      nano /etc/php/7.x/fpm/php.ini
+        press ctrl + w for searching
+        press ctrl + shift+v for past &  Enter Search
+
+        memory_limit = 2G
+        max_execution_time = 3600
+        max_input_time = 1800
+        upload_max_filesize = 10M
+        zlib.output_compression = On
+        press ctrl + O for saving or Ctrl+x
+        service php7.x-fpm start
+
             
             
 ## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS
