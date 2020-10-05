@@ -95,3 +95,8 @@ Running below SQL query in your database
       TRUNCATE sales_bestsellers_aggregated_monthly;
       TRUNCATE sales_bestsellers_aggregated_daily;
       SET foreign_key_checks = 1;
+
+## Create DB
+
+      mysql> CREATE DATABASE testdb;
+      SHOW CREATE DATABASE testdb;
