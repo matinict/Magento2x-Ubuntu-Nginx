@@ -63,14 +63,16 @@ Prompt for password:
  ### Dumping Triggers / Skip Triggers in mysqldump
  
 
-Hints 
---triggers  (Used to take all the triggers)
---skip-triggers (Used to skiping all the triggers)
+Hints:
+
+   --triggers  (Used to take all the triggers)
+   --skip-triggers (Used to skiping all the triggers)
 
 
 Example:
-   mysqldump -uusername -ppassword db_name --triggers > export_filename.sql
-   mysqldump -uusername -ppassword db_name --routines --skip-triggers > export_filename.sql
+
+      mysqldump -uusername -ppassword db_name --triggers > export_filename.sql
+      mysqldump -uusername -ppassword db_name --routines --skip-triggers > export_filename.sql
 
 
 - To import the data from the old database into the new database that you created in step 1, type the following command. Replace username with the MySQL username, and replace new_dbname with the name of the new database:
