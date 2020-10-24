@@ -52,7 +52,10 @@ Congratulations! You have set up your development environment for the Venia stor
 
 
    
-### My Final Video:
+### My Final Video: 
+
+https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
+
 
 [![M24 PWA](https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ)](https://youtu.be/_pUZZNBjj6Y "PWA")
 
