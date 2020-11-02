@@ -18,6 +18,8 @@ PHP 7.2 stable version has been released. Use the following set of commands to e
       sudo apt-get install -y php7.3
       Now use the following command to check installed php version on your system.
       php -v 
+      sudo apt-get install php7.3 php7.3-fpm php7.3-mysql libapache2-mod-php7.3 -y
+
 
 
 
