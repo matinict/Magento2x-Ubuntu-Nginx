@@ -1,6 +1,14 @@
+# Play with Multi php
 
 
-# Install PHP 7.3 on Ubuntu
+## Install PHP 7.4 on Ubuntu
+ 
+      sudo apt update
+      sudo apt install php7.4
+      sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+
+
+## Install PHP 7.3 on Ubuntu
 
 PHP 7.2 stable version has been released. Use the following set of commands to enable PPA for PHP 7.2 in your Ubuntu system and install it. You can use this version for production use also.
 
@@ -13,7 +21,7 @@ PHP 7.2 stable version has been released. Use the following set of commands to e
 
 
 
-#Install PHP 7.2 on Ubuntu
+## Install PHP 7.2 on Ubuntu
 
 PHP 7.2 stable version has been released. Use the following set of commands to enable PPA for PHP 7.2 in your Ubuntu system and install it. You can use this version for production use also.
 
@@ -30,7 +38,7 @@ PHP 7.2 stable version has been released. Use the following set of commands to e
 
 
 
-#Install PHP 7.1 on Ubuntu
+## Install PHP 7.1 on Ubuntu
 
 Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and install PHP 7.1 version.
 
