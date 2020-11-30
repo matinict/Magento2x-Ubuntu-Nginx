@@ -299,6 +299,9 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
                127.0.0.1	www.magento.lan 
            
           $ sudo ln -s /etc/nginx/sites-available/magento.lan /etc/nginx/sites-enabled
+          
+          [ sudo unlink /etc/nginx/sites-enabled/default ]
+
           $ sudo systemctl restart nginx
           
           http://www.magento.lan/setup
