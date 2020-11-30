@@ -213,7 +213,8 @@ Next, open your web browser and type the URL http://site2.example.com.
 You will get the following page that indicates that your Website2 is running with PHP 7.2.
 
 
-## Issue  Problem 
+## Issue 1.1: composer update  show below error
+
     - Installation request for magento/product-community-edition 2.3.3 -> satisfiable by magento/product-community-edition[2.3.3].
     - magento/product-community-edition 2.3.3 requires ext-pdo_mysql * -> the requested PHP extension pdo_mysql is missing from your system.
 
