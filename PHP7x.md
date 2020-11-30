@@ -228,5 +228,7 @@ Solution:
     composer update --ignore-platform-reqs
 
 
+    nano /etc/php/7.2/fpm/php.ini
+
 
 
