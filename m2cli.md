@@ -78,28 +78,24 @@ php bin/magento setup:upgrade -f
 ## Themes
  
  ```
- If you want pub/static files while installing or updating database then use following command:
-php bin/magento setup:upgrade --keep-generated
-Static Content Deploy(use -f for force deploy on 2.2.x or later):
-php bin/magento setup:static-content:deploy
-Static Content Deploy For Particular Language:
-php bin/magento setup:static-content:deploy en_US
-Static Content Deploy For Magento Backend Theme Using Command Line (Working on 2.1.1 or later)
-php bin/magento setup:static-content:deploy --theme="Magento/backend"
-Static Content Deploy For Specific Themes (Working on 2.1.1 or later)
-php bin/magento setup:static-content:deploy --theme Magento/luma --theme Magento/another_theme
-Exclude Themes on Static Content Deploy and does not minify HTML files Using Command Line (Working on 2.1.1 or later)
-php bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
+
+php bin/magento setup:upgrade --keep-generated  [ If you want pub/static files while installing or updating database then use following command:]
+php bin/magento setup:static-content:deploy [Static Content Deploy(use -f for force deploy on 2.2.x or later):]
+php bin/magento setup:static-content:deploy en_US [Static Content Deploy For Particular Language:]
+php bin/magento setup:static-content:deploy --theme="Magento/backend"  [Static Content Deploy For Magento Backend Theme Using Command Line (Working on 2.1.1 or later)]
+php bin/magento setup:static-content:deploy --theme Magento/luma --theme Magento/another_theme [Static Content Deploy For Specific Themes (Working on 2.1.1 or later)]
+
+php bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify [Exclude Themes on Static Content Deploy and does not minify HTML files Using Command Line (Working on 2.1.1 or later)]
  ```
  
  
 ## Cache & Reindex related commands:
 ```
-Cache Clean: php bin/magento cache:clean
-Cache Flush: php bin/magento cache:flush
-View cache status: php bin/magento cache:status
-Enable Cache: php bin/magento cache:enable [cache_type]
-Disable Cache: php bin/magento cache:disable [cache_type]
+php bin/magento c:c [Cache Clean:]
+php bin/magento c:f [Cache Flush: ]
+php bin/magento c:status [View cache status:]
+php bin/magento c:enable [cache_type Enable Cache: ]
+php bin/magento c:disable [cache_type Disable Cache: ]
 
 php  bin/magento index:reindex
 php -d memory_limit=2G bin/magento index:reindex
