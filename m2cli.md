@@ -116,6 +116,13 @@ php bin/magento module:enable Namespace_Module --clear-static-content [Enable mo
 php bin/magento module:disable Namespace_Module --clear-static-content [Disable module]
 php bin/magento module:uninstall Namespace_Module --clear-static-content [Uninstall Module]
 ```
+### Db module  Related
+```
+SELECT * FROM `setup_module` where `module` like '%Address%'
+DELETE FROM setup_module WHERE module='Namespace_Module'
+DELETE FROM core_config_data WHERE path LIKE 'Namespace_Module%'
+```
+
  
 ## Other Commands:
 
