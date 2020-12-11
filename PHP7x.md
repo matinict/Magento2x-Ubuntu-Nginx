@@ -31,7 +31,32 @@ The installation of php on Ubuntu configures Apache. For users interested in run
     sudo systemctl disable --now apache2 
     sudo apt-get install nginx php7.4-fpm
     systemctl status php7.4-fpm nginx
-    PHP FPM configuration file is /etc/php/7.4/fpm/pool.d/www.conf.
+    
+   PHP FPM configuration file is /etc/php/7.4/fpm/pool.d/www.conf.
+   
+    Change the following lines by replacing the www-data with your username.
+    user = username 
+    group = username 
+    listen.owner = username
+    listen.group = username
+
+    
+    sudo nano /etc/php/7.4/fpm/php.ini
+    
+   Hit F6 for search inside the editor and update the following values for better performance.
+    
+    upload_max_filesize = 32M 
+    post_max_size = 48M 
+    memory_limit = 256M 
+    max_execution_time = 600 
+    max_input_vars = 3000 
+    max_input_time = 1000
+
+ Restart PHP 7.4 FPM
+ 
+    sudo php-fpm7.4 -t 
+    sudo service php7.4-fpm restart
+
 
 
 
