@@ -1,9 +1,10 @@
+## Remove apache2
 
+          sudo service apache2 stop
+          sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+          sudo apt-get autoremove
+          
 
-sudo service apache2 stop
-
-$ sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
-$ sudo apt-get autoremove
 Finally, check if there is any configuration files or manual pages belonging to Apache2, which are still not removed.
 
 $ whereis apache2
