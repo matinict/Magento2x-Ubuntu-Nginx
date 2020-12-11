@@ -28,6 +28,8 @@ The installation of php on Ubuntu configures Apache. For users interested in run
 
     sudo systemctl disable --now apache2 
     sudo apt-get install nginx php7.4-fpm
+    systemctl status php7.4-fpm nginx
+    PHP FPM configuration file is /etc/php/7.4/fpm/pool.d/www.conf.
 
 
 
