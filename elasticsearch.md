@@ -54,10 +54,30 @@ sudo apt-get install -y oracle-java8-installer
       sudo journalctl -f
       sudo journalctl --unit elasticsearch
 
+## 1.4  — Configuring Elasticsearch
+To configure Elasticsearch, we will edit its main configuration file elasticsearch.yml where most of its configuration options are stored. This file is located in the /etc/elasticsearch directory. Use your preferred text editor to edit Elasticsearch’s configuration file. Here, we’ll use nano:
+
+      sudo nano /etc/elasticsearch/elasticsearch.yml
+
+            . . .
+      # ---------------------------------- Network -----------------------------------
+      #
+      # Set the bind address to a specific IP (IPv4 or IPv6):
+      #
+      network.host: localhost
+      
+      
+      sudo systemctl start elasticsearch
+      sudo systemctl enable elasticsearch
+      
+      curl -X GET 'http://localhost:9200'
 
 
 
-## 1.4 Verify  Elasticsearch
+
+
+
+## 1.5 Verify  Elasticsearch
  Elasticsearch is working by entering the following command on the server on which it is running:
  
 
