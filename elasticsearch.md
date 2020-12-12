@@ -1,7 +1,7 @@
 # Elasticsearch On Magento 2.3x
 
 
-## 1.1 Install the JDK on Ubuntu
+## 1.1a Install the JDK on Ubuntu
 To install JDK 1.8 on Ubuntu, enter the following commands as a user with root privileges:
 ```
 sudo add-apt-repository -y ppa:webupd8team/java
@@ -9,8 +9,23 @@ sudo apt-get -y update
 sudo apt-get install -y oracle-java8-installer
 ```
 
+## 1.1b  Install the JDK 1.8 on Ubuntu
 
-## 1.2 Install Elasticsearch 6.x
+      apt-get -y update
+      apt-get install -y openjdk-8-jdk
+       
+
+
+
+## 1.2a Install Elasticsearch 7.x
+
+      wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+      sudo apt-get install apt-transport-https
+      echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
+      sudo apt-get update && sudo apt-get install elasticsearch
+
+
+## 1.2b Install Elasticsearch 6.x
 - Log in to your Magento server as a user with root privileges.
 
 - Ubuntu: Install Elasticsearch 6.x using the Elasticsearch Ubuntu documentation
