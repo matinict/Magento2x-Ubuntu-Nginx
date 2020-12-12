@@ -11,8 +11,8 @@ sudo apt-get install -y oracle-java8-installer
 
 ## 1.1b  Install the JDK 1.8 on Ubuntu
 
-      apt-get -y update
-      apt-get install -y openjdk-8-jdk
+      sudo apt-get -y update
+      sudo apt-get install -y openjdk-8-jdk
        
 
 
