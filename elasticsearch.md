@@ -73,6 +73,11 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
 
 ```
 
+## Problem
+
+#### Job for elasticsearch.service failed because the control process exited with error code.See "systemctl status elasticsearch.service" and "journalctl -xe" for details.
+
+
 ## 1.5 Remove/Uninstall Elasticsearch
 
 
