@@ -2,6 +2,18 @@
 
 
 ## 1.1a Install the JDK on Ubuntu
+      
+      java -version
+      
+      Output
+      Command 'java' not found, but can be installed with:
+
+      apt install default-jre
+      apt install openjdk-11-jre-headless
+      apt install openjdk-8-jre-headless
+
+
+
 To install JDK 1.8 on Ubuntu, enter the following commands as a user with root privileges:
 ```
 sudo add-apt-repository -y ppa:webupd8team/java
