@@ -4,9 +4,9 @@
 ## 1.1 Install the JDK on Ubuntu
 To install JDK 1.8 on Ubuntu, enter the following commands as a user with root privileges:
 ```
-add-apt-repository -y ppa:webupd8team/java
-apt-get -y update
-apt-get install -y oracle-java8-installer
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get -y update
+sudo apt-get install -y oracle-java8-installer
 ```
 
 
