@@ -28,7 +28,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
     
     
       sudo apt-get update
-      sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
+      sudo apt-get -y install git wget curl nano unzip sudo nano net-tools openssh-server
       - Install the Nginx 1.10.x: 
       sudo apt-get -y install nginx
       sudo service nginx start
@@ -104,7 +104,7 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
    # 1.6-Create a new virtual host for accessing to phpmyadmin
     
         
-         sudo  vim /etc/nginx/sites-available/default
+         sudo  nano /etc/nginx/sites-available/default
          Paste the following Nginx configuration for phpmyadmin inside the 'server {...}' bracket.
 
      location /phpmyadmin {
