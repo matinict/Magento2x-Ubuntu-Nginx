@@ -69,6 +69,44 @@ In this example, add a new user called matin to the www-data group, enter:
  
 ### set the password for matin user ###
     sudo passwd matin
+    
+## Live Server Config with https
+ - Remove /etc/nginx/sites-available/default
+ -  create  /etc/nginx/sites-available/domain
+
+ ```
+   upstream fastcgi_backend {
+     server  unix:/run/php/php7.2-fpm.sock;
+   }
+
+   server {
+       listen 443 ssl;
+       ssl_certificate     /etc/nginx/ssl/bundle.crt;
+       ssl_certificate_key /etc/nginx/ssl/private.key;
+
+       server_name domain.com www.domain.com;
+       set $MAGE_ROOT /var/www/prod/magento2;
+       include /var/www/prod/magento2/nginx.conf.sample;
+   }
+
+   server {
+       listen 80;
+
+
+       server_name domain.com www.domain.com;
+       #set $MAGE_ROOT /var/www/prod/magento2;
+
+       #location /.well-known/pki-validation/4D94A304AD65F8463B3EE2992F34C0CA.txt {
+       #    alias /var/www/prod/magento2/4D94A304AD65F8463B3EE2992F34C0CA.txt;
+       #}
+
+       #include /var/www/prod/magento2/nginx.conf.sample;
+
+       return 301 https://domain.com$request_uri;
+   }
+ ```
+
+
 
 ## Troubleshooting Nginx
 
