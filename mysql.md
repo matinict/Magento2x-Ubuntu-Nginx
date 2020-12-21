@@ -124,15 +124,18 @@ The asterisks in this command refer to the database and table (respectively) tha
 
 
 
-### CREATE MYSQL DATABASES AND USERS
+### CREATE MYSQL DATABASES AND USERS:
+
 To create MySQL database and users, follow these steps:
 
 At the command line, log in to MySQL as the root user:
-mysql -u root -p
+
+      mysql -u root -p
+      
 Type the MySQL root password, and then press Enter.
 To create a database user, type the following command. Replace username with the user you want to create, and replace password with the user's password:
 
-GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+      GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 
 
  
@@ -174,6 +177,7 @@ Example:
 
 - To import the data from the old database into the new database that you created in step 1, type the following command. Replace username with the MySQL username, and replace new_dbname with the name of the new database:
 
+      mysql -u username -p database_name < /path/to/file.sql
       mysql -u username -p new_dbname < dbimport.sql
       mysql -u matin -pmatin@123 mydb < mydbfile.sql
 
