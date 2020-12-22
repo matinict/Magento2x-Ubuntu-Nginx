@@ -202,6 +202,16 @@ rm 'debug.log'
 git commit -m "Start ignoring debug.log"
 ```
 
+### add  directory to .gitignore
+
+	$ cat .gitignore
+	# exclude everything except directory foo/bar
+	/*
+	!/foo
+	/foo/*
+	!/foo/bar
+    
+
 ## How to add / commit Directory recusively 
 
 ```
