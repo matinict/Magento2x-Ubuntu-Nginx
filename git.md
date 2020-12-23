@@ -238,7 +238,8 @@ git push origin master [Push the change to your remote repository:]
 
 ### Working With Feature Branch
 ============================================================ 
-LOC:
+
+LOC:*local Branch/ create feature branch each feature
  
 	 git status
 	 git add stagetest.php
@@ -251,13 +252,9 @@ LOC:
 	 git checkout -b gignor1
 	 git log
 	 git push origin stest
+	 git checkout -b gitIgnor2
 
-	git checkout -b gitIgnor2
-
- 
-
-
-
+  
 
 Stage: * stage
 
