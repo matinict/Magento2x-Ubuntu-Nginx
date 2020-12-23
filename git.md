@@ -233,6 +233,56 @@ git commit -m "Remove duplicated directory" [Commit the change:]
 git push origin master [Push the change to your remote repository:]
 ```
 
+
+
+
+### Working With Feature Branch
+============================================================ 
+LOC:
+ 
+	 git status
+	 git add stagetest.php
+	 git status
+	 nano stest.php
+	 git commit -m "stg test"
+	 git push origin mloc
+	 git stash
+	 git status
+	 git checkout -b gignor1
+	 git log
+	 git push origin stest
+
+	git checkout -b gitIgnor2
+
+ 
+
+
+
+
+Stage: * stage
+
+	git status
+	git init
+	git status
+	git branch
+	git add .
+	git commit -m "master ini commit"
+	git remote add origin git@gitlab.eoninfosys.com:matin/eonbazar.git
+	git pull
+	git pull origin
+	git remote add origin http://gitlab.domain.com/matin/project1.git
+	git remote rm origin
+	git remote add origin http://gitlab.domain.com/matin/project1.git
+	git pull --all origin
+	git pull  origin
+	git branch
+	git branch -a
+	git checkout stage
+	stest.php [check  ls]
+
+
+git reset --hard origin/stage
+
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
 - [BranchingMergingYu](https://www.youtube.com/watch?v=FyAAIHHClqI)
