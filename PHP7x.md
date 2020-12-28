@@ -1,5 +1,37 @@
 # Play with Multi php
 
+## Install PHP 8.0 on Ubuntu 18.04/20.4
+    
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:ondrej/php
+
+Once the PPA is enabled, you can install PHP 8. 
+
+    sudo apt install php8.0-fpm
+    sudo systemctl status php8.0-fpm
+    sudo systemctl restart nginx
+    sudo apt install php8.0-mysql php8.0-gd
+    sudo apt install php8.0-snmp php-memcached php8.0-mysql
+    sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
+    php -v
+    sudo vim /var/www/html/info.php
+    
+    systemctl status php8.0-fpm
+    sudo systemctl restart nginx
+    
+    sudo nano /etc/php/8.0/fpm/php.ini
+    
+Hit F6 for search inside the editor and update the following values for better performance.
+
+    upload_max_filesize = 32M 
+    post_max_size = 48M 
+    memory_limit = 256M 
+    max_execution_time = 600 
+    max_input_vars = 3000 
+    max_input_time = 1000
+ 
 
 ## Install PHP 7.4 on Ubuntu 20.4
  
@@ -45,12 +77,14 @@ The installation of php on Ubuntu configures Apache. For users interested in run
     
    Hit F6 for search inside the editor and update the following values for better performance.
     
+    memory_limit = 2G     
+    max_input_time = 1800     
     upload_max_filesize = 32M 
-    post_max_size = 48M 
-    memory_limit = 256M 
+    post_max_size = 48M   
     max_execution_time = 600 
     max_input_vars = 3000 
     max_input_time = 1000
+    zlib.output_compression = On
 
  Restart PHP 7.4 FPM
  
