@@ -317,4 +317,7 @@ Solution:
     nano /etc/php/7.2/fpm/php.ini
 
 
+# Ref
+
+- https://www.atlantic.net/vps-hosting/host-multiple-websites-with-different-php-versions-on-ubuntu-18-04-vps/
 
