@@ -2,11 +2,11 @@
 
  # Install the softwares: 
  
-      $ sudo apt-get update
-      $ sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
+      sudo apt-get update
+      sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
       - Install the Nginx 1.10.x: 
-      $ sudo apt-get -y install nginx
-      $ sudo service nginx start
+      sudo apt-get -y install nginx
+      sudo service nginx start
       nginx -v
       
       Firewall setup:
@@ -16,16 +16,23 @@
       depends on the firewall manager in use on the machine, but here I will assume the ufw is running, 
       since it is the default on Ubuntu.
       
-      First, we verify that the firewall is active:
-      $ sudo ufw status
-      If it's not you can activate it by executing the following linux command:
-      $ sudo ufw enable
-      However be careful when, because as the system will notify you, activating the firewall could destroy currently existing connections. To allow incoming connections via port 80, we should run:
-      $ sudo ufw allow 80/tcp
+   First, we verify that the firewall is active:
+   
+      sudo ufw status
+      
+If it's not you can activate it by executing the following linux command:
+
+      sudo ufw enable
+      
+However be careful when, because as the system will notify you, activating the firewall could destroy currently existing connections. To allow incoming connections via port 80, we should run:
+
+      sudo ufw allow 80/tcp
       To allow port 443, instead:
-      $ sudo ufw allow 443/tcp
-      Finally, to visualize the current status of the firewall, we can run:
-      $ sudo ufw status numbered
+      sudo ufw allow 443/tcp
+      
+ Finally, to visualize the current status of the firewall, we can run:
+ 
+     sudo ufw status numbered
       Status: active
 
            To                         Action      From
@@ -109,6 +116,11 @@ In this example, add a new user called matin to the www-data group, enter:
 
 
 ## Troubleshooting Nginx
+
+### Nginx Error Log File
+
+ cat /var/log/nginx/error.log
+ cat /var/log/nginx/access.log
 
 ### [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 If you get following error, when you try to start nginx…[emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
