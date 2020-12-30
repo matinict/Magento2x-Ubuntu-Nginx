@@ -4,19 +4,14 @@
  
       sudo apt-get update
       sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
-      - Install the Nginx 1.10.x: 
-      sudo apt-get -y install nginx
-      sudo service nginx start
-      nginx -v
       
-      Firewall setup:
-      To make our server being able to serve pages to other machines 
-      we must setup the firewall to allow incoming traffic through port 80 (the default), and port 443 
-      if we want to use the https protocol. The exact command to run to accomplish that, 
-      depends on the firewall manager in use on the machine, but here I will assume the ufw is running, 
-      since it is the default on Ubuntu.
+  - Install the Nginx 1.10.x: 
+
+        sudo apt-get -y install nginx
+        sudo service nginx start
+        nginx -v
       
-   First, we verify that the firewall is active:
+Firewall setup: To make our server being able to serve pages to other machines, we must setup the firewall to allow incoming traffic through port 80 (the default), and port 443, if we want to use the https protocol. The exact command to run to accomplish that,  depends on the firewall manager in use on the machine, but here I will assume the ufw is running,    since it is the default on Ubuntu.First, we verify that the firewall is active:
    
       sudo ufw status
       
