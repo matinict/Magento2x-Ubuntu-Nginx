@@ -127,6 +127,11 @@ In this example, add a new user called matin to the www-data group, enter:
 
     cat /var/log/nginx/error.log
     cat /var/log/nginx/access.log
+    
+ ### Xdubug iisue
+ 
+    sudo phpdismod xdebug
+    sudo service php7.2-fpm restart
 
 ### [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 If you get following error, when you try to start nginx…[emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
