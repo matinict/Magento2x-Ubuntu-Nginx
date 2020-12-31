@@ -16,7 +16,6 @@ Near the end of the installation process, you will be presented with a window th
 
 ## Step 2 — Configuring Postfix
 In this step, you’ll read how to configure Postfix to process requests to send emails only from the server on which it is running, that is, from localhost.
-
 For that to happen, Postfix needs to be configured to listen only on the loopback interface, the virtual network interface that the server uses to communicate internally. To make the change, open the main Postfix configuration file using nano or your favorite text editor.
 
     sudo nano /etc/postfix/main.cf
@@ -53,27 +52,21 @@ The recommended defaults for that scenario are given in the code block below, so
     . . .
 
 Save and close the file.
-
 If you’re hosting multiple domains on a single server, the other domains can also be passed to Postfix using the mydestination directive. However, to configure Postfix in a manner that scales and that does not present issues for such a setup involves additional configurations that are beyond the scope of this article.
-
 Finally, restart Postfix.
 
     sudo systemctl restart postfix
+    
 ## Step 3 — Testing the SMTP Server
 In this step, you’ll test whether Postfix can send emails to an external email account using the mail command, which is part of the mailutils package that was installed in Step 1.To send a test email, type:
 
-    echo "This is the body of the email" | mail -s "This is the subject line" your_email_address
+    echo "This is the body of the email" | mail -s "This is the subject line" matinict@gmail.com
  
-In performing your own test(s), you may use the body and subject line text as-is, or change them to your liking. However, in place of your_email_address, use a valid email address. The domain part can be gmail.com, fastmail.com, yahoo.com, or any other email service provider that you use.
-
-Now check the email address where you sent the test message. You should see the message in your inbox. If not, check your spam folder.
-
+In performing your own test(s), you may use the body and subject line text as-is, or change them to your liking. However, in place of your_email_address, use a valid email address. The domain part can be gmail.com, fastmail.com, yahoo.com, or any other email service provider that you use.Now check the email address where you sent the test message. You should see the message in your inbox. If not, check your spam folder.
 Note that with this configuration, the address in the From field for the test emails you send will be sammy@example.com, where sammy is your Linux username and the domain part is the server’s hostname. If you change your username, the From address will also change.
 
 ## Step 4 — Forwarding System Mail
-The last thing we want to set up is forwarding, so you’ll get emails sent to root on the system at your personal, external email address.
-
-To configure Postfix so that system-generated emails will be sent to your email address, you need to edit the /etc/aliases file.
+The last thing we want to set up is forwarding, so you’ll get emails sent to root on the system at your personal, external email address.To configure Postfix so that system-generated emails will be sent to your email address, you need to edit the /etc/aliases file.
 
     sudo nano /etc/aliases
  
