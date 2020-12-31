@@ -9,6 +9,8 @@ In this step, you’ll learn how to install Postfix. The most efficient way to i
 Finally, install Postfix. Installing mailtuils will install Postfix as well as a few other programs needed for Postfix to function.
 
     sudo apt install mailutils
+    
+    Promt ==> Internet Site
  
 Near the end of the installation process, you will be presented with a window that looks exactly like the one in the image below. The default option is Internet Site. That’s the recommended option for this tutorial, so press TAB, then ENTER.
 
