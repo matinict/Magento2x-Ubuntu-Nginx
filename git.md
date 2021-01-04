@@ -241,18 +241,25 @@ git push origin master [Push the change to your remote repository:]
 
 LOC:*local Branch/ create feature branch each feature
  
-	 git status
-	 git add stagetest.php
-	 git status
-	 nano stest.php
-	 git commit -m "stg test"
-	 git push origin mloc
-	 git stash
-	 git status
-	 git checkout -b gignor1
-	 git log
-	 git push origin stest
-	 git checkout -b gitIgnor2
+	git status
+	git add stagetest.php
+	git status
+	nano stest.php
+	git commit -m "stg test"
+	git push origin mloc
+	git stash
+	git status
+	git checkout -b gignor1
+	git log
+	git push origin stest
+	git checkout -b gitIgnor2
+	git checkout -b gitIgnore3 [Feature Name:gitIgnore3 ]
+	git branch
+	git status
+	git add .gitignore
+	git commit -m "remove media issue"
+	git push
+	git push origin gitIgnore3
 
   
 
