@@ -1,5 +1,6 @@
-## m2 cron
+# m2 cron
 
+## Create the Magento crontab
 
 Cron Set Config :
 
@@ -20,3 +21,27 @@ Cron Cli List :
     crontab -l
     bin/magento cron:remove
     crontab -l
+    
+## Run cron from the command line
+
+Command options:
+
+    bin/magento cron:run [--group="<cron group name>"]
+where --group specifies the cron group to run (omit this option to run cron for all groups)
+
+To run the indexing cron job, enter:
+
+    bin/magento cron:run --group index
+To run the default cron job, enter:
+
+    bin/magento cron:run --group default
+    
+## Remove the Magento crontab
+You should remove the Magento crontab only before uninstalling the Magento application. To remove the Magento crontab:Log in as or switch to the Magento file system owner.Change to the Magento installation directory.Enter the following command:
+
+    bin/magento cron:remove
+
+
+## Ref
+
+https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html#create-or-remove-the-magento-crontab
