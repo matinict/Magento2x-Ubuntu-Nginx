@@ -23,6 +23,24 @@ On the Admin sidebar, go to Stores > Settings > Configuration.In the left panel,
        Set the Frequency.
        Set Maintenance Mode to Yes.
        When complete, click Save Config.
+       
+ ## Backup From Terminal 
+ 
+ - DB Backup:
+ 
+        mysqldump -u root -p root@123 > magento_prod20210105a.sql
+        mysql -u root -p root@123 < magento_prod20210105a.sql 
+    
+- File Backup:
+
+        Tar:
+        tar -czvf name-of-archive.tar.gz /path/to/directory-or-file 
+        tar -czvf media20210104.tar.gz media
+
+        unzip tar:
+        tar -zcvf media20210104.tar.gz /var/www/html/magento2/pub/media/
+        tar -zcvf magento_prod20210103b.tar.gz magento_prod20210103b.sql
+        tar -zxvf product20210105.tar.gz
 
 ## Ref
 
