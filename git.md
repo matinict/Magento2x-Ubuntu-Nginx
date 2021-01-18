@@ -251,6 +251,8 @@ LOC:*local Branch/ create feature branch each feature
 	git status
 	git checkout -b gignor1
 	git log
+	git add dir/*
+	git commit -m "master ini commit"
 	git push origin stest
 	git checkout -b gitIgnor2
 	git checkout -b gitIgnore3 [Feature Name:gitIgnore3 ]
