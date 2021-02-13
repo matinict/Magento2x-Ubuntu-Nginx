@@ -1,28 +1,26 @@
 
 
-#Install MySQL
 
-MySQL is the most popular open source Relational Database Management System (RDBMS) created by Oracle Corporation. It's a central component of the LEMP Stack, and we will install the latest MySQL version from the Ubuntu repository.
 
-Install MySQL using the apt command below.
+## 1.5- Install phpMyAdmin
 
-    sudo apt install mysql-server mysql-client -y
+install PHPMyAdmin using the apt command below.
+  sudo apt install phpmyadmin -y
+  
+ During the installation, it will ask you about the web server configuration for phpmyadmin.
+ Choose none option and move the cursor to: 'OK'.
+ For the phpmyadmin database configuration: choose 'Yes'
+ And type new 'STRONG' phpmyadmin admin such as 'Hakaselabs001@#'.
 
-After the MySQL installation is complete, start the MySQL service and enable it to launch everytime at system boot.
-
-    systemctl start mysql
-    systemctl enable mysql
+ Enter a password: "phpmyadmin@123"
+ Repeat the "phpmyadmin@123" password.
 
 
  
  #Install PhpMyAdmin
  
  
-PhpMyAdmin is a PHP based application to manage MySQL or MariaDB databases from a web browser.
-
-In this step, we will install and configure phpmyadmin under the LEMP (Linux, Nginx, MySQL, and PHP-FPM) stack.
-
-Install PHPMyAdmin using the apt command below.
+PhpMyAdmin is a PHP based application to manage MySQL or MariaDB databases from a web browser.In this step, we will install and configure phpmyadmin under the LEMP (Linux, Nginx, MySQL, and PHP-FPM) stack.Install PHPMyAdmin using the apt command below.
 
     sudo apt install phpmyadmin -y
 
