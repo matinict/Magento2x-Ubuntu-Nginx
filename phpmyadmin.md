@@ -2,9 +2,7 @@
 
 
 
-## 1.5- Install phpMyAdmin
-
-install PHPMyAdmin using the apt command below.
+## - Install phpMyAdmin 
 
     sudo apt install phpmyadmin -y
   
@@ -31,9 +29,9 @@ Choose none option and move the cursor to 'OK'.
 
 For the phpmyadmin database configuration, choose 'Yes'.
 
-And type new 'STRONG' phpmyadmin admin such as 'PhpMyAdmin@123'.
+And type new 'STRONG' phpmyadmin admin such as 'phpmyadmin'.
 
-Repeat the 'PhpMyAdmin@123' password.
+Repeat the 'phpmyadmin' password.
 
 
 And the phpmyadmin installation is complete.
@@ -119,6 +117,12 @@ And below is all information about PHP server configuration.
 
 
 
+## Remove 
+
+    sudo apt-get remove phpmyadmin
+    sudo apt-get purge phpmyadmin
+    
+    sudo apt-get autoremove
 
 
 
