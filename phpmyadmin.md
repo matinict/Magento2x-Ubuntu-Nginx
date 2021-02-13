@@ -5,7 +5,8 @@
 ## 1.5- Install phpMyAdmin
 
 install PHPMyAdmin using the apt command below.
-  sudo apt install phpmyadmin -y
+
+    sudo apt install phpmyadmin -y
   
  During the installation, it will ask you about the web server configuration for phpmyadmin.
  Choose none option and move the cursor to: 'OK'.
