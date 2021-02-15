@@ -209,3 +209,12 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
  php bin/magento cron:run
  
  ```
+
+## Change Customer Password From DB
+
+    UPDATE `customer_entity`
+    SET `password_hash` = CONCAT(SHA2('xxxxxxxxYOURPASSWORD', 256), ':xxxxxxxx:1')
+    WHERE email='matinict@gmail.com'
+
+
+## Change 
