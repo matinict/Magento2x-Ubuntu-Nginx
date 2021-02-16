@@ -2,14 +2,14 @@
 
 
 
-Step 2 –Install it on Ubuntu 20.04 LTS:
+### Step 1 –Install it on Ubuntu 20.04 LTS:
 
       sudo apt search mysql-server
       sudo apt info mysql-server
       
       sudo apt install mysql-server
  
-To secure the installation:
+### Step 2 – Securing MySQL server
 
       sudo mysql_secure_installation
  
