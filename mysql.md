@@ -13,19 +13,61 @@
 
       sudo mysql_secure_installation
  
-This script will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
+      ```
+      Securing the MySQL server deployment. Connecting to MySQL using a blank password.
 
-Warning: Enabling this feature is something of a judgment call. If enabled, passwords which don’t match the specified criteria will be rejected by MySQL with an error. This will cause issues if you use a weak password in conjunction with software which automatically configures MySQL user credentials, such as the Ubuntu packages for phpMyAdmin. It is safe to leave validation disabled, but you should always use strong, unique passwords for database credentials.
+      VALIDATE PASSWORD COMPONENT can be used to test passwords
+      and improve security. It checks the strength of password
+      and allows the users to set only those passwords which are
+      secure enough. Would you like to setup VALIDATE PASSWORD component?
 
-Answer Y for yes, or anything else to continue without enabling.
+      Press y|Y for Yes, any other key for No: n
+      Please set the password for root here.
 
-VALIDATE PASSWORD PLUGIN can be used to test passwords
-and improve security. It checks the strength of password
-and allows the users to set only those passwords which are
-secure enough. Would you like to setup VALIDATE PASSWORD plugin?
+      New password: 
 
-Press y|Y for Yes, any other key for No:
-If you’ve enabled validation, the script will also ask you to select a level of password validation. Keep in mind that if you enter 2 – for the strongest level – you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters, or which is based on common dictionary words.
+      Re-enter new password: 
+      By default, a MySQL installation has an anonymous user,
+      allowing anyone to log into MySQL without having to have
+      a user account created for them. This is intended only for
+      testing, and to make the installation go a bit smoother.
+      You should remove them before moving into a production
+      environment.
+
+      Remove anonymous users? (Press y|Y for Yes, any other key for No) : no
+
+       ... skipping.
+
+
+      Normally, root should only be allowed to connect from
+      'localhost'. This ensures that someone cannot guess at
+      the root password from the network.
+
+      Disallow root login remotely? (Press y|Y for Yes, any other key for No) : no
+
+       ... skipping.
+      By default, MySQL comes with a database named 'test' that
+      anyone can access. This is also intended only for testing,
+      and should be removed before moving into a production
+      environment.
+
+
+      Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+       - Dropping test database...
+      Success.
+
+       - Removing privileges on test database...
+      Success.
+
+      Reloading the privilege tables will ensure that all changes
+      made so far will take effect immediately.
+
+      Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+      Success.
+
+      All done! 
+
+      ```
 
 There are three levels of password validation policy:
 ```
