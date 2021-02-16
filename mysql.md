@@ -2,16 +2,14 @@
 
 
 
-Step 2 – Installing MySQL to Manage Site Data
-Now that you have a web server, you need to install MySQL (a database management system) to store and manage the data for your site.
+Step 2 –Install it on Ubuntu 20.04 LTS:
 
-Install MySQL by typing:
-
+      sudo apt search mysql-server
+      sudo apt info mysql-server
+      
       sudo apt install mysql-server
  
-The MySQL database software is now installed, but its configuration is not yet complete.
-
-To secure the installation, MySQL comes with a script that will ask whether we want to modify some insecure defaults. Initiate the script by typing:
+To secure the installation:
 
       sudo mysql_secure_installation
  
