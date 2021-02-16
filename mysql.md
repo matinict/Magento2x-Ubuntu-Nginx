@@ -100,15 +100,15 @@ Note that in Ubuntu systems running MySQL 5.7 (and later versions), the root MyS
      Memory: 338.6M
      CGroup: /system.slice/mysql.service
              └─1129 /usr/sbin/mysqld 
-
-### Step 4 – Starting/Stopping/Restarting MySQL server
-We can control the MySQL server on Ubuntu using the command line option itself. Let us start it with
+             
+### Step 4 – Starting/Stopping/Restarting MySQL server 
 
       sudo systemctl start mysql.service 
       sudo systemctl stop mysql.service 
       sudo systemctl restart mysql.service 
       sudo journalctl -u mysql.service -xe
       sudo tail -f /var/log/mysql/error.log
+      
 
 ### ￼Truoble in PhpMyAdmin Login
 
@@ -153,27 +153,21 @@ Output:
 +------------------+-------------------------------------------+-----------------------+-----------+
 4 rows in set (0.00 sec)
 ```
-You can see in this example output that the root MySQL user now authenticates using a password. Once you confirm this on your own server, you can exit the MySQL shell:
-
-exit
- 
+You can see in this example output that the root MySQL user now authenticates using a password. Once you confirm this on your own server, you can exit the MySQL shell: exit
 Note: After configuring your root MySQL user to authenticate with a password, you’ll no longer be able to access MySQL with the sudo mysql command used previously. Instead, you must run the following:
 
       mysql -u root -p
  
-After entering the password you just set, you will see the MySQL prompt.
-
-At this point, your database system is now set up and you can move on to installing PHP
+After entering the password you just set, you will see the MySQL prompt.At this point, your database system is now set up and you can move on to installing PHP
 
 
 ### How to Create a New User 
 
-```
-   # sudo mysql -u root -p
-   CREATE USER 'matin'@'localhost' IDENTIFIED BY 'matin@123';
-   CREATE USER 'matin'@'127.0.0.1' IDENTIFIED BY 'matin@123';
-   CREATE USER 'matin'@'*' IDENTIFIED BY 'matin@123';
-  ```
+         # sudo mysql -u root -p
+         CREATE USER 'matin'@'localhost' IDENTIFIED BY 'matin@123';
+         CREATE USER 'matin'@'127.0.0.1' IDENTIFIED BY 'matin@123';
+         CREATE USER 'matin'@'*' IDENTIFIED BY 'matin@123';
+  
 
 ### At this point newuser has no permissions to do anything with the databases.
 
@@ -248,19 +242,12 @@ Example:
 
       mysql -u username -p database_name < /path/to/file.sql
       mysql -u username -p new_dbname < dbimport.sql
-      mysql -u matin -pmatin@123 mydb < mydbfile.sql
+      mysql -u matin -pmatin@123 mydb < mydbfile.sql 
 
-- To delete the old database, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database to delete:
-
-      mysql -u username -p -e "DROP DATABASE old_dbname"
-      
-
-- This step is optional. You do not have to delete the old database.You can now use the new database named new_dbname, which contains all of the tables and data from the old database.
+      mysql -u username -p -e "DROP DATABASE old_dbname" 
 
 
-### Log cleaning in Magento 2
-Running below SQL query in your database
-
+### Log cleaning in Magento 2 
  
 
       SET foreign_key_checks = 0;
@@ -298,4 +285,8 @@ Running below SQL query in your database
       
       rm -rf /etc/mysql
       sudo find / -iname 'mysql*' -exec rm -rf {} \;
+      
+      
+      
+### Ref
  
