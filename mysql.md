@@ -43,6 +43,35 @@ For the rest of the questions, you should press Y and hit the ENTER key at each 
 
 Note that in Ubuntu systems running MySQL 5.7 (and later versions), the root MySQL user is set to authenticate using the auth_socket plugin by default rather than with a password. This allows for some greater security and usability in many cases, but it can also complicate things when you need to allow an external program (e.g., phpMyAdmin) to access the user.
 
+### Step 3 – Enabling MySQL server at boot time  server start when Ubuntu 20.04 LTS boots:
+
+      sudo systemctl is-enabled mysql.service
+      sudo systemctl enable mysql.service
+      sudo systemctl status mysql.service
+
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2020-10-23 09:20:17 UTC; 16min ago
+   Main PID: 1129 (mysqld)
+     Status: "Server is operational"
+      Tasks: 40 (limit: 4680)
+     Memory: 338.6M
+     CGroup: /system.slice/mysql.service
+             └─1129 /usr/sbin/mysqld 
+
+### Step 4 – Starting/Stopping/Restarting MySQL server
+We can control the MySQL server on Ubuntu using the command line option itself. Let us start it with
+
+      sudo systemctl start mysql.service 
+      sudo systemctl stop mysql.service 
+      sudo systemctl restart mysql.service 
+      sudo journalctl -u mysql.service -xe
+      sudo tail -f /var/log/mysql/error.log
+
+### ￼Truoble in PhpMyAdmin Login
+
+mysqli_real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]
+
 If using the auth_socket plugin to access MySQL fits with your workflow, you can proceed to Step 3. If, however, you prefer to use a password when connecting to MySQL as root, you will need to switch its authentication method from auth_socket to mysql_native_password. To do this, open up the MySQL prompt from your terminal:
 
       sudo mysql 
@@ -62,7 +91,7 @@ Output
 ```
 In this example, you can see that the root user does in fact authenticate using the auth_socket plugin. To configure the root account to authenticate with a password, run the following ALTER USER command. Be sure to change password to a strong password of your choosing:
 
-      ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+      ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'matin@123';
       FLUSH PRIVILEGES;
  
 Check the authentication methods employed by each of your users again to confirm that root no longer authenticates using the auth_socket plugin:
