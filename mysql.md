@@ -226,4 +226,7 @@ Running below SQL query in your database
       sudo apt-get autoclean -y
       sudo apt-get remove dbconfig-mysql -y
       sudo apt-get dist-upgrade -y
-      sudo apt-get install mysql-server -y
+      
+      rm -rf /etc/mysql
+      sudo find / -iname 'mysql*' -exec rm -rf {} \;
+ 
