@@ -312,9 +312,20 @@ You will get the following page that indicates that your Website2 is running wit
 Solution:
 
     composer update --ignore-platform-reqs
-
-
     nano /etc/php/7.2/fpm/php.ini
+    
+## issue php not running 
+
+    # pass PHP scripts to FastCGI server
+    #
+    location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    #
+    # # With php-fpm (or other unix sockets):
+    fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+    # # With php-cgi (or other tcp sockets):
+    # fastcgi_pass 127.0.0.1:9000;
+    }
 
 
 # Ref
