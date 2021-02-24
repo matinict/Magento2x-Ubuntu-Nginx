@@ -29,6 +29,13 @@ To install JDK 1.8 on Ubuntu, enter the following commands as a user with root p
       sudo apt-get install apt-transport-https
       echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
       sudo apt-get update && sudo apt-get install elasticsearch
+      
+      OR,
+      wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.11.1-amd64.deb
+      wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.11.1-amd64.deb.sha512
+      shasum -a 512 -c elasticsearch-7.11.1-amd64.deb.sha512 
+      sudo dpkg -i elasticsearch-7.11.1-amd64.deb
+
 
  
 
