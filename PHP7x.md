@@ -36,8 +36,8 @@ Hit F6 for search inside the editor and update the following values for better p
 ## Install PHP 7.4 on Ubuntu 20.4
  
       sudo apt update
-      sudo apt install php7.4
-      sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+      sudo apt -y install php7.4
+      sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl 
       
       
   
@@ -48,17 +48,14 @@ Hit F6 for search inside the editor and update the following values for better p
     sudo add-apt-repository ppa:ondrej/php
     sudo apt-get update
  
-    sudo apt -y install php7.4
+    sudo apt -y install php7.4 
     sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
 
     php -v
-    
-
     sudo apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,common}
 
 PHP configurations related to Apache is stored in /etc/php/7.4/apache2/php.ini
-Using PHP 7.4 with Nginx on Ubuntu:
-The installation of php on Ubuntu configures Apache. For users interested in running Nginx and PHP, you need to stop and disable Apache service.
+Using PHP 7.4 with Nginx on Ubuntu:The installation of php on Ubuntu configures Apache. For users interested in running Nginx and PHP, you need to stop and disable Apache service.
 
     sudo systemctl disable --now apache2 
     sudo apt-get install nginx php7.4-fpm
