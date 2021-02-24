@@ -18,7 +18,7 @@
         sudo ufw allow 443/tcp 
         
         sudo ufw status numbered
-        
+      ```  
       Status: active
 
            To                         Action      From
@@ -27,7 +27,7 @@
       [ 2] 80/tcp                     ALLOW IN    Anywhere
       [ 3] 443/tcp (v6)               ALLOW IN    Anywhere (v6)
       [ 4] 80/tcp (v6)                ALLOW IN    Anywhere (v6)
-      
+      ```
 If you do not have a domain name pointed at your server and you do not know your server’s public IP address, you can find it by running the following command:
 
     ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//' 
@@ -137,7 +137,9 @@ Then it means nginx or some other process is already using port 80. You can kill
  grep -r 'listen ' /etc/nginx/* 
  ``` 
 
-### nginx: [warn] could not build optimal proxy_headers_hash, you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
+### nginx: [warn] could not build optimal proxy_headers_hash, 
+
+you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
 
 
 
