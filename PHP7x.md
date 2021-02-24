@@ -58,7 +58,7 @@ PHP configurations related to Apache is stored in /etc/php/7.4/apache2/php.ini
 Using PHP 7.4 with Nginx on Ubuntu:The installation of php on Ubuntu configures Apache. For users interested in running Nginx and PHP, you need to stop and disable Apache service.
 
     sudo systemctl disable --now apache2 
-    sudo apt-get install nginx php7.4-fpm
+    sudo apt-get -y install nginx php7.4-fpm
     systemctl status php7.4-fpm nginx
     
    PHP FPM configuration file is /etc/php/7.4/fpm/pool.d/www.conf.
