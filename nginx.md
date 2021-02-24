@@ -9,25 +9,16 @@
 
         sudo apt-get -y install nginx
         sudo service nginx start
-        nginx -v
-      
-Firewall setup: To make our server being able to serve pages to other machines, we must setup the firewall to allow incoming traffic through port 80 (the default), and port 443, if we want to use the https protocol. The exact command to run to accomplish that,  depends on the firewall manager in use on the machine, but here I will assume the ufw is running,    since it is the default on Ubuntu.First, we verify that the firewall is active:
+        nginx -v 
    
-      sudo ufw status
-      
-If it's not you can activate it by executing the following linux command:
-
-      sudo ufw enable
-      
-However be careful when, because as the system will notify you, activating the firewall could destroy currently existing connections. To allow incoming connections via port 80, we should run:
-
-      sudo ufw allow 80/tcp
-      To allow port 443, instead:
-      sudo ufw allow 443/tcp
-      
- Finally, to visualize the current status of the firewall, we can run:
- 
-     sudo ufw status numbered
+        sudo ufw status 
+        sudo ufw enable  
+        sudo ufw allow 80/tcp
+        To allow port 443, instead:
+        sudo ufw allow 443/tcp 
+        
+        sudo ufw status numbered
+        
       Status: active
 
            To                         Action      From
