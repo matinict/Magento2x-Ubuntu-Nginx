@@ -1,21 +1,14 @@
 # Magento2x-Ubuntu-Nginx
 
-How to install Magento 2.3 on Ubuntu with Nginx.
+How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environment:
 
-Development Environment:
-
-     Magento 2.3.x
+     Magento 2.3x / 2.4x
      nginx/1.14.x
-     PHP 7.2.x
-     MySQL 5.7
-     Ubuntu 18.04
+     PHP 7.2x -7.4x
+     MySQL 5.7-8x
+     Ubuntu 18.04-20.04
   
- 
- I am going to show everybody the best practice, How to install Magento 2.3x on Ubuntu with Nginx.
- I will show everybody steps by step to install Magento 2.3x on Ubuntu 18.04 with Nginx 1.10.x, PHP 7.2.x and MySQL 5.7.
- 
-
-Okie, let's go.Let's do this practice, you need to follow steps by step:
+  
 
 # Step 1: Installing the server. 
 
@@ -29,39 +22,38 @@ Okie, let's go.Let's do this practice, you need to follow steps by step:
     
       sudo apt-get update
       sudo apt-get -y install git wget curl nano unzip sudo nano net-tools openssh-server
-      - Install the Nginx 1.10.x: 
       sudo apt-get -y install nginx
       sudo service nginx start
       nginx -v
-      ## port 80. Enable this by typing:
       sudo ufw app list
-      ## verify the change by running
       sudo ufw allow 'Nginx HTTP'
-      ##check ip on browser
       curl -4 icanhazip.com
       
    # 1.2- Install PHP 7.2.x and the required PHP extensions: 
    
-      apt-get install software-properties-common
-      add-apt-repository ppa:ondrej/php
-      apt-get update
-      apt-cache search php7.2
-      apt-get install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap php-xdebug php-imagick
+      sudo apt-get install software-properties-common
+      sudo add-apt-repository ppa:ondrej/php
+      sudo apt-get update
+      sudo apt-cache search php7.2
+      sudo apt-get install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap php-xdebug php-imagick 
+      sudo apt-get -y install php7.2-fpm
       
-      php -v
-      - Install PHP 7.2 FPM:
-      apt-get install php7.2-fpm
-      nano /etc/php/7.2/fpm/php.ini
+      
+     sudo nano /etc/php/7.2/fpm/php.ini
+     sudo nano /etc/php/7.3/fpm/php.ini
+     sudo nano /etc/php/7.4/fpm/php.ini
+     
       press ctrl + w for searching
       press ctrl + shift+v for past &  Enter Search
        
-      memory_limit = 2G
+      memory_limit = 4G
       max_execution_time = 3600
       max_input_time = 1800
       upload_max_filesize = 10M
       zlib.output_compression = On
       press ctrl + O for saving or Ctrl+x
-      service php7.2-fpm start
+      
+      sudo service php7.2-fpm start
       
            
    # 1.3- Install Composer:
