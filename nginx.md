@@ -101,7 +101,7 @@ In this example, add a new user called matin to the www-data group, enter:
 
 
 
-## Troubleshooting Nginx
+## Troubleshooting Point Nginx
 
 
 #### Nginx Config 
@@ -118,8 +118,10 @@ In this example, add a new user called matin to the www-data group, enter:
  
     sudo phpdismod xdebug
     sudo service php7.2-fpm restart
+    
+## Problem List
 
-### [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
+### Problem-01 : [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 If you get following error, when you try to start nginx…[emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 Then it means nginx or some other process is already using port 80. You can kill it using:And then try restarting nginx again
  ```
@@ -137,9 +139,17 @@ Then it means nginx or some other process is already using port 80. You can kill
  grep -r 'listen ' /etc/nginx/* 
  ``` 
 
-### nginx: [warn] could not build optimal proxy_headers_hash, 
+### Problem-02: [warn] could not build optimal proxy_headers_hash, 
 
 you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_hash_bucket_size: 64; ignoring proxy_headers_hash_bucket_size
+
+
+### Problem-03: EOF Showing NGINX
+
+
+Server showing EOF text
+
+
 
 
 
