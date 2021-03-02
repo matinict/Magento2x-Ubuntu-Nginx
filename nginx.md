@@ -2,15 +2,12 @@
 
  # Install the softwares: 
  
-      sudo apt-get update
-      sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server
-      
-  - Install the Nginx 1.10.x: 
-
+        sudo apt-get update
+        sudo apt-get -y install git wget curl nano unzip sudo vim net-tools openssh-server 
         sudo apt-get -y install nginx
         sudo service nginx start
-        nginx -v 
-   
+        nginx -v    
+        
         sudo ufw status 
         sudo ufw enable  
         sudo ufw allow 80/tcp
