@@ -147,10 +147,18 @@ you should increase either proxy_headers_hash_max_size: 512 or proxy_headers_has
 ### Problem-03: EOF Showing NGINX
 
 
-Server showing EOF text
+Server showing EOF text , Posiiblbe cause as below
+
+-  Ip of Host not valid/accesable
+-  check localhost using VPN
+ 
+
+### Problem-04: 
 
 
 
-
-
+ 
+ 
+ ## Ref
+ 
  
