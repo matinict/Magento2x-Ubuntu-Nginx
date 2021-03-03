@@ -150,7 +150,12 @@ Server showing EOF text , Posiiblbe cause as below
 -  check localhost using VPN
  
 
-### Problem-04: 
+### Problem-04:  Customer Login Issue 
+
+
+     #fastcgi_buffers 1024 4k;
+     fastcgi_buffers 11024 16k;
+     fastcgi_buffer_size 32k;
 
 
 
