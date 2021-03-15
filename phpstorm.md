@@ -1,9 +1,8 @@
 
-## Way-1: Reset Expiration 1 month  Evaluation
+## Way-1: Reset Expiration 1 month  Evaluation Enjoy again 1 month 
 
-      rm ~/.config/JetBrains/PhpStorm2020.3/options/other.xml
-      rm -rf ~/.config/JetBrains/PhpStorm2020.3/eval/*
-      rm -rf .java/.userPrefs
+      rm -rf ~/.config/JetBrains/PhpStorm2020.3/
+      rm -rf .java/.userPrefs/
       
 ## Way-2: /etc/hosts.
 
