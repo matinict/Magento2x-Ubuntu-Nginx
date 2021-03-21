@@ -3,6 +3,14 @@
 
 ### Step 1 — Enabling HTTP/2 Support
 
+Enable HTTP/2 in Nginx
+
+    listen 443 ssl http2;
+    
+And reload your Nginx configuration:
+
+    sudo systemctl reload nginx.service
+
 Open the configuration file for your domain:
 
     sudo nano /etc/nginx/sites-available/your_domain
