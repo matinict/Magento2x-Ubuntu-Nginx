@@ -223,17 +223,18 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
 
 
 
-## MERGE CSS/JS
+## Merge & Minify CSS/JS
 
     bin/magento config:set dev/css/merge_css_files 1
-    bin/magento cache:clean
+    bin/magento c:c
     
-    or 
     
     php bin/magento config:set dev/css/merge_css_files 1
     php bin/magento config:set dev/css/minify_files 1
+    
+    For JS (Be carefull ):  
 
     php bin/magento config:set dev/js/merge_files 1
     php bin/magento config:set dev/js/minify_files 1
    
-   
+    bin/magento c:f
