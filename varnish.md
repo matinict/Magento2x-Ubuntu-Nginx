@@ -1,25 +1,11 @@
-## Install and configure Varnish
+## Install and configure Varnish 
 
-- Installing Varnish is as simple as running the following command:
+		sudo apt-get install varnish -y 
+		sudo systemctl start varnish
+		sudo systemctl enable varnish
+		netstat -plntu
 
-```
-sudo apt-get install varnish -y
-
-```
-
-After that you need to start Varnish. Use following commands to start Varnish and launch it at system boot:
-
-```
-sudo systemctl start varnish
-sudo systemctl enable varnish
-```
 By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend.
-You can check if Varnish is running and its port using netstat command:
-
-```
-netstat -plntu
-```
-
 
 ## Config Magento Admin
 From your Magento Admin dashboard click on the STORES==> Configuration -> ADVANCED -> System -> Full Page Cache Unselected Use system value and from the Caching Application list==> select Varnish Cache (Recommended)==>save the configuration, click on the Varnish Configuration link and click on the Export VCL for Varnish 4 button. The varnish.vcl file which we will use will be exported in the directory /var/www/myMagentoSite.com/var/.
