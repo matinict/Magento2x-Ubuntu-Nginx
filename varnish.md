@@ -85,8 +85,8 @@ The varnish.vcl file which we will use will be exported in the directory /var/ww
 
 		sudo systemctl restart nginx
 		sudo systemctl restart varnish 
-		sudo bin/magento setup:store-config:set --base-url="http://magento.lan"
-		sudo php bin/magento cache:flush
+		php bin/magento setup:store-config:set --base-url="http://magento.lan"
+		php bin/magento cache:flush
  
 
 If everything is setup correctly now you should be able to login to your Magento back-end by going to 
@@ -97,9 +97,7 @@ https://magento.lan/admin
 
 ## Varnish with Apache: 
 
-- To change the varnish port from 6081 to 80, we need to edit the systemd service configuration.
-
-Create a new customexec.conf file
+- To change the varnish port from 6081 to 80, 
 ```
 sudo mkdir -p /etc/systemd/system/varnish.service.d
 sudo nano /etc/systemd/system/varnish.service.d/customexec.conf
