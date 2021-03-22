@@ -120,7 +120,8 @@ Important headers:
 	X-Magento-Cache-Control: max-age=86400, public, s-maxage=86400
 	Age: 0
 	X-Magento-Cache-Debug: MISS
-	This value is also acceptable: X-Magento-Cache-Debug: HIT.
+	
+	[This value is also acceptable: X-Magento-Cache-Debug: HIT]
 
 
 ### Clear Varnish Cache
