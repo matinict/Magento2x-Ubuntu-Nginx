@@ -10,11 +10,21 @@
         
         sudo ufw status 
         sudo ufw enable  
-        sudo ufw allow 80/tcp
-        To allow port 443, instead:
-        sudo ufw allow 443/tcp 
+        sudo ufw allow 80/tcp 
+        sudo ufw allow 8080/tcp      
+        sudo ufw allow 443/tcp   
+        sudo ufw allow https
+        sudo ufw allow 'Nginx HTTPS'
+        
+        sudo ufw allow 7100:7200/tcp
+        sudo ufw allow 7100:7200/udp
+        
+        sudo ufw allow from 64.63.62.61
+        
+        sudo ufw allow from 64.63.62.61 to any port 22
         
         sudo ufw status numbered
+        
       ```  
       Status: active
 
