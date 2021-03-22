@@ -112,8 +112,8 @@ Now that you’re using the default.vcl generated for you by Magento, you can pe
 
 For example,
 	
-	curl -I http://magento.lan
-	curl -I -v --location-trusted 'http://magento.lan'
+	curl -I http://www.magento.lan
+	curl -I -v --location-trusted 'http://www.magento.lan'
 	
 Important headers:
 
