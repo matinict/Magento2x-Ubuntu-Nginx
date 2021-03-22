@@ -89,14 +89,16 @@ The varnish.vcl file which we will use will be exported in the directory /var/ww
 		sudo systemctl restart nginx
 		sudo systemctl restart varnish 
 		php bin/magento setup:store-config:set --base-url="http://www.magento.lan"
-		php bin/magento setup:config:set --http-cache-hosts=127.0.0.1:8080		
-		 magento setup:config:set   \
+		php bin/magento setup:config:set --http-cache-hosts=127.0.0.1:8080	
+		php bin/magento cache:flush
+		
+		
+		magento setup:config:set   \
 		--db-ssl-key=""  \
 		--db-ssl-cert=""  \
 		--db-ssl-ca=/path/tho/ca.pem  \
 		--db-ssl-verify  \
 		--session-save=db
-		php bin/magento cache:flush
 		
  
 
