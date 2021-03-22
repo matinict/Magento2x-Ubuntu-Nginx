@@ -122,6 +122,11 @@ Important headers:
 	X-Magento-Cache-Debug: MISS
 	
 	[This value is also acceptable: X-Magento-Cache-Debug: HIT]
+	
+	
+	rm -rf  var/page_cache/* 
+	
+Check the var/page_cache/ directory.If the directory is empty, congratulations! 
 
 
 ### Clear Varnish Cache
