@@ -97,68 +97,15 @@ If everything is setup correctly now you should be able to login to your Magento
 https://magento.lan/admin
 
 
-
-## Varnish with Apache: 
-
-- To change the varnish port from 6081 to 80, 
-```
-sudo mkdir -p /etc/systemd/system/varnish.service.d
-sudo nano /etc/systemd/system/varnish.service.d/customexec.conf
-```
-paste the following:
-```
-[Service]
-ExecStart=
-ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
-```
-
-- Reload systemd units
-
-```
-sudo systemctl daemon-reload
-```
-``` 
-gedit /etc/default/varnish & >/dev/null
-DAEMON_OPTS=""-a:80 \
-
-gedit /etc/varnis/default.vcl & >/dev/null
-
-backend default{
-  .host = "127.0.0.1";
-  .port = "8080";
-
-}
-//systemctl restart apache2.service;
-systemctl restart varnish.service;
-
-ps aux | grep vcache
-gedit /lib/systemd/system/varnish.service & >dev/null
-ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a:80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
-//systemctl daemon-reload;
-//systemctl restart apache2.service;
-systemctl restart varnish.service;
-curl -l http:ip
-curl -l http://192.168.0.105
-```
+ 
 
 ### Check/Test Varnish 
 
-How to check if varnish is working? Well, you should notice with your naked eyes that your website is now loading much faster.  If you need tools,  you can use following commands to test Varnish:
-
-1. View Varnish access log with varnishncsa command:
-
-```
-varnishncsa
-```
-Start the command and access your website via web browser.
-
-2. If you want detailed view for each request use varnishlog command:
-
-```
-varnishlog
-varnishd -V
-varnishhist
-```
+	varnishncsa 
+	varnishlog
+	varnishd -V
+	varnishhist
+ 
 
 ## Final verification
 Now that you’re using the default.vcl generated for you by Magento, you can perform some final verifications to make sure Varnish is working. Verify HTTP response headers Use curl or another utility to view HTTP response headers when you visit any Magento page in a web browser.First, make sure you are using Magento’s developer mode; otherwise, you won’t see the headers.
