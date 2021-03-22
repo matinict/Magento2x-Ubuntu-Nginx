@@ -5,7 +5,7 @@
 		sudo systemctl enable varnish
 		netstat -plntu
 
-By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend.
+[By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend]
 
 ## Config Magento Admin
 From your Magento Admin dashboard click on the STORES==> Configuration -> ADVANCED -> System -> Full Page Cache Unselected Use system value and from the Caching Application list==> select Varnish Cache (Recommended)==>save the configuration, click on the Varnish Configuration link and click on the Export VCL for Varnish 4 button. The varnish.vcl file which we will use will be exported in the directory /var/www/myMagentoSite.com/var/.
@@ -29,7 +29,7 @@ sudo ln -sf /var/www/myMagentoSite.com/var/varnish.vcl /etc/varnish/default.vcl
 - Now we need to change Nginx listening port from 80 to 8080 and enable Nginx SSL termination with HTTP2, to do that open the Nginx configuration file and change it as follows:
 
 ```
-sudo nano /etc/nginx/sites-available/myMagentoSite.com
+sudo nano /etc/nginx/sites-available/magento.lan
 ```
 
 ```
@@ -38,21 +38,21 @@ upstream fastcgi_backend {
 }
 
 server {
-    server_name myMagentoSite.com www.myMagentoSite.com;
+    server_name myMagentoSite.com www.magento.lan;
     listen 8080;
-    set $MAGE_ROOT /var/www/myMagentoSite.com;
+    set $MAGE_ROOT /var/www/magento.lan;
     set $MAGE_MODE production; # or developer
 
-    access_log /var/log/nginx/myMagentoSite.com-access.log;
-    error_log /var/log/nginx/myMagentoSite.com-error.log;
+    access_log /var/log/nginx/magento.lan-access.log;
+    error_log /var/log/nginx/magento.lanm-error.log;
 
-    include /var/www/myMagentoSite.com/nginx.conf.sample;        
+    include /var/www/magento.lan/nginx.conf.sample;        
 }
 
 server {
 
     listen 443 ssl http2;
-    server_name myMagentoSite.com www.myMagentoSite.com;
+    server_name magento.lan www.magento.lan;
 
     ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem; # change with your SSL cert
     ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key; # change with your SSL key
@@ -89,13 +89,13 @@ sudo systemctl restart varnish
 Change the base URL to https and flush the cache
 
 ```
-sudo bin/magento setup:store-config:set --base-url="https://myMagentoSite.com"
+sudo bin/magento setup:store-config:set --base-url="https://magento.lan"
 sudo php bin/magento cache:flush
 ```
 
 If everything is setup correctly now you should be able to login to your Magento back-end by going to 
 
-https://myMagentoSite.com/admin
+https://magento.lan/admin
 
 
 
@@ -136,7 +136,7 @@ backend default{
   .port = "8080";
 
 }
-systemctl restart apache2.service;
+//systemctl restart apache2.service;
 systemctl restart varnish.service;
 
 ps aux | grep vcache
@@ -144,8 +144,8 @@ gedit /lib/systemd/system/varnish.service & >dev/null
 
 ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a:80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,256m
 
-systemctl daemon-reload;
-systemctl restart apache2.service;
+//systemctl daemon-reload;
+//systemctl restart apache2.service;
 systemctl restart varnish.service;
 
 curl -l http:ip
@@ -212,93 +212,10 @@ You can clear cache for specific page on your website using varnishadm:
 ```
 varnishadm -T 127.0.0.1:6082 -S /etc/varnish/secret ban "req.http.host == https://yourdomain.com && req.url == /somepage/"
 ```
-This will clear cache for https://yourdomain.com/somepage/
+This will clear cache for https://magento.lan/somepage/
 
 
 
-
-
-## Install and configure Redis caching
-Redis is a key-value in memory data store and we will use it to replace the default Magento 2 Zend_Cache_Backend_File backend cache.  Install Redis by running the following command:
-
-```
-sudo apt-get install php-redis redis-server
-```
-To configure your Magento installation to use Redis for session storage open the app/etc/env.php file and change/add the following:
-```
-sudo nano /var/www/myMagentoSite.com/app/etc/env.php
-```
-
-```
-change:
- 'session' =>
-  array (
-    'save' => 'files',
-  ),
- ```
-with:
-```
-'session' => 
-   array (
-   'save' => 'redis',
-   'redis' => 
-      array (
-	'host' => '127.0.0.1',
-	'port' => '6379',
-	'password' => '',
-	'timeout' => '2.5',
-	'persistent_identifier' => '',
-	'database' => '0',
-	'compression_threshold' => '2048',
-	'compression_library' => 'gzip',
-	'log_level' => '1',
-	'max_concurrency' => '6',
-	'break_after_frontend' => '5',
-	'break_after_adminhtml' => '30',
-	'first_lifetime' => '600',
-	'bot_first_lifetime' => '60',
-	'bot_lifetime' => '7200',
-	'disable_locking' => '0',
-	'min_lifetime' => '60',
-	'max_lifetime' => '2592000'
-    )
-),
-```
-and to use Redis for page caching add:
-```
-'cache' =>
-array(
-   'frontend' =>
-   array(
-      'default' =>
-      array(
-         'backend' => 'Cm_Cache_Backend_Redis',
-         'backend_options' =>
-         array(
-            'server' => '127.0.0.1',
-            'port' => '6379'
-            ),
-    ),
-    'page_cache' =>
-    array(
-      'backend' => 'Cm_Cache_Backend_Redis',
-      'backend_options' =>
-       array(
-         'server' => '127.0.0.1',
-         'port' => '6379',
-         'database' => '1',
-         'compress_data' => '0'
-       )
-    )
-  )
-),
-```
-Finally flush the cache again:
-
-```
-php bin/magento cache:flush
-
-```
 ### Further Optimizations
 To further optimize your Magento installation from you Magento admin dashboard:
 
