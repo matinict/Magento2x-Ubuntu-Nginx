@@ -1,16 +1,20 @@
 ## Install and configure Varnish 
 
-		sudo apt-get install varnish -y 
-		sudo systemctl start varnish
-		sudo systemctl enable varnish
-		netstat -plntu
-		
-		sudo systemctl start varnish
-		sudo systemctl status varnish
+	sudo apt-get install varnish -y 
+	sudo systemctl start varnish
+	sudo systemctl enable varnish
+	netstat -plntu
+
+	sudo systemctl start varnish
+	sudo systemctl status varnish
 		
  
 
 [By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend]
+
+	sudo apt-get remove varnish
+	sudo apt-get remove --auto-remove varnish
+	
 
 ## Config Magento Admin
 From your Magento Admin dashboard click on the 
