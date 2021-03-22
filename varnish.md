@@ -12,9 +12,9 @@
 
 [By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend]
 
-	sudo apt-get remove varnish
+	sudo apt-get remove varnish -y 
 	sudo apt-get remove --auto-remove varnish
-	sudo apt-get purge varnish 
+	sudo apt-get purge varnish  -y 
 	sudo apt-get purge --auto-remove varnish
 	
 
