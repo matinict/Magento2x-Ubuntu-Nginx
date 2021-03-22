@@ -88,7 +88,7 @@ The varnish.vcl file which we will use will be exported in the directory /var/ww
 
 		sudo systemctl restart nginx
 		sudo systemctl restart varnish 
-		php bin/magento setup:store-config:set --base-url="http://magento.lan"
+		php bin/magento setup:store-config:set --base-url="http://www.magento.lan"
 		php bin/magento cache:flush
  
 
