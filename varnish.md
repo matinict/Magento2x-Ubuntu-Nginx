@@ -174,21 +174,19 @@ varnishhist
 ```
 
 ## Final verification
-Now that you’re using the default.vcl generated for you by Magento, you can perform some final verifications to make sure Varnish is working.
-
-Verify HTTP response headers Use curl or another utility to view HTTP response headers when you visit any Magento page in a web browser.
-
-First, make sure you are using Magento’s developer mode; otherwise, you won’t see the headers.
+Now that you’re using the default.vcl generated for you by Magento, you can perform some final verifications to make sure Varnish is working. Verify HTTP response headers Use curl or another utility to view HTTP response headers when you visit any Magento page in a web browser.First, make sure you are using Magento’s developer mode; otherwise, you won’t see the headers.
 
 For example,
-
-curl -I -v --location-trusted 'http://magento.lan'
+	
+	curl -I http://magento.lan
+	curl -I -v --location-trusted 'http://magento.lan'
+	
 Important headers:
 
-X-Magento-Cache-Control: max-age=86400, public, s-maxage=86400
-Age: 0
-X-Magento-Cache-Debug: MISS
-This value is also acceptable: X-Magento-Cache-Debug: HIT.
+	X-Magento-Cache-Control: max-age=86400, public, s-maxage=86400
+	Age: 0
+	X-Magento-Cache-Debug: MISS
+	This value is also acceptable: X-Magento-Cache-Debug: HIT.
 
 
 ### Clear Varnish Cache
@@ -199,14 +197,9 @@ If you set varnish backend port and hosts correctly in Magento settings as descr
 2. Clear entire Varnish Cache
 In order to clear entire Varnish cache, you can simply restart Varnish:
 
-```
-sudo service varnish restart
-```
-Or
+	sudo service varnish restart 
+	sudo systemctl restart varnish
 
-```
-sudo systemctl restart varnish
-```
 
 3. How to clear varnish cache for specific URL
 You can clear cache for specific page on your website using varnishadm:
@@ -225,12 +218,11 @@ To further optimize your Magento installation from you Magento admin dashboard:
 2. Go to STORES -> Configuration -> ADVANCED -> Developer -> JavaScript Settings and set both Merge JavaScript Files and Minify JavaScript Files to Yes and click Save Config..
 3. Go to STORES -> Configuration -> ADVANCED -> Developer -> CSS Settings and set both Merge CSS Files and Minify CSS Files to Yes and click Save Config.
 4. Consider using a CDN – Content Delivery Network
-
 Do not forget to flush the cache:
 
-  ```
-  php bin/magento cache:flush
-  ```
+ 
+  	php bin/magento cache:flush
+ 
 
 ## Ref:
 - [devdocs.magento.varnish.config](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html)
