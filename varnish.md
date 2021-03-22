@@ -26,7 +26,7 @@ The varnish.vcl file which we will use will be exported in the directory /var/ww
 
 	- Delete the /etc/varnish/default.vcl and symlink it to the exported varnish configuration.
 	sudo rm -f /etc/varnish/default.vcl
-	sudo ln -sf /var/www/magento.lan/var/varnish.vcl /etc/varnish/default.vcl
+	sudo ln -sf /var/www/html/magento.lan/var/varnish.vcl /etc/varnish/default.vcl
  
 
 
