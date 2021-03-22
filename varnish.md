@@ -10,18 +10,21 @@
 [By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend]
 
 ## Config Magento Admin
-From your Magento Admin dashboard click on the STORES==> Configuration -> ADVANCED -> System -> Full Page Cache Unselected Use system value and from the Caching Application list==> select Varnish Cache (Recommended)==>save the configuration, click on the Varnish Configuration link and click on the Export VCL for Varnish 4 button. The varnish.vcl file which we will use will be exported in the directory /var/www/myMagentoSite.com/var/.
+From your Magento Admin dashboard click on the 
 
-Flush the Magento cache with:
+``
+STORES==> Configuration -> ADVANCED -> System -> ==> select Varnish Cache (Recommended)==>save the configuration, 
+click on the Varnish Configuration link and click on the Export VCL for Varnish 4 button.
+The varnish.vcl file which we will use will be exported in the directory /var/www/magento.lan/var/.
+```
 
-```
-php bin/magento cache:flush
-```
-- Delete the /etc/varnish/default.vcl and symlink it to the exported varnish configuration.
-```
-sudo rm -f /etc/varnish/default.vcl
-sudo ln -sf /var/www/myMagentoSite.com/var/varnish.vcl /etc/varnish/default.vcl
-```
+ 
+	php bin/magento cache:flush
+
+	- Delete the /etc/varnish/default.vcl and symlink it to the exported varnish configuration.
+	sudo rm -f /etc/varnish/default.vcl
+	sudo ln -sf /var/www/magento.lan/var/varnish.vcl /etc/varnish/default.vcl
+ 
 
 
 
