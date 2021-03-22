@@ -4,6 +4,8 @@
 		sudo systemctl start varnish
 		sudo systemctl enable varnish
 		netstat -plntu
+		
+ 
 
 [By default, Varnish is configured to listen on port 6081 for public access and 6082 for the backend]
 
