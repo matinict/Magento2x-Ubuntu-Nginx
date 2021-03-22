@@ -14,6 +14,8 @@
 
 	sudo apt-get remove varnish
 	sudo apt-get remove --auto-remove varnish
+	sudo apt-get purge varnish 
+	sudo apt-get purge --auto-remove varnish
 	
 
 ## Config Magento Admin
