@@ -124,7 +124,7 @@ Now that you’re using the default.vcl generated for you by Magento, you can pe
 	
 	rm -rf  var/page_cache/* 
 	
-Check the var/page_cache/ directory.If the directory is empty, congratulations! 
+	Check the var/page_cache/ directory.If the directory is empty, congratulations! 
 
 
 ### Clear Varnish Cache
@@ -139,12 +139,11 @@ In order to clear entire Varnish cache, you can simply restart Varnish:
 	sudo systemctl restart varnish
 
 
-3. How to clear varnish cache for specific URL
-You can clear cache for specific page on your website using varnishadm:
-
-```
-varnishadm -T 127.0.0.1:6082 -S /etc/varnish/secret ban "req.http.host == https://yourdomain.com && req.url == /somepage/"
-```
+3.flush the cache for a single domain in a multisite setup:
+ 
+	varnishadm "ban req.http.host ==http://www.magento.lan"
+	varnishadm -T 127.0.0.1:6082 -S /etc/varnish/secret ban "req.http.host == http://www.magento.lan && req.url == /"
+ 
 This will clear cache for https://magento.lan/somepage/
 
 
