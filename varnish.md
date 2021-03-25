@@ -185,6 +185,7 @@ Do not forget to flush the cache:
  
 
 ## Ref:
+- [devdocs.magento](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish-configure.html)
 - [devdocs.magento.varnish.config](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html)
 - [devdocs.magento.varnish.use](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/use-varnish-cache.html)
 - [youtube1](https://www.youtube.com/watch?v=tYAOeS88qTQ)
