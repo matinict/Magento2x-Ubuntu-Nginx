@@ -4,6 +4,7 @@
 	sudo systemctl start varnish
 	sudo systemctl enable varnish
 	netstat -plntu
+	sudo netstat -nlpt
 
 	sudo systemctl start varnish
 	sudo systemctl status varnish
