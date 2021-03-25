@@ -112,14 +112,7 @@ The varnish.vcl file which we will use will be exported in the directory /var/ww
 		--db-ssl-ca=/path/tho/ca.pem  \
 		--db-ssl-verify  \
 		--session-save=db
-		
- 
-
-If everything is setup correctly now you should be able to login to your Magento back-end by going to 
-
-https://magento.lan/admin
-
-
+		 
  
 
 ### Check/Test Varnish 
@@ -134,6 +127,11 @@ https://magento.lan/admin
 Now that you’re using the default.vcl generated for you by Magento, you can perform some final verifications to make sure Varnish is working. Verify HTTP response headers Use curl or another utility to view HTTP response headers when you visit any Magento page in a web browser.First, make sure you are using Magento’s developer mode; otherwise, you won’t see the headers.
 	
 	curl -I http://www.magento.lan
+	curl -k -I http://www.magento.lan
+	curl -I http://www.magento.lan:80
+	curl -I http://www.magento.lan:8080
+	curl -I http://www.magento.lan:8081
+
 	curl -I -v --location-trusted 'http://www.magento.lan'
 	curl -I -v --location-trusted 'http://www.magento.lan/' > /dev/null | grep X-Magento
 
