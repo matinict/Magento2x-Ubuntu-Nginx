@@ -3,8 +3,10 @@
 	sudo apt-get install varnish -y 
 	sudo systemctl start varnish
 	sudo systemctl enable varnish
+	
 	netstat -plntu
-	sudo netstat -nlpt
+	netstat -nlpt
+	netstat -tulpn
 
 	sudo systemctl start varnish
 	sudo systemctl status varnish
