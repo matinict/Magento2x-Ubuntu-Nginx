@@ -10,6 +10,11 @@
 
 	sudo systemctl start varnish
 	sudo systemctl status varnish
+	
+	
+	sudo systemctl daemon-reload
+	sudo systemctl restart varnish
+	sudo systemctl restart nginx
 		
  
 
