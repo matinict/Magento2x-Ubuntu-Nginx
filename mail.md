@@ -1,26 +1,16 @@
 
-# Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu 
+# Install and Configure  Mail Ubuntu 
 
-## Step 1 — Installing Postfix
-In this step, you’ll learn how to install Postfix. The most efficient way to install Postfix and other programs needed for testing email is to install the mailutils package.First, update the package database:
+## Step 1 — Installing Postfix 
 
-    sudo apt-get update
- 
-Finally, install Postfix. Installing mailtuils will install Postfix as well as a few other programs needed for Postfix to function.
-
+    sudo apt-get update 
     sudo apt install mailutils
     
-    Promt ==> Internet Site
- 
-Near the end of the installation process, you will be presented with a window that looks exactly like the one in the image below. The default option is Internet Site. That’s the recommended option for this tutorial, so press TAB, then ENTER.
+Promt ==> Internet Site  Near the end of the installation process, you will be presented with a window that looks exactly like the one in the image below. The default option is Internet Site. That’s the recommended option for this tutorial, so press TAB, then ENTER.
 
-## Step 2 — Configuring Postfix
-In this step, you’ll read how to configure Postfix to process requests to send emails only from the server on which it is running, that is, from localhost.
-For that to happen, Postfix needs to be configured to listen only on the loopback interface, the virtual network interface that the server uses to communicate internally. To make the change, open the main Postfix configuration file using nano or your favorite text editor.
+## Step 2 — Configuring Postfix 
 
-    sudo nano /etc/postfix/main.cf
- 
-With the file open, scroll down until you see the following section.
+    sudo nano /etc/postfix/main.cf  
 
     /etc/postfix/main.cf
     . . .
@@ -37,8 +27,7 @@ Change the line that reads inet_interfaces = all to inet_interfaces = loopback-o
     recipient_delimiter = +
     inet_interfaces = loopback-only
     . . .
- 
-Another directive you’ll need to modify is mydestination, which is used to specify the list of domains that are delivered via the local_transport mail delivery transport. By default, the values are similar to these:
+ similar to these:
 
     /etc/postfix/main.cf
     . . .
@@ -52,8 +41,7 @@ The recommended defaults for that scenario are given in the code block below, so
     . . .
 
 Save and close the file.
-If you’re hosting multiple domains on a single server, the other domains can also be passed to Postfix using the mydestination directive. However, to configure Postfix in a manner that scales and that does not present issues for such a setup involves additional configurations that are beyond the scope of this article.
-Finally, restart Postfix.
+
 
     sudo systemctl restart postfix
     
