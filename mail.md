@@ -1,5 +1,5 @@
 
-# Install and Configure  Mail Ubuntu 
+## PHP Mail Install and Configure    Ubuntu 
 
 ## Step 1 — Installing Postfix 
 
@@ -77,8 +77,31 @@ You may now test that it works by sending an email to the root account using:
      sudo service nginx reload
      
      
+#  Sendmail Mail Install and Configure    Ubuntu 
 
+## Step 1;
 
+    sudo systemctl stop postfix
+    sudo apt remove postfix && apt purge postfix
+    sudo apt install sendmail
+    sudo sendmailconfig
+    
+    sudo nano /etc/mail/sendmail.mc
+    dnl DAEMON_OPTIONS(`Family=inet,  Name=MTA-v4, Port=smtp, Addr=127.0.0.1')dnl
+    dnl DAEMON_OPTIONS(`Family=inet,  Name=MSP-v4, Port=submission, M=Ea, Addr=127.0.0.1')dnl
+    
+    cat /etc/mail/local-host-names
+        tecadmin.net
+        mail.tecadmin.net
+        localhost
+        localhost.localdomain
+        
+    sudo m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
+    sudo systemctl restart sendmail
+    
+    sudo makemap hash /etc/mail/virtusertable < /etc/mail/virtusertable
+    sudo /etc/init.d/sendmail restart
+    
 
 ## Ref
 
