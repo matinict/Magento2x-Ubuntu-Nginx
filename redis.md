@@ -1,17 +1,12 @@
 
 
 
-## Install and configure Redis caching
-Redis is a key-value in memory data store and we will use it to replace the default Magento 2 Zend_Cache_Backend_File backend cache.  Install Redis by running the following command:
-
-```
-sudo apt-get install php-redis redis-server
-```
-To configure your Magento installation to use Redis for session storage open the app/etc/env.php file and change/add the following:
-```
-sudo nano /var/www/myMagentoSite.com/app/etc/env.php
-```
-
+## Install and configure Redis caching 
+ 
+	sudo apt-get install php-redis redis-server
+	sudo apt install redis-tools 
+	sudo nano /var/www/myMagentoSite.com/app/etc/env.php
+ 
 ```
 change:
  'session' =>
@@ -75,10 +70,9 @@ array(
     )
   )
 ),
-```
-Finally flush the cache again:
+``` 
 
-```
-php bin/magento cache:flush
 
-```
+ 
+    php bin/magento c:f
+ 
