@@ -39,47 +39,35 @@ The recommended defaults for that scenario are given in the code block below, so
     . . .
     mydestination = $myhostname, localhost.$mydomain, $mydomain
     . . .
-
-Save and close the file.
-
-
+    #Save and close the file.
     sudo systemctl restart postfix
     
 ## Step 3 — Testing the SMTP Server
 
-    echo "This is the body of the email" | mail -s "This is the subject line" matinict@gmail.com
-    
+     echo "This is the body of the email" | mail -s "This is the subject line" matinict@gmail.com    
      postconf -p | grep comp
- 
   
 
 ## Step 4 — Forwarding System Mail 
 
-    sudo nano /etc/aliases  
-    
-    /etc/aliases
-    
-    #See man 5 aliases for format
-    
+    sudo nano /etc/aliases      
+    /etc/aliases    
+    #See man 5 aliases for format    
     postmaster:    root
  
-With that setting, system generated emails are sent to the root user. What you want to do is edit it so that those emails are rerouted to your email address. To accomplish that, edit the file so that it reads:
-
+    #system generated emails are sent to the root user.  rerouted to your email addres  edit the file so that it reads:
     /etc/aliases
     # See man 5 aliases for format
     postmaster:    root
-    root:          your_email_address    
+    root:          info@eonbazar.com    
     #Replace your_email_address with your personal email address.     
     sudo newaliases
  
 You may now test that it works by sending an email to the root account using:
 
     echo "This is the body of the email" | mail -s "This is the subject line" root
- 
-You should receive the email at your email address. If not, check your spam folder.
-
-
-echo "This is the body of the email" | mail -s "This is the subject line" matinict@gmail.com
+    # should receive the email at your email address. If not, check your spam folder.
+    echo "This is the body of the email" | mail -s "This is the subject line" matinict@gmail.com
 
 ## Step 5 Recheck
 
