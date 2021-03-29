@@ -16,27 +16,16 @@ Promt ==> Internet Site  Near the end of the installation process, you will be p
     . . .
     mailbox_size_limit = 0
     recipient_delimiter = +
-    inet_interfaces = all
-    . . .
+    inet_interfaces = all 
  
-Change the line that reads inet_interfaces = all to inet_interfaces = loopback-only.
-
-    /etc/postfix/main.cf
-    . . .
+    ##Change the line that reads inet_interfaces = all to inet_interfaces = loopback-only. 
     mailbox_size_limit = 0
     recipient_delimiter = +
-    inet_interfaces = loopback-only
-    . . .
- similar to these:
-
-    /etc/postfix/main.cf
-    . . .
+    inet_interfaces = loopback-only 
+    # similar to these: 
     mydestination = $myhostname, example.com, localhost.com, , localhost
-    . . .
-The recommended defaults for that scenario are given in the code block below, so modify yours to match:
-
-    /etc/postfix/main.cf
-    . . .
+    
+    # recommended defaults for that scenario are given in the code block below, so modify yours to match: 
     mydestination = $myhostname, localhost.$mydomain, $mydomain
     . . .
     #Save and close the file.
@@ -75,6 +64,16 @@ You may now test that it works by sending an email to the root account using:
      
      cat /var/log/mail.log
      tail -f /var/log/mail.log
+     # check port
+     sudo ufw status
+     
+     telnet portquiz.net 587
+     netstat -plant | grep 587
+     
+     iptables -I INPUT -p tcp -m tcp --dport 25 -j ACCEPT
+     sudo ufw allow 25/tcp
+     
+     
 
 
 
