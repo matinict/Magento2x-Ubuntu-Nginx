@@ -69,9 +69,12 @@ You may now test that it works by sending an email to the root account using:
     # should receive the email at your email address. If not, check your spam folder.
     echo "This is the body of the email" | mail -s "This is the subject line" matinict@gmail.com
 
-## Step 5 Recheck
+## Step 5 Recheck log
 
      postconf -p | grep comp
+     
+     cat /var/log/mail.log
+     tail -f /var/log/mail.log
 
 
 
