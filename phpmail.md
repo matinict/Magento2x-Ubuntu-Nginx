@@ -72,6 +72,9 @@ You may now test that it works by sending an email to the root account using:
      
      iptables -I INPUT -p tcp -m tcp --dport 25 -j ACCEPT
      sudo ufw allow 25/tcp
+     sudo ufw allow Postfix
+     
+     sudo service nginx reload
      
      
 
