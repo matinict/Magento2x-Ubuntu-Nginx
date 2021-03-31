@@ -1,34 +1,40 @@
 
 # Magento 2x Command
 
+## Frequently Needed 
+
+    php bin/magento maintenance:enable --ip=202.74.246.84 --ip=202.74.246.84
+    rm -rf var/cache/* var/tmp/_cache var/composer_home/cache/* var/view_preprocessed/* var/page_cache/* var/report/* var/log/* generated/code/*  pub/static/frontend/* pub/static/adminhtml/* pub/static/_cache/*
+    php bin/magento s:up
+    php bin/magento c:f
+    php bin/magento setup:di:compile
+    php bin/magento c:c
+    php bin/magento s:s:d -f
+    php -d memory_limit=2G bin/magento index:reindex
+    php bin/magento c:c
+    php bin/magento c:f
+    php bin/magento maintenance:disable
+
+    php bin/magento maintenance:enable --ip=202.74.246.84 --ip=10.10.16.2
+
 
 ## Maintenance Related Commands:
-
-```
-php bin/magento maintenance:enable
-php bin/magento maintenance:enable --ip=10.10.16.1 --ip=10.10.16.2
-php bin/magento maintenance:enable --ip=none
-php bin/magento maintenance:disable
-php bin/magento maintenance:status
-php bin/magento maintenance:allow-ips --ip=192.168.0.105 --ip=103.125.97.137
-```
-
+ 
+    php bin/magento maintenance:enable
+    php bin/magento maintenance:enable --ip=10.10.16.1 --ip=10.10.16.2
+    php bin/magento maintenance:enable --ip=none
+    php bin/magento maintenance:disable
+    php bin/magento maintenance:status
+    php bin/magento maintenance:allow-ips --ip=192.168.0.105 --ip=103.125.97.137
+ 
 
  ## Production Mode Related CLI
-
-
- ```
- bin/magento deploy:mode:show
  
- php bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
+    bin/magento deploy:mode:show  
+    php bin/magento deploy:mode:set production --s 
+    php -dmemory_limit=8G bin/magento setup:static-content:deploy  en_US -t Magento/backend
  
- php bin/magento deploy:mode:set production --skip-compilation
- 
- php -dmemory_limit=8G bin/magento setup:static-content:deploy  en_US -t Magento/backend
- 
- 
- 
- ```
+  
 
 - Deploy on Poduction mode
 
