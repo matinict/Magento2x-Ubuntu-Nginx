@@ -14,8 +14,7 @@
         sudo ufw allow 8080/tcp      
         sudo ufw allow 443/tcp   
         sudo ufw allow https
-        sudo ufw allow 'Nginx HTTPS'
-        
+        sudo ufw allow 'Nginx HTTPS'        
         sudo ufw allow 7100:7200/tcp
         sudo ufw allow 7100:7200/udp
         
@@ -83,7 +82,6 @@ In this example, add a new user called matin to the www-data group, enter:
        listen 443 ssl;
        ssl_certificate     /etc/nginx/ssl/bundle.crt;
        ssl_certificate_key /etc/nginx/ssl/private.key;
-
        server_name domain.com www.domain.com;
        set $MAGE_ROOT /var/www/prod/magento2;
        include /var/www/prod/magento2/nginx.conf.sample;
@@ -91,17 +89,12 @@ In this example, add a new user called matin to the www-data group, enter:
 
    server {
        listen 80;
-
-
        server_name domain.com www.domain.com;
        #set $MAGE_ROOT /var/www/prod/magento2;
-
        #location /.well-known/pki-validation/4D94A304AD65F8463B3EE2992F34C0CA.txt {
        #    alias /var/www/prod/magento2/4D94A304AD65F8463B3EE2992F34C0CA.txt;
        #}
-
        #include /var/www/prod/magento2/nginx.conf.sample;
-
        return 301 https://domain.com$request_uri;
    }
  ```
@@ -121,7 +114,7 @@ In this example, add a new user called matin to the www-data group, enter:
     cat /var/log/nginx/error.log
     cat /var/log/nginx/access.log
     
- Custom Configuration :
+ #### Custom Configuration :
 
     sudo nano etc/nginx/conf.d/magento.conf 
     
@@ -136,8 +129,11 @@ In this example, add a new user called matin to the www-data group, enter:
 
       error_log /var/log/nginx/magento_error.log;
       access_log /var/log/nginx/magento_access.log;
-
     }
+    
+    
+     cat /var/log/nginx/magento_error.log|less;
+     cat /var/log/nginx/magento_access.log|less;
     
  ### Xdubug iisue
  
