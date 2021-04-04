@@ -121,6 +121,24 @@ In this example, add a new user called matin to the www-data group, enter:
     cat /var/log/nginx/error.log
     cat /var/log/nginx/access.log
     
+ Custom Configuration :
+
+    sudo nano etc/nginx/conf.d/magento.conf 
+    
+    upstream fastcgi_backend {
+      server  127.0.0.1:9000;
+    }
+    server {
+      listen 8085;
+      server_name 192.168.1.64:8085;
+      set $MAGE_ROOT /usr/share/nginx/html/magento;
+      include /usr/share/nginx/html/magento/nginx.conf.sample;
+
+      error_log /var/log/nginx/magento_error.log;
+      access_log /var/log/nginx/magento_access.log;
+
+    }
+    
  ### Xdubug iisue
  
     sudo phpdismod xdebug
