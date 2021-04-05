@@ -16,6 +16,21 @@
     php bin/magento maintenance:disable
 
     php bin/magento maintenance:enable --ip=202.74.246.84 --ip=10.10.16.2
+    
+    
+    
+## File Permission
+
+
+    sudo find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+    sudo find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+    sudo chown -R :www-data .
+    sudo chmod u+x bin/magento
+
+    find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+    find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+    chown -R :www-data .
+    chmod u+x bin/magento
 
 
 ## Maintenance Related Commands:
