@@ -111,14 +111,15 @@ PHP 7.2 stable version has been released. Use the following set of commands to e
 
 ## Install PHP 7.2 on Ubuntu
 
-PHP 7.2 stable version has been released. Use the following set of commands to enable PPA for PHP 7.2 in your Ubuntu system and install it. You can use this version for production use also.
+PHP 7.2 stable version has been released.  
 
       sudo apt-get install software-properties-common
-      sudo add-apt-repository ppa:ondrej/php
+      #sudo add-apt-repository ppa:ondrej/php
+      
+      sudo add-apt-repository ppa:ppa:ondrej/nginx-mainline      
+      sudo add-apt-repository ppa:ppa:ondrej/nginx
       sudo apt-get update
       sudo apt-get install -y php7.2
-      Now use the following command to check installed php version on your system.
-
       php -v 
 
 
@@ -149,60 +150,50 @@ Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and
         Now use the following command to check installed php version on your system.
         php -v 
 
+          
+            
+## Switch/change between Multiple PHP
 
-# How to change the PHP version?
+        sudo update-alternatives --config php
+        ## or
+        sudo update-alternatives -set php /usr/bin/php7.2 
 
-            $ sudo update-alternatives --config php
-            or
-            $ sudo update-alternatives -set php /usr/bin/php7.2
-## Switch between Multiple PHP
+        sudo service nginx restart 
+        sudo service php7.x-fpm restart
 
-      sudo update-alternatives --config php
-      
-After run above command select the PHP version that you need to use.Press to keep the current choice[*], or type selection number: For example 2
-After switching below command used to restart the PHP and Nginx server.
 
-      sudo service nginx restart
-      sudo service php7.1-fpm or php7.2-fpm  restart
-      
-      
-      nano /etc/php/7.x/fpm/php.ini
+        nano /etc/php/7.x/fpm/php.ini
+
         press ctrl + w for searching
         press ctrl + shift+v for past &  Enter Search
 
-        memory_limit = 2G
+        memory_limit = 4G
         max_execution_time = 3600
         max_input_time = 1800
         upload_max_filesize = 10M
         zlib.output_compression = On
-        press ctrl + O for saving or Ctrl+x
-        service php7.x-fpm start
+
+        #press ctrl + O for saving or Ctrl+x    
+        
+        sudo service php7.x-fpm start
 
             
             
-## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS
+## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS 
 
+        apt-get install software-properties-common -y
+        add-apt-repository ppa:ondrej/php 
 
-- Install PHP 7.0 and PHP 7.2 with PHP-FPM. First, you will need to add PHP repository to your server to install multiple versions of PHP. You can add Ondrej PHP repository with the following command:
+        apt-get update -y 
 
-            apt-get install software-properties-common -y
-            add-apt-repository ppa:ondrej/php
-Next, update the repository with the following command:
+        apt-get install php7.0 php7.0-fpm php7.2 php7.2-fpm -y 
 
-            apt-get update -y
-Once the repository is up to date, install PHP 7.0, PHP 7.2 and PHP-FPM with the following command:
+        systemctl status php7.0-fpm
+        systemctl status php7.2-fpm
+        Create Website1 and Website2 
 
-             apt-get install php7.0 php7.0-fpm php7.2 php7.2-fpm -y
-
-Once the installation has been completed, check the status of PHP-FPM with the following command:
-
-                  systemctl status php7.0-fpm
-                  systemctl status php7.2-fpm
-                  Create Website1 and Website2
-Next, create a document root directory for Website1 and Website2 with the following command:
-
-                  mkdir /var/www/html/site1.example.com
-                  mkdir /var/www/html/site2.example.com
+        mkdir /var/www/html/site1.example.com
+        mkdir /var/www/html/site2.example.com
 Next, create a sample index.php file for website site1.example.com:
 
                         nano /var/www/html/site1.example.com/index.php
