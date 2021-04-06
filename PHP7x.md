@@ -109,47 +109,47 @@ PHP 7.2 stable version has been released. Use the following set of commands to e
     systemctl status php7.3-fpm nginx
 
 
-## Install PHP 7.2 on Ubuntu
+## Install PHP 7.2/7.1/7.0 on Ubuntu 
 
-PHP 7.2 stable version has been released.  
+    sudo apt-get install software-properties-common
+    #sudo add-apt-repository ppa:ondrej/php
 
-      sudo apt-get install software-properties-common
-      #sudo add-apt-repository ppa:ondrej/php
-      
-      sudo add-apt-repository ppa:ppa:ondrej/nginx-mainline      
-      sudo add-apt-repository ppa:ppa:ondrej/nginx
-      sudo apt-get update
-      sudo apt-get install -y php7.2
-      php -v 
+    sudo add-apt-repository ppa:ppa:ondrej/nginx-mainline      
+    sudo add-apt-repository ppa:ppa:ondrej/nginx
+    sudo apt-get update
+    
+    sudo apt-get install -y php7.2
+    php -v  
+    sudo apt-get install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap php-xdebug php-imagick 
+    sudo apt-get -y install php7.2-fpm
+    
+    
+    sudo apt-get install -y php7.1
+    php -v  
+    sudo apt-get install php7.1 libapache2-mod-php7.1 php7.1-common php7.1-gd php7.1-mysql php7.1-curl php7.1-intl php7.1-xsl php7.1-mbstring php7.1-zip php7.1-bcmath php7.1-soap php-xdebug php-imagick 
+    sudo apt-get -y install php7.1-fpm
+    
+    
+    sudo apt-get install -y php7.0 
+    php -v 
+    sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-soap php-xdebug php-imagick 
+    sudo apt-get -y install php7.0-fpm
+  
+  
+        sudo nano /etc/php/7.x/fpm/php.ini
 
+        #press ctrl + w for searching
+        #press ctrl + shift+v for past &  Enter Search
 
+        memory_limit = 4G
+        max_execution_time = 3600
+        max_input_time = 1800
+        upload_max_filesize = 10M
+        zlib.output_compression = On
 
-
-
-
-## Install PHP 7.1 on Ubuntu
-
-Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and install PHP 7.1 version.
-
-      sudo apt-get install software-properties-common
-      sudo add-apt-repository ppa:ondrej/php
-      sudo apt-get update
-      sudo apt-get install -y php7.1
-      php -v 
-
-
-
-## Install PHP 7.0 on Ubuntu
-
-Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and install PHP 7.0 version.
-
-        sudo apt-get install python-software-properties
-        sudo add-apt-repository ppa:ondrej/php
-        sudo apt-get update
-        sudo apt-get install -y php7.0
-        Now use the following command to check installed php version on your system.
-        php -v 
-
+        #press ctrl + O for saving or Ctrl+x    
+        
+        sudo service php7.x-fpm start
           
             
 ## Switch/change between Multiple PHP
@@ -162,20 +162,7 @@ Use the following set of commands to add PPA for PHP 7 in your Ubuntu system and
         sudo service php7.x-fpm restart
 
 
-        nano /etc/php/7.x/fpm/php.ini
-
-        press ctrl + w for searching
-        press ctrl + shift+v for past &  Enter Search
-
-        memory_limit = 4G
-        max_execution_time = 3600
-        max_input_time = 1800
-        upload_max_filesize = 10M
-        zlib.output_compression = On
-
-        #press ctrl + O for saving or Ctrl+x    
         
-        sudo service php7.x-fpm start
 
             
             
