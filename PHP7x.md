@@ -1,65 +1,46 @@
 # Play with Multi php
 
 ## Install PHP 8.0 on Ubuntu 18.04/20.4
-    
-    sudo apt update
-    sudo apt upgrade
-    sudo apt install software-properties-common
-    sudo add-apt-repository ppa:ondrej/php
-
-Once the PPA is enabled, you can install PHP 8. 
-
-    sudo apt install php8.0-fpm
-    sudo systemctl status php8.0-fpm
-    sudo systemctl restart nginx
-    sudo apt install php8.0-mysql php8.0-gd
-    sudo apt install php8.0-snmp php-memcached php8.0-mysql
-    sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
-    php -v
-    sudo vim /var/www/html/info.php
-    
-    systemctl status php8.0-fpm
-    sudo systemctl restart nginx
-    
-    sudo nano /etc/php/8.0/fpm/php.ini
-    
-Hit F6 for search inside the editor and update the following values for better performance.
-
-    upload_max_filesize = 32M 
-    post_max_size = 48M 
-    memory_limit = 256M 
-    max_execution_time = 600 
-    max_input_vars = 3000 
-    max_input_time = 1000
-   
-       
- 
-   
+        
 
 
 ## Install PHP 7.3/7.2/7.1/7.0 on Ubuntu 
-
+        sudo apt update
+        sudo apt upgrade
         sudo apt-get install software-properties-common
         #sudo add-apt-repository ppa:ondrej/php
 
         sudo add-apt-repository ppa:ppa:ondrej/nginx-mainline      
         sudo add-apt-repository ppa:ppa:ondrej/nginx
         sudo apt-get update 
-        
+
+
+
+        # Once the PPA is enabled, you can install PHP 8. 
+
+        sudo apt install php8.0-fpm
+        sudo systemctl status php8.0-fpm
+        sudo systemctl restart nginx
+        sudo apt install php8.0-mysql php8.0-gd
+        sudo apt install php8.0-snmp php-memcached php8.0-mysql
+        sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
+        php -v
+
+
         ##7.4 on Ubuntu 20.4 
-        
+
         sudo apt update
         sudo apt -y install php7.4
         sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
         sudo php-fpm7.4 -t 
-        
+
         ##7.4 on Ubuntu 18.04/16.04 
         sudo apt -y install php7.4 
         sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
         php -v
         sudo apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,common}
         sudo service php7.4-fpm restart
-        
+
         # 7.3
         sudo apt-get install -y php7.3 
         php -v 
@@ -101,15 +82,15 @@ Hit F6 for search inside the editor and update the following values for better p
         #press ctrl + O for saving or Ctrl+x    
 
         sudo service php7.x-fpm start
-        
+
         sudo systemctl restart nginx
-        
+
         ## PHP configurations related to Apache is stored in /etc/php/7.4/apache2/php.ini  you need to stop and disable Apache service.
 
         sudo systemctl disable --now apache2 
         sudo apt-get -y install nginx php7.4-fpm
         systemctl status php7.4-fpm nginx
-    
+
         sudo nano /etc/php/7.4/fpm/pool.d/www.conf.
         ## Change the following lines by replacing the www-data with your username.
         user = username 
