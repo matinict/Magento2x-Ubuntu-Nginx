@@ -31,64 +31,8 @@ Hit F6 for search inside the editor and update the following values for better p
     max_execution_time = 600 
     max_input_vars = 3000 
     max_input_time = 1000
- 
-
-## Install PHP 7.4 on Ubuntu 20.4
- 
-      sudo apt update
-      sudo apt -y install php7.4
-      sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl 
-      
-      
-  
-## Install PHP 7.4 on Ubuntu 18.04/16.04
-  
-    sudo apt-get update
-    sudo apt -y install software-properties-common
-    sudo add-apt-repository ppa:ondrej/php
-    sudo apt-get update
- 
-    sudo apt -y install php7.4 
-    sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
-
-    php -v
-    sudo apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,common}
-
-PHP configurations related to Apache is stored in /etc/php/7.4/apache2/php.ini
-Using PHP 7.4 with Nginx on Ubuntu:The installation of php on Ubuntu configures Apache. For users interested in running Nginx and PHP, you need to stop and disable Apache service.
-
-    sudo systemctl disable --now apache2 
-    sudo apt-get -y install nginx php7.4-fpm
-    systemctl status php7.4-fpm nginx
-    
-   PHP FPM configuration file is /etc/php/7.4/fpm/pool.d/www.conf.
    
-    Change the following lines by replacing the www-data with your username.
-    user = username 
-    group = username 
-    listen.owner = username
-    listen.group = username
-
-    
-    sudo nano /etc/php/7.4/fpm/php.ini
-    
-   Hit F6 for search inside the editor and update the following values for better performance.
-    
-    memory_limit = 2G     
-    max_input_time = 1800     
-    upload_max_filesize = 32M 
-    post_max_size = 48M   
-    max_execution_time = 600 
-    max_input_vars = 3000 
-    max_input_time = 1000
-    zlib.output_compression = On
-
- Restart PHP 7.4 FPM
- 
-    sudo php-fpm7.4 -t 
-    sudo service php7.4-fpm restart
-
-
+       
  
    
 
@@ -101,7 +45,22 @@ Using PHP 7.4 with Nginx on Ubuntu:The installation of php on Ubuntu configures 
         sudo add-apt-repository ppa:ppa:ondrej/nginx-mainline      
         sudo add-apt-repository ppa:ppa:ondrej/nginx
         sudo apt-get update 
-
+        
+        ##7.4 on Ubuntu 20.4 
+        
+        sudo apt update
+        sudo apt -y install php7.4
+        sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
+        sudo php-fpm7.4 -t 
+        
+        ##7.4 on Ubuntu 18.04/16.04 
+        sudo apt -y install php7.4 
+        sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+        php -v
+        sudo apt-get install -y php7.4-{bcmath,bz2,intl,gd,mbstring,mysql,zip,common}
+        sudo service php7.4-fpm restart
+        
+        # 7.3
         sudo apt-get install -y php7.3 
         php -v 
         sudo apt-get install -y php7.3 php7.3-fpm php7.3-mysql libapache2-mod-php7.3 -y
@@ -140,6 +99,22 @@ Using PHP 7.4 with Nginx on Ubuntu:The installation of php on Ubuntu configures 
         #press ctrl + O for saving or Ctrl+x    
 
         sudo service php7.x-fpm start
+        
+        sudo systemctl restart nginx
+        
+        ## PHP configurations related to Apache is stored in /etc/php/7.4/apache2/php.ini  you need to stop and disable Apache service.
+
+        sudo systemctl disable --now apache2 
+        sudo apt-get -y install nginx php7.4-fpm
+        systemctl status php7.4-fpm nginx
+    
+        sudo nano /etc/php/7.4/fpm/pool.d/www.conf.
+        ## Change the following lines by replacing the www-data with your username.
+        user = username 
+        group = username 
+        listen.owner = username
+        listen.group = username 
+    
           
             
 ## Switch/change between Multiple PHP
