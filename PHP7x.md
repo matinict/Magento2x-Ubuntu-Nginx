@@ -68,7 +68,7 @@
         sudo service php7.0-fpm restart
         php -v 
 
-        # Congfig 
+        # configurations 
         sudo nano /etc/php/7.x/fpm/php.ini
         # press ctrl + w for searching
         # press ctrl + shift+v for past &  Enter Search
@@ -79,25 +79,24 @@
         zlib.output_compression = On
         session.gc_maxlifetime = 991440
         # press ctrl + O for saving or Ctrl+x    
-        sudo service php7.x-fpm start 
+        sudo service php7.x-fpm restart 
         
         
         sudo systemctl status php8.0-fpm 
         sudo service php7.4-fpm restart
         sudo systemctl restart nginx
 
-        ## PHP configurations related to Apache is stored in /etc/php/7.4/apache2/php.ini  you need to stop and disable Apache service.
-
+        ## PHP related to Apache is stored in /etc/php/7.4/apache2/php.ini  stop and disable Apache service.
         sudo systemctl disable --now apache2 
         sudo apt-get -y install nginx php7.4-fpm
         systemctl status php7.4-fpm nginx
 
         sudo nano /etc/php/7.4/fpm/pool.d/www.conf.
         ## Change the following lines by replacing the www-data with your username.
-        user = username 
-        group = username 
-        listen.owner = username
-        listen.group = username 
+        #user = username 
+        #group = username 
+        #listen.owner = username
+        #listen.group = username 
     
           
             
@@ -111,7 +110,7 @@
         sudo service php7.x-fpm restart
  
             
-## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS 
+        ## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS 
 
         sudo apt-get install software-properties-common -y
         asudo dd-apt-repository ppa:ondrej/php 
@@ -126,31 +125,31 @@
 
         mkdir /var/www/html/site1.example.com
         mkdir /var/www/html/site2.example.com
-Next, create a sample index.php file for website site1.example.com:
+        #create a sample index.php file for website site1.example.com:
 
-                        nano /var/www/html/site1.example.com/index.php
-Add the following lines:
+        nano /var/www/html/site1.example.com/index.php
+        # Add the following lines:
 
       <?php
       phpinfo();
       ?>
-Save and close the file. Then, create an index.php file for site2.example.com:
+     #Save and close the file. Then, create an index.php file for site2.example.com:
 
             nano /var/www/html/site2.example.com/index.php
-Add the following lines:
+        #Add the following lines:
 
             <?php
             phpinfo();
             ?>
-Save and close the file. Then, change the ownership of both websites to www-data:
+        #Save and close the file. Then, change the ownership of both websites to www-data:
 
             chown -R www-data:www-data /var/www/html/site1.example.com
             chown -R www-data:www-data /var/www/html/site2.example.com
-Configure Nginx
-Next, you will need to create an Nginx virtual host file for domain site1.linuxbuz.com that uses PHP 7.0. You can do it with the following command:
+        #Configure Nginx
+        #Next, you will need to create an Nginx virtual host file for domain site1.linuxbuz.com that uses PHP 7.0. You can do it with the following command:
 
             nano /etc/nginx/sites-available/site1.example.com.conf
-Add the following lines:
+        #Add the following lines:
 
                   server {
                      listen 80;
@@ -169,7 +168,7 @@ Add the following lines:
                         include fastcgi_params;
                      }
                   }
-Save and close the file.
+        #Save and close the file.
 
 Next, create an Nginx virtual host file for domain site2.example.com that uses PHP 7.2.
 
