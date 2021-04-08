@@ -68,18 +68,20 @@
         sudo service php7.0-fpm restart
         php -v 
 
-
+        # Congfig 
         sudo nano /etc/php/7.x/fpm/php.ini
-        #press ctrl + w for searching
-        #press ctrl + shift+v for past &  Enter Search
+        # press ctrl + w for searching
+        # press ctrl + shift+v for past &  Enter Search
         memory_limit = 4G
         max_execution_time = 3600
         max_input_time = 1800
-        upload_max_filesize = 10M
+        upload_max_filesize = 100M
         zlib.output_compression = On
-        #press ctrl + O for saving or Ctrl+x    
-
-        sudo service php7.x-fpm start        
+        session.gc_maxlifetime = 991440
+        # press ctrl + O for saving or Ctrl+x    
+        sudo service php7.x-fpm start 
+        
+        
         sudo systemctl status php8.0-fpm 
         sudo service php7.4-fpm restart
         sudo systemctl restart nginx
