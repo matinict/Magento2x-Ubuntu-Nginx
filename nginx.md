@@ -58,17 +58,13 @@ Sample outputs: www-data:x:33:
 ## How do I add an existing user named matin to group Apache group www-data?
 Simply run the following command to add an existing user to an existing group:
 
-       sudo adduser {USER-NAME-HERE} {GROUP-NAME-HERE}
-       sudo adduser matin www-data
-         
- ## Add a new user to the www-data group
-In this example, add a new user called matin to the www-data group, enter:
-
+    sudo adduser {USER-NAME-HERE} {GROUP-NAME-HERE}
+    sudo adduser matin www-data         
+    ## Add a new user to the www-data group 
     sudo useradd -g www-data matin
- 
-### set the password for matin user ###
+    ### set the password for matin user ###
     sudo passwd matin
-    
+
 ## Live Server Config with https
  - Remove /etc/nginx/sites-available/default
  -  create  /etc/nginx/sites-available/domain
@@ -145,20 +141,18 @@ In this example, add a new user called matin to the www-data group, enter:
 ### Problem-01 : [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 If you get following error, when you try to start nginx…[emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 Then it means nginx or some other process is already using port 80. You can kill it using:And then try restarting nginx again
- ```
- sudo fuser -k 80/tcp 
- sudo fuser -k 443/tcp
- sudo service nginx start
  
- or
+    sudo fuser -k 80/tcp 
+    sudo fuser -k 443/tcp
+    sudo service nginx start
+    # or
+    nginx -t -c /etc/nginx/nginx.conf 
+    ps -eaf |grep nginx 
+    sudo cat /var/log/nginx/error.log|less 
+    //ps -eaf |grep nginx and netstat -tulpn |grep 80 a
+    //kill -9 749 
+    grep -r 'listen ' /etc/nginx/* 
  
- nginx -t -c /etc/nginx/nginx.conf 
- ps -eaf |grep nginx 
- sudo cat /var/log/nginx/error.log|less 
- //ps -eaf |grep nginx and netstat -tulpn |grep 80 a
- //kill -9 749 
- grep -r 'listen ' /etc/nginx/* 
- ``` 
 
 ### Problem-02: [warn] could not build optimal proxy_headers_hash, 
 
@@ -182,8 +176,6 @@ Server showing EOF text , Posiiblbe cause as below
      fastcgi_buffer_size 32k;
 
 
-
- 
  
  ## Ref
  
