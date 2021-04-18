@@ -11,10 +11,10 @@
       
       ## Config
       nano /home/matin/.ssh/config      
-      ## Add for SSH-aws:ssh aws.ecom
-      Host aws.ecom
+      ## Add for SSH-aws:ssh aws.com
+      Host aws.com
          HostName ip.136.241.xx
-         User ubuntu
+         User matin
          IdentityFile ~/.ssh/id_rsa
 
  
