@@ -110,7 +110,7 @@ Simply run the following command to add an existing user to an existing group:
       include /var/www/stage/magento2-stage2/nginx.conf.sample;
 
 
-          ## Allow pub/srcipts/ folder to execute php custom
+          ## Allow pub/scripts/ folder to execute php custom
          location /scripts/ {
           location ~* \.php$ {
                   try_files $uri =404;
