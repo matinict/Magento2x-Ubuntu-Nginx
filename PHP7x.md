@@ -16,7 +16,7 @@
         sudo apt install php8.0-fpm
         sudo apt install php8.0-snmp php-memcached php8.0-mysql
         sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
-        php -v
+        
         
 
 
@@ -26,15 +26,13 @@
         sudo apt-get -y install php7.4-fpm
         sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
         sudo php-fpm7.4 -t 
-        sudo service php7.4-fpm restart
-         php -v
+       
 
         ##7.4 on Ubuntu 18.04/16.04 
         sudo apt -y install php7.4 
         sudo apt-get -y install php7.3-fpm
         sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
-        sudo service php7.4-fpm restart
-        php -v 
+        
         
 
         # 7.3
@@ -42,31 +40,27 @@
         sudo apt-get -y install php7.3-fpm
         sudo apt-get install -y php7.3 php7.3-fpm php7.3-mysql  -y
         sudo apt install -y php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
-        sudo service php7.3-fpm restart
-         php -v 
+        
 
 
         ## 7.2
         sudo apt-get install -y php7.2
         sudo apt-get -y install php7.2-fpm         
         sudo apt-get install -y  php7.2   php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap php-xdebug php-imagick 
-        sudo service php7.2-fpm restart
-        php -v 
+         
 
-
+        #7.1
         sudo apt-get install -y php7.1
         sudo apt-get -y install php7.1-fpm
-        sudo apt-get install -y php7.1  php7.1-common php7.1-gd php7.1-mysql php7.1-curl php7.1-intl php7.1-xsl php7.1-mbstring php7.1-zip php7.1-bcmath php7.1-soap php-xdebug php-imagick 
-        sudo service php7.1-fpm restart
-        php -v  
+        sudo apt-get install -y php7.1  php7.1-common php7.1-gd php7.1-mysql php7.1-curl php7.1-intl php7.1-xsl php7.1-mbstring php7.1-zip php7.1-bcmath php7.1-soap php-xdebug php-imagick  
         
 
-
+        #7.0
         sudo apt-get install -y php7.0 
         sudo apt-get -y install php7.0-fpm
         sudo apt-get install -y  php7.0  php7.0-common php7.0-gd php7.0-mysql php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-soap php-xdebug php-imagick 
-        sudo service php7.0-fpm restart
-        php -v 
+        
+        
 
         # configurations 
         sudo nano /etc/php/7.x/fpm/php.ini
@@ -79,12 +73,14 @@
         zlib.output_compression = On
         session.gc_maxlifetime = 991440
         # press ctrl + O for saving or Ctrl+x    
-        sudo service php7.x-fpm restart 
         
         
-        sudo systemctl status php8.0-fpm 
-        sudo service php7.4-fpm restart
+        
+        ## Restart php-fpm & Chk version
+        sudo service php7.x-fpm restart      
+        sudo systemctl status php7.x-fpm  
         sudo systemctl restart nginx
+        php -v 
 
         ## PHP related to Apache is stored in /etc/php/7.4/apache2/php.ini  stop and disable Apache service.
         sudo systemctl disable --now apache2 
@@ -111,16 +107,7 @@
  
             
         ## Host Multiple Websites with different PHP Versions on Ubuntu 18.04 VPS 
-
-        sudo apt-get install software-properties-common -y
-        asudo dd-apt-repository ppa:ondrej/php 
-
-        sudo apt-get update -y 
-
-        sudo apt-get install php7.0 php7.0-fpm php7.2 php7.2-fpm -y 
-
-        systemctl status php7.0-fpm
-        systemctl status php7.2-fpm
+ 
         Create Website1 and Website2 
 
         mkdir /var/www/html/site1.example.com
