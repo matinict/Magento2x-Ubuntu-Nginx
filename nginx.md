@@ -94,6 +94,43 @@ Simply run the following command to add an existing user to an existing group:
        return 301 https://domain.com$request_uri;
    }
  ```
+ ## Inside Magento Run PHP
+ 
+    nano /etc/nginx/sites-available/magento_stage 
+ 
+    server {
+      listen 80;
+      #    ssl_certificate /etc/letsencrypt/live/stage.ecom.domain.com/fullchain.pem; # managed by Certbot
+      #    ssl_certificate_key /etc/letsencrypt/live/stage.ecom.domain.com/privkey.pem; # managed by Certbot
+      #    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+      #    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+      server_name stage.domain.com;
+      set $MAGE_ROOT /var/www/stage/magento2-stage2;
+      include /var/www/stage/magento2-stage2/nginx.conf.sample;
+
+
+          ## Allow pub/srcipts/ folder to execute php custom
+         location /scripts/ {
+          location ~* \.php$ {
+                  try_files $uri =404;
+                  fastcgi_pass   fastcgi_backend;
+                  fastcgi_buffers 1024 4k;
+
+                  fastcgi_read_timeout 600s;
+                  fastcgi_connect_timeout 600s;
+
+                  fastcgi_index  index.php;
+                  fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                  include        fastcgi_params;
+                 }
+          }
+
+
+
+     }
+
+
 
 
 
