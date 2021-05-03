@@ -286,8 +286,9 @@ Stage: * stage
 	git checkout stage
 	stest.php [check  ls]
 
+### Override Local
 
-git reset --hard origin/stage
+	git reset --hard origin/stage
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
