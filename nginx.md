@@ -147,6 +147,10 @@ Simply run the following command to add an existing user to an existing group:
     cat /var/log/nginx/error.log
     cat /var/log/nginx/access.log
     
+    sudo truncate -s 0 error.log
+    sudo truncate -s 0 access.log
+    
+    
  #### Custom Configuration :
 
     sudo nano etc/nginx/conf.d/magento.conf 
