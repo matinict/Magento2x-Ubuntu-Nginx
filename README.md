@@ -293,8 +293,12 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
           $ sudo ln -s /etc/nginx/sites-available/magento.lan /etc/nginx/sites-enabled
           
           [ sudo unlink /etc/nginx/sites-enabled/default ]
-
-          $ sudo systemctl restart nginx
+          
+          # Resart ALL
+          sudo systemctl restart nginx
+          sudo service php7.2-fpm restart
+          sudo service mysql restart
+          sudo systemctl restart mysql.service 
           
           http://www.magento.lan/setup
           
