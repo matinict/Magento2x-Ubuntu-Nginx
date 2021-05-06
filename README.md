@@ -51,6 +51,8 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       max_input_time = 1800
       upload_max_filesize = 10M
       zlib.output_compression = On
+      max_input_vars = 81000
+
       press ctrl + O for saving or Ctrl+x
       
       sudo service php7.2-fpm start
