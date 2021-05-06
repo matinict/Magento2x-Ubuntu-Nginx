@@ -72,6 +72,8 @@
         upload_max_filesize = 100M
         zlib.output_compression = On
         session.gc_maxlifetime = 991440
+        max_input_vars = 81000
+
         # press ctrl + O for saving or Ctrl+x    
         
         
