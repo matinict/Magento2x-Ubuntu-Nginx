@@ -95,6 +95,12 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
 
 ```
 
+## 1.6 Removing ElasticSearch from @Magento 2.4" [Yireo_RemoveSearch](https://github.com/yireo/Yireo_RemoveSearch)
+ 
+        
+        php bin/magento module:disable Magento_AdvancedSearch Magento_CatalogSearch Magento_Elasticsearch Magento_Elasticsearch Magento_Elasticsearch-6  Magento_Elasticsearch-7 Magento_InventoryCatalogCearch   Magento_Inventory-Elasticsearch Magento_Search  Elasticsearch_Elasticsearch
+
+
 ## Problem
 
 #### Job for elasticsearch.service failed because the control process exited with error code.See "systemctl status elasticsearch.service" and "journalctl -xe" for details.
