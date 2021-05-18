@@ -1,7 +1,11 @@
 ## Status apache2
 
+    httpd -v
     sudo systemctl status apache2
     sudo systemctl is-enabled apache2
+    
+    ## Chk permission user/group 
+    ps aux | egrep '(apache|httpd)'
 
 ## Remove apache2
 
