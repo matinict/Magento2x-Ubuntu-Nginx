@@ -18,3 +18,4 @@ And finally after performing any self-update, you can specify --rollback to go b
     composer self-update
     composer self-update --rollback
 
+    composer update --ignore-platform-reqs
