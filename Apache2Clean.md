@@ -6,6 +6,17 @@
     
     ## Chk permission user/group 
     ps aux | egrep '(apache|httpd)'
+    
+ ## Chk issue log
+ 
+    apachectl -S
+    # Main ErrorLog: "/etc/apache2/logs/error_log"
+    cat /etc/apache2/logs/error_log
+    
+    truncate -s 0 /etc/apache2/logs/error_log
+
+
+
 
 ## Remove apache2
 
