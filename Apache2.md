@@ -3,11 +3,13 @@
     httpd -v
     sudo systemctl status apache2
     sudo systemctl is-enabled apache2
+    sudo systemctl restart apache2
     
     ## Chk permission user/group 
+    
     ps aux | egrep '(apache|httpd)'
     
-## User 
+## User & Web user 
 
     sudo chown -R apache:apache /var/www/html/
     sudo chmod -R 775 /var/www/html/
