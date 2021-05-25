@@ -7,6 +7,12 @@
     ## Chk permission user/group 
     ps aux | egrep '(apache|httpd)'
     
+## User 
+
+    sudo chown -R apache:apache /var/www/html/
+    sudo chmod -R 775 /var/www/html/
+    
+    
  ## Chk issue log
  
     apachectl -S
