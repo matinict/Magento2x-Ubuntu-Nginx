@@ -88,6 +88,14 @@ http://your_server_ip
 
 
     sudo tail -n 10 /var/log/apache2/error.log
+    
+    # on CentOS/RHEL-based distributions:     
+    sudo tail -n 10 /var/log/httpd/error_log
+
+    # on Debian/Ubuntu-based distributions: 
+    sudo tail -n 10 /var/log/apache2/error.log
+
+
 
 
 
