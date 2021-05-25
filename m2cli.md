@@ -265,5 +265,8 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
  ## Error Log
  
     sudo tail -n 10 var/log/exception.log
+    
+    truncate -s 0 var/log/exception.log
+
 
 
