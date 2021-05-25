@@ -95,6 +95,11 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
 
 ```
 
+            # Check version
+            
+            curl http://localhost:9200
+            
+
 ## 1.6 Removing ElasticSearch from @Magento 2.4" [Yireo_RemoveSearch](https://github.com/yireo/Yireo_RemoveSearch)
  
         
@@ -109,6 +114,7 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
 ## 1.5 Remove/Uninstall Elasticsearch
 
 
+### exception(s): Exception #0 (Elasticsearch\Common\Exceptions\BadMethodCallException): Namespace [suggest] not found
 
 
 # Ref:
