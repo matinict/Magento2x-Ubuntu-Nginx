@@ -12,6 +12,11 @@
     sudo chown -R apache:apache /var/www/html/
     sudo chmod -R 775 /var/www/html/
     
+    sudo usermod -a -G www-data $USER
+    sudo chown -R $USER:www-data /var/www/
+
+
+    
     
  ## Chk issue log
  
