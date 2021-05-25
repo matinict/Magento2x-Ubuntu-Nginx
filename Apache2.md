@@ -1,3 +1,15 @@
+## Install 
+
+    sudo apt update && sudo apt upgrade
+    sudo apt install apache2
+    sudo ufw allow 'Apache Full'
+    sudo ufw allow 'OpenSSH'
+    sudo ufw enable
+
+    sudo nano /etc/php/7.4/apache2/php.ini
+    sudo nano /etc/php/7.2/apache2/php.ini
+
+
 ## Status apache2
 
     httpd -v
