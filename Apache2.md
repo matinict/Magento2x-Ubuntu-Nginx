@@ -78,9 +78,16 @@ Status: active
     Apache                     ALLOW       Anywhere                  
     OpenSSH (v6)               ALLOW       Anywhere (v6)                    
     Apache (v6)                ALLOW       Anywhere (v6)     
+    
+    #if inactive 
+    
+    sudo ufw enable
+
 
  
 http://your_server_ip 
+
+
 
 
 
