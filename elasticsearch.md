@@ -99,11 +99,22 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
             
             curl http://localhost:9200
             
+## 1.8 Magento admin setting 
+      
+      Go to STORES > CONFIGURATION > CATALOG > CATALOG > CATALOG SEARCH > Elasticsearch Index Prefix.
+      
+      # Set a different prefix for each store, any random one for each. Reindex and flush cache on each store.
 
-## 1.6 Removing ElasticSearch from @Magento 2.4" [Yireo_RemoveSearch](https://github.com/yireo/Yireo_RemoveSearch)
+       php -d memory_limit=2G bin/magento index:reindex
+
+            
+
+## 1.7 Removing ElasticSearch from @Magento 2.4" [Yireo_RemoveSearch](https://github.com/yireo/Yireo_RemoveSearch)
  
         
         php bin/magento module:disable Magento_AdvancedSearch Magento_CatalogSearch Magento_Elasticsearch Magento_Elasticsearch Magento_Elasticsearch-6  Magento_Elasticsearch-7 Magento_InventoryCatalogCearch   Magento_Inventory-Elasticsearch Magento_Search  Elasticsearch_Elasticsearch
+        
+        
 
 
 ## Problem
