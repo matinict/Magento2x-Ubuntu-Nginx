@@ -261,3 +261,9 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     
     php bin/magento config:set dev/js/merge_files 1 
     bin/magento c:f
+    
+ ## Error Log
+ 
+    sudo tail -n 10 var/log/exception.log
+
+
