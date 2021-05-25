@@ -89,3 +89,13 @@ Status: active
  
 http://your_server_ip 
 
+
+
+## Troubleshot /Apache Log Files
+
+
+    sudo tail -n 2 /var/log/apache2/error.log
+
+
+
+
