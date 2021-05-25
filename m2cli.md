@@ -31,6 +31,10 @@
     find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
     chown -R :www-data .
     chmod u+x bin/magento
+    
+    ## Sometime need use
+    sudo chmod -R 777 pub/* var/* generated/*
+
 
 
 ## Maintenance Related Commands:
