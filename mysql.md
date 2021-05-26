@@ -91,15 +91,15 @@ Note that in Ubuntu systems running MySQL 5.7 (and later versions), the root MyS
       sudo systemctl enable mysql.service
       sudo systemctl status mysql.service
 
-● mysql.service - MySQL Community Server
-     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
-     Active: active (running) since Fri 2020-10-23 09:20:17 UTC; 16min ago
-   Main PID: 1129 (mysqld)
-     Status: "Server is operational"
-      Tasks: 40 (limit: 4680)
-     Memory: 338.6M
-     CGroup: /system.slice/mysql.service
-             └─1129 /usr/sbin/mysqld 
+      ● mysql.service - MySQL Community Server
+           Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+           Active: active (running) since Fri 2020-10-23 09:20:17 UTC; 16min ago
+         Main PID: 1129 (mysqld)
+           Status: "Server is operational"
+            Tasks: 40 (limit: 4680)
+           Memory: 338.6M
+           CGroup: /system.slice/mysql.service
+                   └─1129 /usr/sbin/mysqld 
              
 ### Step 4 – Starting/Stopping/Restarting MySQL server 
 
@@ -139,27 +139,20 @@ In this example, you can see that the root user does in fact authenticate using 
 Check the authentication methods employed by each of your users again to confirm that root no longer authenticates using the auth_socket plugin:
 
       SELECT user,authentication_string,plugin,host FROM mysql.user;
- 
-
-```
-Output:
-+------------------+-------------------------------------------+-----------------------+-----------+
-| user             | authentication_string                     | plugin                | host      |
-+------------------+-------------------------------------------+-----------------------+-----------+
-| root             | *3636DACC8616D997782ADD0839F92C1571D6D78F | mysql_native_password | localhost |
-| mysql.session    | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
-| mysql.sys        | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
-| debian-sys-maint | *CC744277A401A7D25BE1CA89AFF17BF607F876FF | mysql_native_password | localhost |
-+------------------+-------------------------------------------+-----------------------+-----------+
-4 rows in set (0.00 sec)
-```
-You can see in this example output that the root MySQL user now authenticates using a password. Once you confirm this on your own server, you can exit the MySQL shell: exit
-Note: After configuring your root MySQL user to authenticate with a password, you’ll no longer be able to access MySQL with the sudo mysql command used previously. Instead, you must run the following:
+  
+      Output:
+      +------------------+-------------------------------------------+-----------------------+-----------+
+      | user             | authentication_string                     | plugin                | host      |
+      +------------------+-------------------------------------------+-----------------------+-----------+
+      | root             | *3636DACC8616D997782ADD0839F92C1571D6D78F | mysql_native_password | localhost |
+      | mysql.session    | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
+      | mysql.sys        | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
+      | debian-sys-maint | *CC744277A401A7D25BE1CA89AFF17BF607F876FF | mysql_native_password | localhost |
+      +------------------+-------------------------------------------+-----------------------+-----------+
+      4 rows in set (0.00 sec) 
 
       mysql -u root -p
- 
-After entering the password you just set, you will see the MySQL prompt.At this point, your database system is now set up and you can move on to installing PHP
-
+  
 
 ### How to Create a New User 
 
@@ -177,42 +170,26 @@ Therefore, the first thing to do is to provide the user with access to the infor
 
      GRANT ALL PRIVILEGES ON * . * TO 'matin'@'localhost';
      GRANT ALL PRIVILEGES ON * . * TO 'matin'@'127.0.0.1';
-     GRANT ALL PRIVILEGES ON * . * TO 'matin'@'*';
-
-
-The asterisks in this command refer to the database and table (respectively) that they can access—this specific command allows to the user to read, edit, execute and perform all tasks across all the databases and tables.Please note that in this example we are granting newuser full root access to everything in our database. While this is helpful for explaining some MySQL concepts, it may be impractical for most use cases and could put your database’s security at high risk.Once you have finalized the permissions that you want to set up for your new users, always be sure to reload all the privileges.
+     GRANT ALL PRIVILEGES ON * . * TO 'matin'@'*'; 
 
 
       FLUSH PRIVILEGES;
 
 
 
-### CREATE MYSQL DATABASES AND USERS:
+### CREATE MYSQL DATABASES AND USERS: 
 
-To create MySQL database and users, follow these steps:
-
-At the command line, log in to MySQL as the root user:
-
-      mysql -u root -p
-      
-Type the MySQL root password, and then press Enter.
-To create a database user, type the following command. Replace username with the user you want to create, and replace password with the user's password:
+      mysql -u root -p 
 
       GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 
 
  
 
-## Export Import  In Server Using SSH/Terminal
+## Export Import  In Server Using SSH/Terminal 
 
 
-- Log in to your server using SSH.At the command prompt, type the following command to create a new database. Replace username with the MySQL username, and replace new_dbname with the new database name that you want to use:
-
-
-      mysql -u username -p -e "CREATE DATABASE new_dbname"
-
-- To export the old database to a file, type the following command. Replace username with the MySQL username, and replace old_dbname with the name of the database that you want to rename:
-Prompt for password:
+    mysql -u username -p -e "CREATE DATABASE new_dbname" 
 
     mysql -u <username> -p <databasename> < <filename.sql>
     Enter password directly (not secure):
@@ -245,6 +222,14 @@ Example:
       mysql -u matin -pmatin@123 mydb < mydbfile.sql 
 
       mysql -u username -p -e "DROP DATABASE old_dbname" 
+      
+### Step1: Install PDO module
+
+      sudo apt-get install php7.4-mysql
+     #Enable PDO module
+      phpenmod pdo_mysql
+
+
 
 
 ### Log cleaning in Magento 2 
