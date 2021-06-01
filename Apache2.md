@@ -21,6 +21,42 @@
     
     ps aux | egrep '(apache|httpd)'
     
+## Configuring Apache
+Open Apache ports.conf file using the below command;
+
+    sudo nano /etc/apache2/ports.conf
+    ##Look for the following line;
+
+    Listen 127.0.0.1:80
+
+    ##Moreover, change it to;
+
+    Listen 127.0.01:8080
+    
+    ##Save and Exit.
+
+    # edit the default virtual host file in Apache. The <VirtualHost> in this file is set to serve sites only on port 80
+
+    sudo nano /etc/apache2/sites-available/000-default.conf
+    ##Look for the following line;
+
+    <VirtualHost 127.0.0.1:80>
+    ##Moreover, change it to;
+
+    <VirtualHost 127.0.0.1:8080>
+    ##Save the file and reload Apache.
+
+    sudo service apache2 reload
+    ##Verify that Apache is now listening on 8080.
+
+    sudo netstat -tlpn
+    ##The output is shown below, with apache2 listening on :::8080.
+
+    ## Active Internet connections (only servers)
+    Proto Recv-Q Send-Q Local Address     Foreign Address      State    PID/Program name
+    tcp        0      0 0.0.0.0:22        0.0.0.0:*            LISTEN   1086/sshd
+    tcp6       0      0 :::8080           :::*                 LISTEN   4678/apache2
+    
 ## User & Web user 
 
     sudo chown -R apache:apache /var/www/html/
