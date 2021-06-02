@@ -186,23 +186,15 @@ composer remove magento/product-community-edition --no-update
 ```
 composer require magento/product-community-edition=2.3.x --no-update
 ```
-## Check Version Cli
+## Magento2x Info Terminal
+ 
+    ## Check Version Cli
+    php bin/magento --version
+    php bin/magento -V
 
-- Admin Dashboard
-- Composer.json file
-- Composer.lock file
-- via Command Line
-- the Chrome Extension
-- from the URL
-- PHP Code
-- Magento Version Checking tool
-- Online Tools
-
-```
-php bin/magento --version
-php bin/magento -V
-
-```
+    # Get Admin Url
+    php bin/magento info:adminuri
+ 
 
 
 ## Clean m2 db
