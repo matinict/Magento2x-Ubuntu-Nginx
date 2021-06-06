@@ -1,4 +1,14 @@
+## Install Magento Using Composer
 
+
+    ## composer create-project --repository=https://repo.magento.com/ magento/project-community-edition <install-directory-name>
+    composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.x magento2.4.x
+    ##cd magento2.4.2
+    find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+    find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+    chown -R :www-data .
+    chmod u+x bin/magento
+    
 
 ## rollback to version 1 of composer, you simply execute:
 
@@ -17,5 +27,4 @@ And finally after performing any self-update, you can specify --rollback to go b
 
     composer self-update
     composer self-update --rollback
-
     composer update --ignore-platform-reqs
