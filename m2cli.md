@@ -258,6 +258,42 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     php bin/magento config:set dev/js/merge_files 1 
     bin/magento c:f
     
+## command line to install Magento. 
+
+    php bin/magento setup:install \
+    --base-url=http://www.magento24.lan \
+    --db-host=localhost \
+    --db-name=mag24db \
+    --db-user=matin \
+    --db-password=matin@123 \
+    --admin-firstname=Matin \
+    --admin-lastname=Admin \
+    --admin-email=admin@admin.com \
+    --admin-user=admin \
+    --admin-password=admin@123 \
+    --language=en_US \
+    --currency=USD \
+    --timezone=America/Chicago \
+    --use-rewrites=1
+    
+  BDT::
+  
+    php bin/magento setup:install \
+    --base-url=http://www.magento24.lan \
+    --db-host=localhost \
+    --db-name=mag24db \
+    --db-user=matin \
+    --db-password=matin@123 \
+    --admin-firstname=Matin \
+    --admin-lastname=Admin \
+    --admin-email=admin@admin.com \
+    --admin-user=admin \
+    --admin-password=admin@123 \
+    --language=en_US \
+    --currency=BDT \
+    --timezone=Asia/Dhaka \
+    --use-rewrites=1
+    
  ## Error Log
  
     sudo truncate -s 0 var/log/exception.log
