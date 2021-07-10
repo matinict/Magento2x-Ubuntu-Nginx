@@ -285,6 +285,14 @@ Stage: * stage
 	git branch -a
 	git checkout stage
 	stest.php [check  ls]
+	
+	
+	git checkout -b v1.0-matin-mobile-email-login
+	git branch
+	git status
+	git add app/code/Vendor/MobileLogin/
+	git commit -m "matin-mobile-email-login Apps"
+	git push origin v1.0-matin-mobile-email-login
 
 ### Override Local
 
