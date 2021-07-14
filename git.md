@@ -297,7 +297,10 @@ Stage: * stage
 ### Override Local
 
 	git fetch --all
-	git fetch --force.
+	git fetch --force
+	
+	git checkout -f branch
+
 
 
 	git reset --hard origin/stage
