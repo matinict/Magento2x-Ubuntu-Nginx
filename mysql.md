@@ -110,11 +110,10 @@ Note that in Ubuntu systems running MySQL 5.7 (and later versions), the root MyS
       sudo tail -f /var/log/mysql/error.log
       
 
-### ￼Truoble in PhpMyAdmin Login
+### Truoble in PhpMyAdmin Login
 
-mysqli_real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]
-
-If using the auth_socket plugin to access MySQL fits with your workflow, you can proceed to Step 3. If, however, you prefer to use a password when connecting to MySQL as root, you will need to switch its authentication method from auth_socket to mysql_native_password. To do this, open up the MySQL prompt from your terminal:
+- Issue: mysqli_real_connect(): The server requested authentication method unknown to the client [caching_sha2_password]
+ 
 
       sudo mysql 
       SELECT user,authentication_string,plugin,host FROM mysql.user;
