@@ -304,6 +304,41 @@ Stage: * stage
 
 
 	git reset --hard origin/stage
+	
+## Stashing and Cleaning
+
+	git status
+	# modified:   lib/simplegit.rb
+	
+	git stash 
+	git stash list
+	git stash apply
+	git stash apply --index
+	git status -s
+	git stash --patch
+	
+	git clean -d -n
+	git clean -n -d
+	
+	git status -s
+	M lib/simplegit.rb
+	?? build.TMP
+	?? tmp/
+
+	git clean -n -d
+	Would remove build.TMP
+	Would remove tmp/
+
+	git clean -n -d -x
+	Would remove build.TMP
+	Would remove test.o
+
+
+
+
+
+
+	
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
