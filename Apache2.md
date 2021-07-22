@@ -59,13 +59,19 @@ Open Apache ports.conf file using the below command;
     
 ## User & Web user 
 
-    sudo chown -R apache:apache /var/www/html/
-    sudo chmod -R 775 /var/www/html/
+    sudo chown -R apache:apache /var/www/public_html/
+    sudo chmod -R 775 /var/www/public_html/
     
     sudo usermod -a -G www-data $USER
     sudo chown -R $USER:www-data /var/www/
 
 
+# Permission 
+
+    sudo mkdir /var/www/public_html/mysite
+    sudo chown $USER:www-data /var/www/public_html/mysite
+    sudo chmod g+s /var/www/public_html/mysite
+    sudo chmod o-rwx /var/www/public_html/mysite
     
     
  ## Chk issue log
