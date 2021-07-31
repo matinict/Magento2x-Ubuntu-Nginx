@@ -308,6 +308,11 @@ Stage: * stage
 ## Stashing and Cleaning
 
 	git status
+	
+	 git stash push -m dcompileIssue_cart PayPal/ButtonAdapter.php
+
+
+
 	# modified:   lib/simplegit.rb
 	
 	git stash 
