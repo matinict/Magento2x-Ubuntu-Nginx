@@ -258,6 +258,30 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     php bin/magento config:set dev/js/merge_files 1 
     bin/magento c:f
     
+## Secure JS/CSS
+
+    php bin/magento web/secure/use_in_frontend 0
+    select * from `core_config_data` WHERE `core_config_data`.`path` = "web/secure/use_in_frontend";
+    select * from `core_config_data` WHERE `core_config_data`.`path` = "web/secure/use_in_adminhtml";
+    Enable ssl:
+    php bin/magento web/secure/use_in_frontend 1
+    php bin/magento web/secure/use_in_adminhtml 1
+    or
+    UPDATE `core_config_data` SET `value` = '1' WHERE `core_config_data`.`path` = "web/secure/use_in_frontend";
+    UPDATE `core_config_data` SET `value` = '1' WHERE `core_config_data`.`path` = "web/secure/use_in_adminhtml";
+    disable ssl:
+    php bin/magento web/secure/use_in_frontend 0
+    php bin/magento web/secure/use_in_adminhtml 0
+    or
+    UPDATE `core_config_data` SET `value` = '0' WHERE `core_config_data`.`path` = "web/secure/use_in_frontend";
+    UPDATE `core_config_data` SET `value` = '0' WHERE `core_config_data`.`path` = "web/secure/use_in_adminhtml";
+    UPDATE `core_config_data` SET `value` = '0' WHERE `core_config_data`.`config_id` = 94;
+    UPDATE `core_config_data` SET `value` = '0' WHERE `core_config_data`.`config_id` = 93;
+    SELECT * FROM `core_config_data` where path LIKE "%admin/url/use_custom%"
+    SELECT * FROM `core_config_data` where path LIKE "%admin/url%"
+    UPDATE `core_config_data` SET `value` = '0' WHERE `core_config_data`.`path` ="admin/url/use_custom";
+    bin/magento msp:security:recaptcha:disable
+    
 ## command line to install Magento. 
 
     php bin/magento setup:install \
