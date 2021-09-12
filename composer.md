@@ -1,3 +1,28 @@
+
+
+## Install  Composer
+
+    sudo apt update
+    sudo apt install php-cli unzip
+    cd ~
+    curl -sS https://getcomposer.org/installer -o composer-setup.php
+    HASH=`curl -sS https://composer.github.io/installer.sig`
+    
+    composer self-update
+
+
+## Remove  Composer
+    sudo apt-get remove composer
+    sudo apt-get remove --auto-remove composer
+    sudo apt-get purge composer
+    sudo apt-get purge --auto-remove composer
+
+    where composer
+    rm /usr/local/bin/composer
+
+
+
+
 ## Install Magento Using Composer
 
 
