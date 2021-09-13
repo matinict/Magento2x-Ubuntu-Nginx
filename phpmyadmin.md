@@ -124,5 +124,13 @@ And below is all information about PHP server configuration.
     
     sudo apt-get autoremove
 
+## issue javascript-common
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+
+    sudo apt-get remove --purge javascript-common
+    sudo apt autoremove
+
+
+
 
 
