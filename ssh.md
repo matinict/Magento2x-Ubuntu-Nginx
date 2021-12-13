@@ -16,6 +16,10 @@
          HostName ip.136.241.xx
          User matin
          IdentityFile ~/.ssh/id_rsa
+         
+ ###  SSH Access copy to gitlab setup
+ 
+         cat ~/.ssh/id_rsa.pub
 
  
 ### Add Origin SSH Access
