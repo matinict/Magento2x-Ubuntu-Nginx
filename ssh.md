@@ -18,3 +18,10 @@
          IdentityFile ~/.ssh/id_rsa
 
  
+### Add Origin SSH Access
+
+      git remote -v
+      git remote remove origin
+      git remote add origin git@gitlab.com:kpd-i/nucap/spidertech.git
+
+
