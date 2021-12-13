@@ -18,8 +18,9 @@
          IdentityFile ~/.ssh/id_rsa
          
  ###  SSH Access copy to gitlab setup
- 
-         cat ~/.ssh/id_rsa.pub
+      ssh-keygen -o -f ~/.ssh/id_rsa
+      chmod 400 ~/.ssh/id_rsa
+      cat ~/.ssh/id_rsa.pub
 
  
 ### Add Origin SSH Access
