@@ -30,7 +30,10 @@
         
         #!/bin/bash
         pestle.phar magento2:generate:module Spidertech BundleLanding 0.0.1
-        pestle.phar magento2:generate:crud-model Spidertech_BundleLanding 1.0.0
+        
+        ##pestle.phar magento2:generate:crud-model Spidertech_BundleLanding 1.0.0
+        php pestle.phar magento2:generate:crud-model Spidertech_BundleLanding Bundle Product
+        
         pestle.phar magento2:generate:acl Spidertech_BundleLanding Spidertech_BundleLanding::1.0.0s
         pestle.phar magento2:generate:menu Spidertech_BundleLanding "" Spidertech_BundleLanding::1.0.0s Spidertech_BundleLanding::1.0.0s "BundleLanding 1.0.0s" spidertech_bundlelanding_1.0.0s/index/index 10
         pestle.phar magento2:generate:menu Spidertech_BundleLanding Spidertech_BundleLanding::1.0.0s Spidertech_BundleLanding::1.0.0s_list Spidertech_BundleLanding::1.0.0s "1.0.0 Objects" spidertech_bundlelanding_1.0.0s/index/index 10
