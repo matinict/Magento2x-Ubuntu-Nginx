@@ -55,7 +55,7 @@
     ## Generates Theme Configuration
     php pestle.phar magento2:generate:theme Spidertech Theme 
     ## Vandor ThemeName, Area: frontend/adminhtml ,Parent: Magento/luma or Magento/blank
-    php pestle.phar magento2:generate:theme Spidertech Theme  frontend  Magento/Luma
+    php pestle.phar magento2:generate:theme Spidertech Theme  frontend  Magento/luma
 
 
     ## All
