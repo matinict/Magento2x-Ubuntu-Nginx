@@ -50,15 +50,16 @@
         php bin/magento module:enable Spidertech_BundleLanding
 
 
-    ## All
-    pestle.phar list
+    
     
     ## Generates Theme Configuration
-    php pestle.phar magento2:generate:theme Spidertech_Theme 1.0.0    
-    php pestle.phar magento2:generate:theme Spidertech_Theme 1.0.0  frontend 
+    php pestle.phar magento2:generate:theme Spidertech Theme 
+    ## Vandor ThemeName, Area: frontend/adminhtml ,Parent: Magento/luma or Magento/blank
+    php pestle.phar magento2:generate:theme Spidertech Theme  frontend  Magento/Luma
 
 
-
+    ## All
+    php pestle.phar list
 
 
 
