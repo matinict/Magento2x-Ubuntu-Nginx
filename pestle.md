@@ -17,10 +17,22 @@
     
     ## Genarate Modul 
     php pestle.phar generate_module
+    
+    ## Genarate Route 
+    php pestle.phar generate_route Spidertech WordPress 1.0.0
+    
+    ## Adding View
+    php pestle.phar generate_view Pulsestorm_HelloPestle frontend hello_pestle_index_index Main content.phtml
+    php pestle.phar generate_view
+
+    ## All
+    pestle.phar list
+
+
 
 
 
 ## Ref
 
-https://github.com/astorm/pestle
-https://alanstorm.com/category/magento-2/
+    https://github.com/astorm/pestle
+    https://alanstorm.com/category/magento-2/
