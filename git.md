@@ -346,7 +346,8 @@ Stage: * stage
       git remote add origin git@gitlab.com:kpd-i/nucap/spidertech.git
 
 
-
+## SSH
+	cat ~/.ssh/id_rsa.pub
 
 	
 
