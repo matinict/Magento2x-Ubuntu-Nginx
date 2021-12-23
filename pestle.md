@@ -11,9 +11,16 @@
     
     ## get help for a specific command with
     php pestle.phar help generate_module
+    
+    ## Create Module
+    php pestle.phar generate_module Spidertech WordPress 1.0.0
+    
+    ## Genarate Modul 
+    php pestle.phar generate_module
 
 
 
 ## Ref
 
 https://github.com/astorm/pestle
+https://alanstorm.com/category/magento-2/
