@@ -1,9 +1,9 @@
 
 
-## pestle
+## Pestle
 
 
-
+    php pestle.phar list-commands
 
 
 ## Ref
