@@ -54,7 +54,8 @@
     pestle.phar list
     
     ## Generates Theme Configuration
-    php pestle.phar magento2:generate:theme Spidertech_Theme 1.0.0              
+    php pestle.phar magento2:generate:theme Spidertech_Theme 1.0.0    
+    php pestle.phar magento2:generate:theme Spidertech_Theme 1.0.0  frontend 
 
 
 
