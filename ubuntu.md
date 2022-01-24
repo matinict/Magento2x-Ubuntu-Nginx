@@ -1,5 +1,21 @@
+# Ubuntu
 
 
+## Prerequisites 
+
+- RAM:4GB
+- HD : 30GB  
+
+
+## Installing
+
+- Bootable OS
+
+
+## check your current Ubuntu version
+
+        cat /etc/*release  
+        
 
 ## Change swap size in Ubuntu 18.04 or newer
 
