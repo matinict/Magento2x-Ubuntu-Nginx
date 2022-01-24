@@ -4,10 +4,13 @@
 ### The Requirements 
  To  check that all prerequisites are met neet installed:
 
-     - Magento version
-     - Redis
-     - Node
-     - Varshish 
+- Magento version
+
+- Redis
+
+- Node
+
+- Varshish 
 
 
 
