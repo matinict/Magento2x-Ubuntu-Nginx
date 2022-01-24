@@ -11,12 +11,12 @@
 
 - Installing Node.js with Apt from the Default Repositories
 
-    sudo apt update
-    sudo apt install nodejs
-    node -v
-    sudo apt install npm
-    
-    
+        sudo apt update
+        sudo apt install nodejs
+        node -v
+        sudo apt install npm
+
+
 - Installing Node.js with Apt Using a NodeSource PPA
 
       cd ~
