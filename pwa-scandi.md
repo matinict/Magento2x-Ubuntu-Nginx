@@ -6,7 +6,7 @@
 
 - Magento version
 
-- Redis [redis.md]
+- (Redis)[redis.md]
 
 - Node
 
