@@ -14,6 +14,7 @@
         sudo apt update
         sudo apt install nodejs
         node -v
+        ##v10.19.0
         sudo apt install npm
 
 
