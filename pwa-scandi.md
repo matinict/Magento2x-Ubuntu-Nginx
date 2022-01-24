@@ -4,13 +4,13 @@
 ### The Requirements 
  To  check that all prerequisites are met neet installed:
 
-- Magento version
+- [Magento](m24.md)
 
-- (Redis)[redis.md]
+- [Redis](redis.md)
 
-- Node
+- [Node](node.md)
 
-- Varshish 
+- [Varshish](varnish.md)
 
 
 
