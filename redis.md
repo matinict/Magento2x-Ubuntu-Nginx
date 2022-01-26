@@ -7,7 +7,7 @@
 ### Installing Redis on Ubuntu 20.04
 
 	sudo apt update
-	sudo apt install redis-server
+	sudo apt install redis-server -y
 	sudo systemctl status redis-server
 
 
