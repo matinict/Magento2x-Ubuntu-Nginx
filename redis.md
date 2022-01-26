@@ -75,4 +75,18 @@ array(
 
  
     php bin/magento c:f
+    
+ ## Check if Redis cache is working
  
+To verify that Redis and Magento are working together, use the following commands:
+
+	##Redis ping : 
+	redis-cli ping 
+
+	##Redis monitor: 
+	redis-cli monitor
+ 
+ 
+ ### Ref
+ 
+ https://www.mageplaza.com/devdocs/redis-cache-magento-2.html
