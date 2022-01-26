@@ -89,4 +89,6 @@ To verify that Redis and Magento are working together, use the following command
  
  ### Ref
  
+ https://linuxize.com/post/how-to-install-and-configure-redis-on-ubuntu-20-04/
+ 
  https://www.mageplaza.com/devdocs/redis-cache-magento-2.html
