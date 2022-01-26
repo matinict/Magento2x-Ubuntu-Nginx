@@ -1,7 +1,20 @@
 
 
 
-## Install and configure Redis caching 
+## Install  Redis  
+
+
+### Installing Redis on Ubuntu 20.04
+
+	sudo apt update
+	sudo apt install redis-server
+	sudo systemctl status redis-server
+
+
+
+
+
+### tftf
  
 	sudo apt-get install php-redis redis-server -y
 	sudo apt install redis-tools -y
