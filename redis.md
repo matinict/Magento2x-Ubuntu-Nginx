@@ -3,8 +3,8 @@
 
 ## Install and configure Redis caching 
  
-	sudo apt-get install php-redis redis-server
-	sudo apt install redis-tools 
+	sudo apt-get install php-redis redis-server -y
+	sudo apt install redis-tools -y
 	sudo nano /var/www/myMagentoSite.com/app/etc/env.php
  
 ```
