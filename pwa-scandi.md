@@ -15,25 +15,25 @@
 
 ### Check Magento var 
    
-   ##Terminal
-   php bin/magento --version
+    ##Terminal
+    php bin/magento --version
 
-   ##sowagar
-   url/sowagar
+    ##sowagar
+    url/sowagar
 
-   ##url
-   https://www.magereport.com/scan
+    ##url
+    https://www.magereport.com/scan
 
 
   
 
 ### Check Redis cache 
 
-  ##Redis ping : 
-  redis-cli ping 
+   ##Redis ping : 
+   redis-cli ping 
 
-  ##Redis monitor: 
-  redis-cli monitor
+   ##Redis monitor: 
+   redis-cli monitor
  
  
  
@@ -46,8 +46,9 @@
  
  
  ### Check Node  
-  node -v
-  ##Output v16.6.1
+ 
+   node -v
+   ##Output v16.6.1
 
  
  
