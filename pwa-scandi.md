@@ -1,7 +1,7 @@
 
 # ScandiPWA
 
-### The Requirements 
+## The Requirements 
  To  check that all prerequisites are met neet installed:
 
 - [Magento](m24.md)
@@ -13,7 +13,45 @@
 - [Varshish](varnish.md)
 
 
+### Check Magento var 
+   
+   ##Terminal
+   php bin/magento --version
 
+   ##sowagar
+   url/sowagar
+
+   ##url
+   https://www.magereport.com/scan
+
+
+  
+
+### Check Redis cache 
+
+  ##Redis ping : 
+  redis-cli ping 
+
+  ##Redis monitor: 
+  redis-cli monitor
+ 
+ 
+ 
+ ### Check Varshish cache 
+    
+    varnishncsa 
+    varnishlog
+    varnishd -V
+    varnishhist
+ 
+ 
+ ### Check Node  
+  node -v
+  ##Output v16.6.1
+
+ 
+ 
+ 
 
 ## Ref:
 
