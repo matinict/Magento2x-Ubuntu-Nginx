@@ -13,7 +13,7 @@
 - [Varshish](varnish.md)
 
 
-### Check Magento var 
+### Check Magento var  [Magento](m24.md)
    
      ##Terminal
      php bin/magento --version
@@ -27,7 +27,7 @@
 
   
 
-### Check Redis cache 
+### Check Redis cache  [Redis](redis.md)
 
     ##Redis ping : 
     redis-cli ping 
@@ -37,7 +37,7 @@
  
  
  
- ### Check Varshish cache 
+ ### Check Varshish cache [Varshish](varnish.md)
     
     varnishncsa 
     varnishlog
@@ -45,7 +45,7 @@
     varnishhist
  
  
- ### Check Node  
+ ### Check Node  [Node](node.md)
  
     node -v
     ##Output v16.6.1
