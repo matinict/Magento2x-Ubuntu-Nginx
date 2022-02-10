@@ -12,3 +12,15 @@
 
       1.2.3.4         account.jetbrains.com
       0.0.0.0 https://account.jetbrains.com:443
+      
+      
+## Remove PhpStorm
+
+      rm -r ~/.PhpStorm2020.3
+      sudo rm /usr/local/bin/pstorm
+      whereis pstorm
+      find ./ -name phpstorm.sh
+
+
+
+
