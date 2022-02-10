@@ -2,6 +2,9 @@
 
 ## SSH Key
 
+### Check key files exist or not
+
+    ls -l ~/.ssh/id_*.pub
 
 
 ### Ed25519:
