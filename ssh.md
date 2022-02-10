@@ -5,10 +5,11 @@
 
 
 ### Ed25519:
-  ssh-keygen -t ed25519 -C "abdul.matin@selise.ch"
-  eval "$(ssh-agent -s)"p
-  ssh-add ~/.ssh/id_edch
-  cat ~/.ssh/id_ed25519.pub
+
+    ssh-keygen -t ed25519 -C "abdul.matin@selise.ch"
+    eval "$(ssh-agent -s)"p
+    ssh-add ~/.ssh/id_edch
+    cat ~/.ssh/id_ed25519.pub
 
  
 
