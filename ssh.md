@@ -6,7 +6,7 @@
 
 ### Ed25519:
 
-    ssh-keygen -t ed25519 -C "abdul.matin@selise.ch"
+    ssh-keygen -t ed25519 -C "matinict@gmail.com"
     eval "$(ssh-agent -s)"p
     ssh-add ~/.ssh/id_edch
     cat ~/.ssh/id_ed25519.pub
