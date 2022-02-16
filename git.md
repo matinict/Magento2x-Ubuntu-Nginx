@@ -349,7 +349,9 @@ Stage: * stage
 ## SSH
 	cat ~/.ssh/id_rsa.pub
 
-	
+### Remote url/repo not found issue
+
+	eval `ssh-agent -s`
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
