@@ -337,6 +337,12 @@ Stage: * stage
 	git clean -n -d -x
 	Would remove build.TMP
 	Would remove test.o
+	
+## Remove Pub git tracking
+
+	git rm -r --cached pub
+	git add .gitignore
+	git commit -m "ignore pub"
 
 
 
@@ -352,6 +358,7 @@ Stage: * stage
 ### Remote url/repo not found issue
 
 	eval `ssh-agent -s`
+	
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
