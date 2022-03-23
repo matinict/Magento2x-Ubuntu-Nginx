@@ -27,6 +27,9 @@
         curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
         sudo apt-get install -y nodejs
         npm install -g npm@latest
+        
+        curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+        sudo apt-get install -y nodejs
 
 
 
@@ -71,4 +74,6 @@
 
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
 
+https://github.com/nodesource/distributions/blob/master/README.md
+https://nodejs.org/en/download/package-manager
 
