@@ -16,6 +16,9 @@
         node -v
         ##v10.19.0
         sudo apt install npm
+        
+        
+        npm install -g npm@latest
 
 
 - Installing Node.js with Apt Using a NodeSource PPA
