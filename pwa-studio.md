@@ -2,7 +2,7 @@
 
 ## Magento PWA Studio Introduction
 
-### 1. PWA Get started
+### 1. PWA Started Setup Storefront project
 
 
     node -v
