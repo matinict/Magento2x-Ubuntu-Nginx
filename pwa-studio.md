@@ -29,9 +29,8 @@
        ? Install package dependencies with yarn after creating project: Yes
        
        
-       
-       Created new PWA project pwa-studio-fundamentals. Next steps:
-     - cd pwa-studio-fundamentals before running the below commands.
+      ## Created new PWA project pwa-studio-fundamentals. Next steps:
+     cd pwa-studio-fundamentals
      - yarn run buildpack create-custom-origin . to generate a unique, secure custom domain for your new project. Highly recommended.
      - yarn run watch to start the dev server and do real-time development.
      - yarn run storybook to start Storybook dev server and view available components in your app.
@@ -53,6 +52,8 @@
        php bin/magento module:enable --clear-static-content Magento_ContactGraphQlPwa
        php bin/magento module:enable --clear-static-content Magento_NewsletterGraphQlPwa
        php bin/magento module:enable --clear-static-content Magento_QuoteGraphQlPwa
+       php bin/magento set:up
+       cd pwa-studio-fundamentals 
 
 
 
