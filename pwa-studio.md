@@ -5,10 +5,10 @@
 ### 1. PWA Started Setup Storefront project
 
 - First install [Magento2.4](m24.md)
+- install [Node](node.md)
 
 
         node -v
-        npm install -g npm@latest
         
         npm init @magento/pwa
 
