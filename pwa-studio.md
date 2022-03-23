@@ -44,8 +44,17 @@
 
      
      
-     ## Issue add top
+     ## Issue body start top
      "start": "react-scripts --openssl-legacy-provider start"
+     
+     
+       # Isuue in magento root :
+       composer require magento/pwa 
+       php bin/magento module:enable --clear-static-content Magento_ContactGraphQlPwa
+       php bin/magento module:enable --clear-static-content Magento_NewsletterGraphQlPwa
+       php bin/magento module:enable --clear-static-content Magento_QuoteGraphQlPwa
+
+
 
 
         
@@ -106,6 +115,8 @@ https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
 
 
 ## Ref
+https://webkul.com/blog/magento2-3-pwa-studio-setup/
+https://swissuplabs.com/blog/how-to-start-using-magento-2-pwa-studio-on-your-hosting-a-complete-guide/
 
 [here](https://magento.github.io/pwa-studio/)
 
