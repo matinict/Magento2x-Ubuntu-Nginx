@@ -33,6 +33,12 @@
       sudo apt install nodejs
       node -v
       ##Output v16.6.1
+ 
+- Installing Node Using the Node Version Manager
+
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 
 
 ##  Remove Node/NPM
