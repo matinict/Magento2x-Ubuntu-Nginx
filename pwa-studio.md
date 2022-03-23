@@ -10,14 +10,17 @@
 
 
         node -v
-        
         npm init @magento/pwa
 
-         
-         yarn -v
-         yarn create @magento/pwa
+
+        yarn -v
+        yarn create @magento/pwa
+        # Comand promp
+        pwa-studio-fundamentals
 
 
+        
+        
  
 
 
