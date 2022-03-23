@@ -44,6 +44,7 @@
 
         sudo apt-get -y purge nodejs npm
         sudo apt -y autoremove
+        sudo apt -y update 
 
 
 
