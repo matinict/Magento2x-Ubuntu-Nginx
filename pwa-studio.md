@@ -8,6 +8,8 @@
 
 
         node -v
+        npm install -g npm@latest
+        
         npm init @magento/pwa
 
  
