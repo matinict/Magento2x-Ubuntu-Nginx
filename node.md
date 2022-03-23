@@ -17,6 +17,10 @@
         ##v10.19.0
         sudo apt -y install npm
         
+        # Short Way
+        sudo apt -y update && sudo apt install nodejs npm 
+
+
         
         npm install -g npm@latest
 
