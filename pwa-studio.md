@@ -6,18 +6,25 @@
 
 - First install [Magento2.4](m24.md)
 - install [Node](node.md) or 
--  install [Yarn](yarn.md)
+- install [Yarn](yarn.md)
 
 
-        node -v
-        npm init @magento/pwa
-
+       
+### 1.1a Yarn
 
         yarn -v
         yarn create @magento/pwa
         # Comand promp
+        #Project root directory (will be created if it does not exist) pwa-studio-fundamentals
         pwa-studio-fundamentals
+        #Short name of the project to put in the package.json "name" field (pwa-studio-fundamentals) pwa-studio-fundamentals
+        pwa-studio-fundamentals
+        
+        
+### 1.1b Node
 
+        node -v
+        npm init @magento/pwa
 
         
         
@@ -82,5 +89,6 @@ https://magento.github.io/pwa-studio/venia-pwa-concept/setup/
 https://magento.github.io/pwa-studio/venia-pwa-concept/install-sample-data/
 
 https://webscoot.io/blog/magento-pwa-guide/
+https://alanstorm.com/magento-pwa-studio-react-upward/
 
 
