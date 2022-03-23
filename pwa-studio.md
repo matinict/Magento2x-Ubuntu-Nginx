@@ -39,6 +39,9 @@
      - yarn start after build to preview the app on a local staging server.
      
      yarn buildpack create-custom-origin ./
+     yarn watch
+     yarn run watch:all
+
      
      
      ## Issue add top
