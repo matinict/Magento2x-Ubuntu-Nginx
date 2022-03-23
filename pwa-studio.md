@@ -2,11 +2,13 @@
 
 ## Magento PWA Studio Introduction
 
-### 1. What Is PWA?
-PWA stands for  Progressive Web App, is a web application using modern web technologies and design models to bring a reliable, fast, and engaging user experience. 
+### 1. PWA Get started
 
-A website with PWA technology features very fast, secure, responsive, and compatible across browsers. It can run offline and perform like a native app on mobile. Visit [here](https://magento.github.io/pwa-studio/) for technical Magento PWA Documentation. 
 
+    node -v
+    npm init @magento/pwa
+
+ 
 
 
 
@@ -61,6 +63,10 @@ https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
 
 
 ## Ref
+
+[here](https://magento.github.io/pwa-studio/)
+
+https://developer.adobe.com/commerce/pwa-studio/tutorials/setup-storefront/
 
 https://www.youtube.com/watch?v=X4COzBXVpBM
 
