@@ -14,11 +14,37 @@
 
         yarn -v
         yarn create @magento/pwa
-        # Comand promp
-        #Project root directory (will be created if it does not exist) pwa-studio-fundamentals
-        pwa-studio-fundamentals
-        #Short name of the project to put in the package.json "name" field (pwa-studio-fundamentals) pwa-studio-fundamentals
-        pwa-studio-fundamentals
+        
+        # Comand promp         
+        @magento/create-pwa v2.2.0
+       Creating a PWA Studio project
+       ? Project root directory (will be created if it does not exist): pwa-studio-fundamentals
+       ? Short name of the project to put in the package.json "name" field: pwa-studio-fundamentals
+       ? Name of the author to put in the package.json "author" field: Matin<matinict@gmail.com>
+       ? Which template would you like to use to bootstrap pwa-studio-fundamentals? Defaults to "@magento/venia-concept". @magento/venia-concept
+       ? Magento instance to use as a backend (will be added to `.env` file): 2.4-develop
+       ? Edition of the magento store (Enterprise Edition or Community Edition): CE
+       ? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
+       ? NPM package management client to use: yarn
+       ? Install package dependencies with yarn after creating project: Yes
+       
+       
+       
+       Created new PWA project pwa-studio-fundamentals. Next steps:
+
+     - cd pwa-studio-fundamentals before running the below commands.
+
+     - yarn run buildpack create-custom-origin . to generate a unique, secure custom domain for your new project. Highly recommended.
+
+     - yarn run watch to start the dev server and do real-time development.
+
+     - yarn run storybook to start Storybook dev server and view available components in your app.
+
+     - yarn run build to build the project into optimized assets in the '/dist' directory.
+
+     - yarn start after build to preview the app on a local staging server.
+
+
         
         
 ### 1.1b Node
