@@ -4,26 +4,23 @@
 
 ### 1. PWA Started Setup Storefront project
 
+- First install [Magento2.4](m24.md)
+
 
     node -v
     npm init @magento/pwa
 
  
-
-
-
-## 1.1 Install Magento2.4
-- First install [Magento2.4](m24.md)
-
  
-## 1.2 Clone the PWA Studio repository
-Clone the PWA Studio repository into your development environment.
 
-  git clone https://github.com/magento/pwa-studio.git
-  
-  cd pwa-studio/
-  yarn install
-  yarn buildpack create-custom-origin packages/venia-concept
+
+# 1.2 Clone the PWA Studio repository 
+
+git clone https://github.com/magento/pwa-studio.git
+
+cd pwa-studio/
+yarn install
+yarn buildpack create-custom-origin packages/venia-concept
 
  ## 1.4 Run the server
 Use any of the following commands from the project root directory to start the server:
