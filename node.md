@@ -53,6 +53,9 @@
         sudo apt -y update 
 
 
+## Trubleshot 
+
+        npm install semver
 
 
 ## Ref
