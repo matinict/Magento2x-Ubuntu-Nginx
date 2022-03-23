@@ -7,8 +7,8 @@
 - First install [Magento2.4](m24.md)
 
 
-    node -v
-    npm init @magento/pwa
+        node -v
+        npm init @magento/pwa
 
  
  
