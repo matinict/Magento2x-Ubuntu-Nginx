@@ -5,20 +5,18 @@
 ### 1. PWA Started Setup Storefront project
 
 - First install [Magento2.4](m24.md)
-- install [Node](node.md)
+- install [Node](node.md) or 
+-  install [Yarn](yarn.md)
 
 
         node -v
         
         npm init @magento/pwa
 
-        
+         
+         yarn -v
+         yarn create @magento/pwa
 
-        sudo apt remove cmdtest
-        sudo apt remove yarn
-        curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-        echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-        sudo apt-get update && sudo apt-get install yarn
 
  
 
