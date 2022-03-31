@@ -359,6 +359,13 @@ Stage: * stage
 
 	eval `ssh-agent -s`
 	
+### Git Trim after fix commit 	
+	git reset --hard HEAD~1
+	git reset --hard 9daf5dcd
+	git push origin HEAD --force
+	## alterantive
+	git push --force origin my-feature-branch
+	
 
 ## ref
 - [git-scm-book](https://git-scm.com/book/en/v2)
