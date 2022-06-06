@@ -179,6 +179,7 @@ Therefore, the first thing to do is to provide the user with access to the infor
 ### CREATE MYSQL DATABASES AND USERS: 
 
       mysql -u root -p 
+      mysql -u matin -p
 
       GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 
