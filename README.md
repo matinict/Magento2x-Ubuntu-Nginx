@@ -64,7 +64,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       composer --version
       
       
-   # 1.4- Install MySQL 5.7  
+   # 1.4- Install MySQL 5.7  [mysql](mysql.md)
    
    [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
     
