@@ -29,7 +29,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       sudo ufw allow 'Nginx HTTP'
       curl -4 icanhazip.com
       
-   # 1.2- Install PHP 7.2.x and the required PHP extensions: 
+   # 1.2- Install PHP 7.2.x and the required PHP extensions: [PHP7x](PHP7x.md)
    
       sudo apt-get install software-properties-common
       sudo add-apt-repository ppa:ondrej/php
