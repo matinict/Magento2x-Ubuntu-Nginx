@@ -12,12 +12,22 @@
         sudo apt-get update 
 
         # Once the PPA is enabled, you can install PHP 8. 
+
+        ##8.1 on Ubuntu 22.04|20.04|18.04
+
+        sudo apt install php8.1 -y
+        sudo apt install php8.1-{gd,zip,mysql,oauth,yaml,fpm,mbstring,memcache}
+        sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
+
+
+        ##8.0 on Ubuntu 22.04|20.04|18.04
+
         sudo apt install php8.0-mysql php8.0-gd
         sudo apt install php8.0-fpm
         sudo apt install php8.0-snmp php-memcached php8.0-mysql
         sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
-        
-        
+
+
 
 
         ##7.4 on Ubuntu 20.4 
@@ -26,44 +36,45 @@
         sudo apt-get -y install php7.4-fpm
         sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl
         sudo php-fpm7.4 -t 
-       
+
 
         ##7.4 on Ubuntu 18.04/16.04 
         sudo apt -y install php7.4 
         sudo apt-get -y install php7.3-fpm
         sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
-        
-        
+
+
 
         # 7.3
         sudo apt-get install -y php7.3 
         sudo apt-get -y install php7.3-fpm
         sudo apt-get install -y php7.3 php7.3-fpm php7.3-mysql  -y
         sudo apt install -y php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7.3-gd php7.3-imagick php7.3-cli php7.3-dev php7.3-imap php7.3-mbstring php7.3-opcache php7.3-soap php7.3-zip php7.3-intl -y
-        
+
 
 
         ## 7.2
         sudo apt-get install -y php7.2
         sudo apt-get -y install php7.2-fpm         
         sudo apt-get install -y  php7.2   php7.2-common php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-xsl php7.2-mbstring php7.2-zip php7.2-bcmath php7.2-soap php-xdebug php-imagick 
-         
+
 
         #7.1
         sudo apt-get install -y php7.1
         sudo apt-get -y install php7.1-fpm
         sudo apt-get install -y php7.1  php7.1-common php7.1-gd php7.1-mysql php7.1-curl php7.1-intl php7.1-xsl php7.1-mbstring php7.1-zip php7.1-bcmath php7.1-soap php-xdebug php-imagick  
-        
+
 
         #7.0
         sudo apt-get install -y php7.0 
         sudo apt-get -y install php7.0-fpm
         sudo apt-get install -y  php7.0  php7.0-common php7.0-gd php7.0-mysql php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-soap php-xdebug php-imagick 
-        
-        
 
-        # configurations 
+
+
+        # configurations php7.x
         sudo nano /etc/php/7.x/fpm/php.ini
+
         # press ctrl + w for searching
         # press ctrl + shift+v for past &  Enter Search
         memory_limit = 4G
@@ -75,19 +86,38 @@
         max_input_vars = 81000
 
         # press ctrl + O for saving or Ctrl+x    
-        
-        
-        
+
+
+
+
         ## Restart php-fpm & Chk version
         sudo service php7.x-fpm restart      
         sudo systemctl status php7.x-fpm  
         sudo systemctl restart nginx
         php -v 
 
+
+
+        ## configurations php8.1
+        ##sudo nano /etc/php/8.x/fpm/php.ini
+        sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/max_execution_time = 18000/" /etc/php/8.1/fpm/php.ini
+
+        sudo service php8.1-fpm restart      
+        sudo systemctl status php8.1-fpm  
+        sudo systemctl restart nginx
+        php -v 
+        
+        
+
         ## PHP related to Apache is stored in /etc/php/7.4/apache2/php.ini  stop and disable Apache service.
         sudo systemctl disable --now apache2 
         sudo apt-get -y install nginx php7.4-fpm
         systemctl status php7.4-fpm nginx
+        
+        
 
         sudo nano /etc/php/7.4/fpm/pool.d/www.conf.
         ## Change the following lines by replacing the www-data with your username.
