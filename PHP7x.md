@@ -265,6 +265,19 @@ Solution:
 
     composer update --ignore-platform-reqs
     nano /etc/php/7.2/fpm/php.ini
+
+## issue php Extenstion 
+
+  ## PHP74
+    sudo apt-get install -y install php74u-pdo php74u-mysqlnd php74u-opcache php74u-xml php74u-gd php74u-devel php74u-mysql php74u-intl php74u-mbstring php74u-bcmath php74u-json php74u-iconv php74u-soap
+    
+    yum -y install php74u-pdo php74u-mysqlnd php74u-opcache php74u-xml php74u-gd php74u-devel php74u-mysql php74u-intl php74u-mbstring php74u-bcmath php74u-json php74u-iconv php74u-soap
+    
+    ## PHP81
+    sudo apt-get install -y install php81u-pdo php81u-mysqlnd php81u-opcache php81u-xml php81u-gd php81u-devel php81u-mysql php81u-intl php81u-mbstring php81u-bcmath php81u-json php81u-iconv php81u-soap
+
+yum -y install php81u-pdo php81u-mysqlnd php81u-opcache php81u-xml php81u-gd php81u-devel php81u-mysql php81u-intl php81u-mbstring php81u-bcmath php81u-json php81u-iconv php81u-soap
+
     
 ## issue php not running 
 
