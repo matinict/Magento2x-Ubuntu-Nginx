@@ -171,22 +171,22 @@ php bin/magento cron:remove [Remove Magento crontab]
 - Backup the composer.json file.
 
  
-  cp composer.json composer.json.bak
+         cp composer.json composer.json.bak
 
 
  
 -  Add or remove specific packages based on your needs. For example, if you are upgrading from Magento Open Source to Magento Commerce, remove the Magento Open Source package.
 
 
-    composer remove magento/product-community-edition --no-update
+         composer remove magento/product-community-edition --no-update
 
 
 - Indicate the Magento packages, both the edition (community or enterprise) and the version (2.3.x), that you want to upgrade to.Magento Open Source:
 
 
-    composer require magento/product-community-edition=2.3.x --no-update
-    composer require magento/product-community-edition 2.4.2 --no-update
-    composer update
+        composer require magento/product-community-edition=2.3.x --no-update
+        composer require magento/product-community-edition 2.4.2 --no-update
+        composer update
 
 
 ## Magento2x Info Terminal
