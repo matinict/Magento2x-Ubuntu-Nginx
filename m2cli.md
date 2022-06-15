@@ -190,7 +190,12 @@ php bin/magento cron:remove [Remove Magento crontab]
         composer require magento/product-community-edition 2.4.X --no-update
         composer require magento/product-community-edition 2.4.5 --no-update
         composer update
+        
+## PHP & Magento 
 
+        PHP7.3: 2.4.0
+        PHP7.4: 2.4.3-P2 2.4.3	 2.4.2	2.4.1	2.4.0
+        PHP8.1: 2.4.5	 2.4.4	
 
 ## Magento2x Info Terminal
  
@@ -292,11 +297,7 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     bin/magento msp:security:recaptcha:disable
     
 
-## PHP & Magento 
 
-        PHP7.3: 2.4.0
-        PHP7.4: 2.4.3-P2 2.4.3	 2.4.2	2.4.1	2.4.0
-        PHP8.1: 2.4.5	 2.4.4	
     
 ## command line to install Magento. 
 
