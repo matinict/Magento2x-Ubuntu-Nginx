@@ -27,9 +27,31 @@
         sudo apt install php8.0-fpm
         sudo apt install php8.0-snmp php-memcached php8.0-mysql
         sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
+ 
 
+        ## configurations php8.1
+       
+        sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/max_execution_time = 18000/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
 
+        ##sudo nano /etc/php/8.x/fpm/php.ini
+        ; Increase realpath cache size
+        realpath_cache_size = 10M
+        ; Increase realpath cache ttl
+        realpath_cache_ttl = 7200
 
+         
+
+        sudo service php8.1-fpm restart      
+        sudo systemctl status php8.1-fpm  
+        sudo systemctl restart nginx
+        php -v 
+        
+        
+        
 
         ##7.4 on Ubuntu 20.4 
         sudo apt update
@@ -70,9 +92,7 @@
         sudo apt-get install -y php7.0 
         sudo apt-get -y install php7.0-fpm
         sudo apt-get install -y  php7.0  php7.0-common php7.0-gd php7.0-mysql php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-soap php-xdebug php-imagick 
-
-
-
+        
         # configurations php7.x
         sudo nano /etc/php/7.x/fpm/php.ini
 
@@ -95,22 +115,6 @@
         ## Restart php-fpm & Chk version
         sudo service php7.x-fpm restart      
         sudo systemctl status php7.x-fpm  
-        sudo systemctl restart nginx
-        php -v 
-
-
-
-        ## configurations php8.1
-        ##sudo nano /etc/php/8.x/fpm/php.ini
-        sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.1/fpm/php.ini
-        sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
-        sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
-        sudo sed -i "s/max_execution_time = .*/max_execution_time = 18000/" /etc/php/8.1/fpm/php.ini
-        sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
-         
-
-        sudo service php8.1-fpm restart      
-        sudo systemctl status php8.1-fpm  
         sudo systemctl restart nginx
         php -v 
         
