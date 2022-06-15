@@ -172,6 +172,8 @@ php bin/magento cron:remove [Remove Magento crontab]
 
  
          cp composer.json composer.json.bak
+         composer require magento/composer-root-update-plugin=~1.0 --no-update
+         composer update
 
 
  
