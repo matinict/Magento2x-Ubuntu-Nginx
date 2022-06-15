@@ -85,6 +85,7 @@
         zlib.output_compression = On
         session.gc_maxlifetime = 991440
         max_input_vars = 81000
+        realpath_cache_size =8000
 
         # press ctrl + O for saving or Ctrl+x    
 
@@ -105,6 +106,8 @@
         sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/max_execution_time = .*/max_execution_time = 18000/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
+         
 
         sudo service php8.1-fpm restart      
         sudo systemctl status php8.1-fpm  
