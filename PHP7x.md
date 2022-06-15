@@ -210,6 +210,13 @@ Next, open your web browser and type the URL http://site2.example.com.
 You will get the following page that indicates that your Website2 is running with PHP 7.2.
 
 
+## PHP & Magento 
+
+        PHP7.4: 2.4.3-P2 2.4.3	2.4.2	2.4.1	2.4.0
+
+        PHP8.1: 2.4.5	2.4.4	
+
+
 ## Issue 1.1: composer update  show below error
 
     - Installation request for magento/product-community-edition 2.3.3 -> satisfiable by magento/product-community-edition[2.3.3].
