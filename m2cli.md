@@ -290,6 +290,13 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     UPDATE `core_config_data` SET `value` = '0' WHERE `core_config_data`.`path` ="admin/url/use_custom";
     bin/magento msp:security:recaptcha:disable
     
+
+## PHP & Magento 
+
+        PHP7.3: 2.4.0
+        PHP7.4: 2.4.3-P2 2.4.3	 2.4.2	2.4.1	2.4.0
+        PHP8.1: 2.4.5	 2.4.4	
+    
 ## command line to install Magento. 
 
     php bin/magento setup:install \
