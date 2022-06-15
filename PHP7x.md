@@ -16,6 +16,7 @@
         ##8.1 on Ubuntu 22.04|20.04|18.04
 
         sudo apt install php8.1 -y
+        sudo apt install php8.1-fpm
         sudo apt install php8.1-{gd,zip,mysql,oauth,yaml,fpm,mbstring,memcache}
         sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
 
