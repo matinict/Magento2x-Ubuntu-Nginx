@@ -2,8 +2,8 @@
 
 ## Install  Composer
 
-    sudo apt update
-    sudo apt install php-cli unzip
+    sudo apt -y update
+    sudo apt -y install php-cli unzip
     cd ~
     curl -sS https://getcomposer.org/installer -o composer-setup.php
     HASH=`curl -sS https://composer.github.io/installer.sig`
@@ -12,10 +12,10 @@
 
 
 ## Remove  Composer
-    sudo apt-get remove composer
-    sudo apt-get remove --auto-remove composer
-    sudo apt-get purge composer
-    sudo apt-get purge --auto-remove composer
+    sudo apt-get -y remove composer
+    sudo apt-get -y remove --auto-remove composer
+    sudo apt-get -y purge composer
+    sudo apt-get -y purge --auto-remove composer
 
     where composer
     rm /usr/local/bin/composer
