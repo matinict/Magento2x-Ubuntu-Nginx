@@ -77,3 +77,7 @@
     rm -rf vendor/*
     composer clear-cache
     composer update
+    
+ ### composer update bash: /usr/bin/composer: No such file or directory run 
+   
+    alias composer='/usr/local/bin/composer'
