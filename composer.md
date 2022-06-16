@@ -78,6 +78,16 @@
     composer clear-cache
     composer update
     
- ### composer update bash: /usr/bin/composer: No such file or directory run 
+ ###composer update bash: /usr/bin/composer: No such file or directory run 
    
     alias composer='/usr/local/bin/composer'
+    
+ ###Issue: To enable extensions, verify that they are enabled in your .ini files:
+
+        - /etc/php/8.1/cli/php.ini
+        - /etc/php/8.1/cli/conf.d/10-opcache.ini 
+        
+        Solution:
+
+        composer update --ignore-platform-reqs
+        nano /etc/php/8.1/fpm/php.ini
