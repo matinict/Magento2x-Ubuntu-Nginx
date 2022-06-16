@@ -34,14 +34,25 @@
         sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
-        sudo sed -i "s/max_execution_time = .*/max_execution_time = 18000/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/session.gc_maxlifetime = .*/session.gc_maxlifetime = 180000/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/max_input_time = .*/max_input_time = 18000/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/max_input_vars = .*/max_input_vars = 18000/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
+        sudo sed -i "s/realpath_cache_size = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
 
         ##sudo nano /etc/php/8.x/fpm/php.ini
         ; Increase realpath cache size
         realpath_cache_size = 10M
         ; Increase realpath cache ttl
         realpath_cache_ttl = 7200
+        max_input_time = 1800
+        upload_max_filesize = 100M
+        zlib.output_compression = On
+        session.gc_maxlifetime = 991440
+        max_input_vars = 81000
+        realpath_cache_size =8000
+
+
 
          
 
