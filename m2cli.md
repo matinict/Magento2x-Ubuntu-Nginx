@@ -185,7 +185,10 @@ php bin/magento cron:remove [Remove Magento crontab]
 
 - Indicate the Magento packages, both the edition (community or enterprise) and the version (2.3.x), that you want to upgrade to.Magento Open Source:
 
-
+        composer create-project --repository=https://repo.magento.com/ magento/project-community-edition <install-directory-name>
+        composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.4 magento244
+        composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition magento24x
+        
         composer require magento/product-community-edition=2.3.x --no-update
         composer require magento/product-community-edition 2.4.X --no-update
         composer require magento/product-community-edition 2.4.4 --no-update
