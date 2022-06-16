@@ -191,6 +191,8 @@ php bin/magento cron:remove [Remove Magento crontab]
         composer require magento/product-community-edition 2.4.4 --no-update
         composer update
         
+        composer selfupdate
+        
 ## PHP & Magento 
 
         PHP7.3: 2.4.0
