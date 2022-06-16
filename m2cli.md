@@ -204,6 +204,7 @@ php bin/magento cron:remove [Remove Magento crontab]
         composer update
         rm -rf var/cache/* ; rm -rf var/page_cache/* ; rm -rf generated/code/* ; bin/magento setup:upgrade
         composer require-commerce magento/product-community-edition 2.4.4 --no-update
+        #composer require magento/product-community-edition 2.4.4 --no-update
         composer update
         ##CHANGE TO PHP 8.1
         sudo update-alternatives --config php
