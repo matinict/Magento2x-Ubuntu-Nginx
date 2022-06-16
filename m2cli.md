@@ -193,6 +193,21 @@ php bin/magento cron:remove [Remove Magento crontab]
         
         composer selfupdate
         
+ 
+### Version Upgrade issue
+
+        The step I was missing out on and to help anyone else that comes across this odd issue/change:
+
+        STAY IN PHP 7.4
+        composer require magento/composer-root-update-plugin ~2.0 --no-update
+        composer update
+        rm -rf var/cache/* ; rm -rf var/page_cache/* ; rm -rf generated/code/* ; bin/magento setup:upgrade
+        composer require-commerce magento/product-community-edition 2.4.4 --no-update
+        composer update
+        CHANGE TO PHP 8.1
+        rm -rf var/cache/* ; rm -rf var/page_cache/* ; rm -rf generated/code/* ; bin/magento setup:upgrade
+
+        
 ## PHP & Magento 
 
         PHP7.3: 2.4.0
