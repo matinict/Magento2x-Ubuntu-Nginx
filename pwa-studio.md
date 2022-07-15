@@ -81,7 +81,7 @@ yarn buildpack create-custom-origin packages/venia-concept
  ## 1.4 Run the server
 Use any of the following commands from the project root directory to start the server:
 
-yarn run watch:venia
+       yarn run watch:venia
 Starts the Venia storefront development environment.
 
 yarn run watch:all
