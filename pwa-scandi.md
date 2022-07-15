@@ -43,6 +43,8 @@
     varnishlog
     varnishd -V
     varnishhist
+  
+    
  
  
  ### Check Node  [Node](node.md)
@@ -55,6 +57,8 @@
  
 
 ## Ref:
+
+https://docs.scandipwa.com/getting-started-1/magento-theme-mode
 
 https://docs.scandipwa.com
 
