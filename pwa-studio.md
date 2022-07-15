@@ -64,6 +64,47 @@
 
         node -v
         npm init @magento/pwa
+        
+        npm init @magento/pwa
+        
+@magento/create-pwa v2.3.1
+Creating a PWA Studio project
+? Project root directory (will be created if it does not exist) pwa-spider
+? Short name of the project to put in the package.json "name" field pwa-spider
+? Name of the author to put in the package.json "author" field matin
+? Which template would you like to use to bootstrap pwa-spider? Defaults to "@magento/venia-concept". @magento/venia-concept
+? Magento instance to use as a backend (will be added to `.env` file) Other
+? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost
+? Edition of the magento store (Adobe Commerce or Magento Open Source) CE
+? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
+? NPM package management client to use npm
+? Install package dependencies with npm after creating project No
+
+Running command: 
+
+buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
+
+
+  ℹ  Finding @magento/venia-concept tarball on NPM
+  ℹ  Downloading and unpacking https://registry.npmjs.org/@magento/venia-concept/-/venia-concept-12.5.0.tgz
+  ℹ  Unpacked @magento/venia-concept
+  ℹ  Creating a new PWA project 'pwa-spider' in pwa-spider
+  ⚠  Created new PWA project pwa-spider. Next steps:
+
+            - cd pwa-spider && npm install before running the below commands.
+
+            - npm run buildpack -- create-custom-origin . to generate a unique, secure custom domain for your new project. Highly recommended.
+
+            - npm run watch to start the dev server and do real-time development.
+
+            - npm run storybook to start Storybook dev server and view available components in your app.
+
+            - npm run build to build the project into optimized assets in the '/dist' directory.
+
+            - npm start after build to preview the app on a local staging server.
+
+  ℹ  Successfully wrote a fresh configuration file to /srv/public_html/pwa-spider/.env
+
 
         
         
