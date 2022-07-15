@@ -12,6 +12,13 @@
 
 - [Varshish](varnish.md)
 
+### Quick Start
+
+    npx create-magento-app my-app
+    cd my-app
+    npm start
+
+
 
 ### Check Magento var  [Magento](m24.md)
    
