@@ -68,17 +68,29 @@
         npm init @magento/pwa
         
 @magento/create-pwa v2.3.1
+
 Creating a PWA Studio project
+
 ? Project root directory (will be created if it does not exist) pwa-spider
+
 ? Short name of the project to put in the package.json "name" field pwa-spider
+
 ? Name of the author to put in the package.json "author" field matin
+
 ? Which template would you like to use to bootstrap pwa-spider? Defaults to "@magento/venia-concept". @magento/venia-concept
+
 ? Magento instance to use as a backend (will be added to `.env` file) Other
+
 ? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost
+
 ? Edition of the magento store (Adobe Commerce or Magento Open Source) CE
+
 ? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
+
 ? NPM package management client to use npm
+
 ? Install package dependencies with npm after creating project No
+
 
 Running command: 
 
