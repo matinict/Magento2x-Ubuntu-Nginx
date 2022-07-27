@@ -1,4 +1,8 @@
 # m2 cron
+## Create the Commerce crontab
+
+    bin/magento cron:install --force
+    crontab -l
 
 ## Create the Magento crontab
 
@@ -26,14 +30,11 @@ Cron Cli List :
 
 Command options:
 
-    bin/magento cron:run [--group="<cron group name>"]
-where --group specifies the cron group to run (omit this option to run cron for all groups)
-
-To run the indexing cron job, enter:
-
+    bin/magento cron:run 
+    ##[--group="<cron group name>"] where --group specifies the cron group to run (omit this option to run cron for all groups)
+    ##To run the indexing cron job, enter:
     bin/magento cron:run --group index
-To run the default cron job, enter:
-
+    ##To run the default cron job, enter:p
     bin/magento cron:run --group default
     
 ## Remove the Magento crontab
@@ -43,5 +44,6 @@ You should remove the Magento crontab only before uninstalling the Magento appli
 
 
 ## Ref
+https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cron.html
 
 https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-cron.html#create-or-remove-the-magento-crontab
