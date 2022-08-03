@@ -12,11 +12,11 @@
        
 ### 1.1a Yarn
 
-        yarn -v
-        yarn create @magento/pwa
-        
-        # Comand promp         
-        @magento/create-pwa v2.2.0
+       yarn -v
+       yarn create @magento/pwa
+
+       # Comand promp         
+       @magento/create-pwa v2.2.0
        Creating a PWA Studio project
        ? Project root directory (will be created if it does not exist): pwa-studio-fundamentals  [Type String Name]
        ? Short name of the project to put in the package.json "name" field: pwa-studio-fundamentals  [Type String Name]
@@ -29,19 +29,24 @@
        (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk: [Press Enter]
        ? NPM package management client to use: yarn [Select yarn]
        ? Install package dependencies with yarn after creating project: Yes [Press Y]
-       
-       
-      ## Created new PWA project pwa-studio-fundamentals. Next steps:
-     cd pwa-studio-fundamentals
-     - yarn run buildpack create-custom-origin . to generate a unique, secure custom domain for your new project. Highly recommended.
-     - yarn run watch to start the dev server and do real-time development.
-     - yarn run storybook to start Storybook dev server and view available components in your app.
-     - yarn run build to build the project into optimized assets in the '/dist' directory.
-     - yarn start after build to preview the app on a local staging server.
-     
-     yarn buildpack create-custom-origin ./
-     yarn watch
-     yarn run watch:all
+
+
+       ## Created new PWA project pwa-studio-fundamentals. Next steps:
+       cd pwa-studio-fundamentals
+       #to generate a unique, secure custom domain for your new project. Highly recommended.
+       - yarn run buildpack create-custom-origin 
+       #to start the dev server and do real-time development.
+       - yarn run watch 
+       #to start Storybook dev server and view available components in your app.
+       - yarn run storybook 
+       #to build the project into optimized assets in the '/dist' directory.
+       - yarn run build 
+       #after build to preview the app on a local staging server.
+       - yarn start 
+
+       yarn buildpack create-custom-origin ./
+       yarn watch
+       yarn run watch:all
 
      
      
