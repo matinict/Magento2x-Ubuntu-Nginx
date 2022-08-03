@@ -21,7 +21,8 @@
        ? Project root directory (will be created if it does not exist): pwa-studio-fundamentals
        ? Short name of the project to put in the package.json "name" field: pwa-studio-fundamentals
        ? Name of the author to put in the package.json "author" field: Matin<matinict@gmail.com>
-       ? Which template would you like to use to bootstrap pwa-studio-fundamentals? Defaults to "@magento/venia-concept". @magento/venia-concept
+       ? Which template would you like to use to bootstrap pwa-studio-fundamentals? 
+       Defaults to "@magento/venia-concept". @magento/venia-concept: [Press Enter]
        ? Magento instance to use as a backend (will be added to `.env` file): 2.4-develop
        ? Edition of the magento store (Enterprise Edition or Community Edition): CE
        ? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
