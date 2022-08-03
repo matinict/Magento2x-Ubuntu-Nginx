@@ -28,7 +28,7 @@
        ? Braintree API token to use to communicate with your Braintree instance 
        (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk: [Press Enter]
        ? NPM package management client to use: yarn
-       ? Install package dependencies with yarn after creating project: Yes
+       ? Install package dependencies with yarn after creating project: Yes [Press Y]
        
        
       ## Created new PWA project pwa-studio-fundamentals. Next steps:
