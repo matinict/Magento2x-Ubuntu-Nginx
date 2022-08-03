@@ -18,9 +18,9 @@
         # Comand promp         
         @magento/create-pwa v2.2.0
        Creating a PWA Studio project
-       ? Project root directory (will be created if it does not exist): pwa-studio-fundamentals
-       ? Short name of the project to put in the package.json "name" field: pwa-studio-fundamentals
-       ? Name of the author to put in the package.json "author" field: Matin<matinict@gmail.com>
+       ? Project root directory (will be created if it does not exist): pwa-studio-fundamentals  [Type String Name]
+       ? Short name of the project to put in the package.json "name" field: pwa-studio-fundamentals  [Type String Name]
+       ? Name of the author to put in the package.json "author" field: Matin<matinict@gmail.com>   [Type String Name]
        ? Which template would you like to use to bootstrap pwa-studio-fundamentals? 
        Defaults to "@magento/venia-concept". @magento/venia-concept: [Press Enter]
        ? Magento instance to use as a backend (will be added to `.env` file): 2.4-develop
