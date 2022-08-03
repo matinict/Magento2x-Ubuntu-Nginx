@@ -63,10 +63,17 @@
         php -v 
                 
 ## Switch/change between Multiple PHP8
-
+        #CLi
         sudo update-alternatives --config php
         ## or
         sudo update-alternatives -set php /usr/bin/php8.1 
+
+        ##Script
+        sudo nano /etc/nginx/sites-available/default
+
+        upstream fastcgi_backend {
+                server unix:/run/php/php7.2-fpm.sock;
+        }
 
         sudo service nginx restart 
         sudo service php8.1-fpm restart
