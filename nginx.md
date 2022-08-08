@@ -217,6 +217,20 @@ Server showing EOF text , Posiiblbe cause as below
      fastcgi_buffer_size 32k;
 
 
+### Remove, Purge, or Reinstall NGINX
+
+    sudo apt remove nginx
+    sudo apt-get remove nginx nginx-common
+    #or
+    sudo apt-get purge nginx nginx-common
+
+    sudo apt-get autoremove
+    sudo apt purge nginx
+    sudo apt-get remove nginx* --purge
+
+
+    sudo apt reinstall nginx
+
  
  ## Ref 
  
