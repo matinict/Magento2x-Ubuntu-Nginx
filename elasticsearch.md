@@ -99,13 +99,19 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
             
             curl http://localhost:9200
             
-## 1.8 Magento admin setting 
+## 1.8 Magento admin & Cli: 
       
       Go to STORES > CONFIGURATION > CATALOG > CATALOG > CATALOG SEARCH > Elasticsearch Index Prefix.
       
       # Set a different prefix for each store, any random one for each. Reindex and flush cache on each store.
 
-       php -d memory_limit=2G bin/magento index:reindex
+            php -d memory_limit=2G bin/magento index:reindex
+
+            php -f bin/magento config:show catalog/search/engine
+            
+            php bin/magento config:set catalog/search/engine none
+            
+            php bin/magento config:set catalog/search/engine 'elasticsearch7'
 
             
 
