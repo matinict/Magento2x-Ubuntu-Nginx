@@ -26,3 +26,18 @@
         yarn upgrade --latest
         yarn upgrade left-pad --latest
         yarn upgrade left-pad grunt --latest --tilde
+
+### Commands
+        yarn version --major
+        yarn version --minor
+        yarn version --patch
+        yarn version --premajor
+        yarn version --preminor
+        yarn version --prepatch
+        yarn version --prerelease
+        yarn version --no-git-tag-version
+        yarn version --no-commit-hooks
+        
+### Ref
+
+https://classic.yarnpkg.com/en/docs/cli/
