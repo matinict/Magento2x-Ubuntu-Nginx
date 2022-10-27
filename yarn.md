@@ -22,3 +22,7 @@
         echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
         sudo apt-get update && sudo apt-get install yarn
          npm install --global yarn
+
+        yarn upgrade --latest
+        yarn upgrade left-pad --latest
+        yarn upgrade left-pad grunt --latest --tilde
