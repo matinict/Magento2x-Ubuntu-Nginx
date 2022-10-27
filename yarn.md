@@ -1,8 +1,11 @@
 ## yarn
 
+### Install
+
         sudo apt-get install yarn
 
 
+### Remove & Re Install
         sudo apt remove cmdtest
         sudo apt remove yarn
         curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
