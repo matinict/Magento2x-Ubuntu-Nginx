@@ -29,7 +29,7 @@
       
       
             nano /etc/yum.repos.d/MariaDB.repo
-            sudo yum install MariaDB-server MariaDB-client
+            sudo yum install MariaDB-server MariaDB-client -y
 
 
 
