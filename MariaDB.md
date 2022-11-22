@@ -27,3 +27,8 @@
       After upgrade, you can use "mysql" command to verify the MariaDB version running on your server
 
       mysql --version
+
+
+### Ref
+
+https://wiki.centos-webpanel.com/mariadb-upgrade-from-10-2-to-10-4
