@@ -1,5 +1,40 @@
+# MariaDB
 
-## MariaDB Upgrade from 10.2 to 10.4
+
+### MariaDB Upgrade from 10.1 to 10.2
+
+
+      #Verify if MariaDB 10.1 is installed
+
+      rpm -qa|grep -i maria|grep "\-10.1."
+      #Upgrade
+
+      service mysql stop
+      service mariadb stop
+      systemctl disable mariadb
+      rpm --nodeps -ev MariaDB-server
+      yum -y install MariaDB-server
+      yum -y update "MariaDB-*"
+      systemctl enable mariadb
+      service mariadb start
+      mysql_upgrade
+      #Check for the custom configuration
+
+      diff -Bw /etc/my.cnf.d/server.cnf.rpmsave /etc/my.cnf.d/server.cnf
+      #Verify upgraded packages
+
+      rpm -qa|grep -i maria|grep "\-10.2."
+      #The output should look like this
+
+      #MariaDB-compat-10.2.36-1.el7.centos.x86_64
+      #MariaDB-server-10.2.36-1.el7.centos.x86_64
+      #MariaDB-common-10.2.36-1.el7.centos.x86_64
+      #MariaDB-shared-10.2.36-1.el7.centos.x86_64
+      #MariaDB-client-10.2.36-1.el7.centos.x86_64
+
+
+
+### MariaDB Upgrade from 10.2 to 10.4
 
       #Verify if MariaDB 10.2 is installed
 
