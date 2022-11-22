@@ -1,6 +1,33 @@
 # MariaDB
 
 
+### Install the MariaDB package using the yum package manager:
+
+      sudo yum install mariadb-server -y
+
+      #Press y when prompted to proceed with the installation.
+
+      #Once the installation is complete, start the MariaDB service and enable it to start on boot using the following commands:
+
+      sudo systemctl start mariadb
+      sudo systemctl enable mariadb
+
+      #To verify that the installation was successful, check the MariaDB service status by typing:
+
+      sudo systemctl status mariadb
+
+      #The output should show that the service is active and running:
+
+      #Run the mysql_secure_installation script which will perform several security related tasks:
+
+      sudo mysql_secure_installation
+
+      #You will be prompted to set up the root user password, remove anonymous user accounts, restrict root user access to the local machine, and remove the test database.
+
+      #steps are explained in detail. It is recommended to answer Y (yes) to all questions.
+
+
+
 ### MariaDB Upgrade from 10.1 to 10.2
 
 
