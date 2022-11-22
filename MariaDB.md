@@ -22,6 +22,15 @@
       #prompted to set up the root user password, remove anonymous user accounts, restrict root user access to the local machine, and remove the test database.
 
       #steps are explained in detail. It is recommended to answer Y (yes) to all questions.
+      
+      
+      or 
+      
+      
+      
+            nano /etc/yum.repos.d/MariaDB.repo
+            sudo yum install MariaDB-server MariaDB-client
+
 
 
       mariadb --version
