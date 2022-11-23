@@ -183,6 +183,13 @@ Do not forget to flush the cache:
  
   	php bin/magento cache:flush
 	
+### Troubleshooting 
+
+#### Varnish Cache 503 Guru Meditation Error
+
+	varnishlog -q 'RespStatus == 503' -g request
+	
+	
 	
 ### Disable   varnish cache in Ubuntu, CentOS or Red Hat
 In Ubuntu, we disable varnish by changing the port from 8080 to 80. in the varnish configuration file. Our Support Engineers do this by following the steps below:
