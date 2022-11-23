@@ -183,6 +183,24 @@ Do not forget to flush the cache:
  
   	php bin/magento cache:flush
 	
+	
+### Disable   varnish cache in Ubuntu, CentOS or Red Hat
+In Ubuntu, we disable varnish by changing the port from 8080 to 80. in the varnish configuration file. Our Support Engineers do this by following the steps below:
+
+1.Open /etc/varnish/default.vcl and change the .port to 80 and restart the services.
+
+	#Disable varnish cache
+
+	service varnish restart
+	service apache2 restart
+
+	#If our customers are using CentOS or Red Hat then we run the command below for disabling.
+	service varnish stop
+	
+The above command stops the varnish cache service running. And if our customer needs to uninstall varnish cache, then we do that by running the command below.
+
+yum erase varnish
+	
 
 ### Remove varnish
 
@@ -190,8 +208,8 @@ Do not forget to flush the cache:
 	#CenOS
 	yum erase varnish
 	#Ubuntu
-	apt-get remove varnish -y
-	 sudo apt-get purge varnish
+	sudo apt-get remove varnish -y
+	sudo apt-get purge varnish
 
  
 
