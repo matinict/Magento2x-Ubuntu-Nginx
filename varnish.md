@@ -182,6 +182,17 @@ Do not forget to flush the cache:
 
  
   	php bin/magento cache:flush
+	
+
+### Remove varnish
+
+	service varnish stop
+	#CenOS
+	yum erase varnish
+	#Ubuntu
+	apt-get remove varnish -y
+	 sudo apt-get purge varnish
+
  
 
 ## Ref:
