@@ -21,6 +21,10 @@
     
     ps aux | egrep '(apache|httpd)'
     
+    
+    ##CentOS7
+    sudo systemctl restart httpd.service
+    
 ## Configuring Apache
 Open Apache ports.conf file using the below command;
 
