@@ -28,8 +28,18 @@
       
       
       
-            nano /etc/yum.repos.d/MariaDB.repo
-            sudo yum install MariaDB-server MariaDB-client -y
+      nano /etc/yum.repos.d/MariaDB.repo
+      
+      # MariaDB 10.3 CentOS repository list - created 2018-05-25 19:02 UTC
+      # http://downloads.mariadb.org/mariadb/repositories/
+      [mariadb]
+      name = MariaDB
+      baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+      gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+      gpgcheck=1
+
+
+      sudo yum install MariaDB-server MariaDB-client -y
 
 
 
@@ -100,6 +110,8 @@
 
 
 ### Ref
+https://linuxize.com/post/install-mariadb-on-centos-7/
 
 https://wiki.centos-webpanel.com/mariadb-upgrade-from-10-2-to-10-4
+
 https://wiki.centos-webpanel.com/mariadb-upgrade-from-10-1-to-10-2
