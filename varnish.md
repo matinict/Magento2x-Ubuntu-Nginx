@@ -189,6 +189,8 @@ Do not forget to flush the cache:
 
 	varnishlog -q 'RespStatus == 503' -g request
 	
+	#Monitor health probes
+	varnishlog -g raw -i backend_health
 	
 	
 ### Disable   varnish cache in Ubuntu, CentOS or Red Hat
