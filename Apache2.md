@@ -23,7 +23,11 @@
     
     
     ##CentOS7
+    sudo apachectl configtest
+    #Syntax OK
     sudo systemctl restart httpd.service
+    #OR
+    sudo systemctl restart httpd
     
 ## Configuring Apache
 Open Apache ports.conf file using the below command;
@@ -60,6 +64,20 @@ Open Apache ports.conf file using the below command;
     Proto Recv-Q Send-Q Local Address     Foreign Address      State    PID/Program name
     tcp        0      0 0.0.0.0:22        0.0.0.0:*            LISTEN   1086/sshd
     tcp6       0      0 :::8080           :::*                 LISTEN   4678/apache2
+    
+    ### CentOS7
+
+    /etc/apache2/httpd.conf
+    /etc/apache2/apache2.conf
+    /etc/httpd/httpd.conf
+    /etc/httpd/conf/httpd.conf
+
+    #access server via cli can confirm exact location that Apache loading its configuration file from by running cli
+
+    apachectl -V
+    #or
+    httpd -V
+    
     
 ## User & Web user 
 
