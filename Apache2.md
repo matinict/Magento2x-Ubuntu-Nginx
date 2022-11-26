@@ -66,14 +66,12 @@ Open Apache ports.conf file using the below command;
     tcp6       0      0 :::8080           :::*                 LISTEN   4678/apache2
     
     ### CentOS7
-
     /etc/apache2/httpd.conf
     /etc/apache2/apache2.conf
     /etc/httpd/httpd.conf
     /etc/httpd/conf/httpd.conf
 
     #access server via cli can confirm exact location that Apache loading its configuration file from by running cli
-
     apachectl -V
     #or
     httpd -V
