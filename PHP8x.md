@@ -1,9 +1,13 @@
 # Play with Multi php 
 
 
-## Install PHP 8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4
+## Install PHP PHP 8.2/PHP 8.1/8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4
+
         sudo apt update
         sudo apt upgrade
+        
+        sudo apt update && sudo apt -y upgrade
+        
         sudo apt-get install software-properties-common
         #sudo add-apt-repository ppa:ondrej/php
 
@@ -12,9 +16,13 @@
         sudo apt-get update 
 
         # Once the PPA is enabled, you can install PHP 8. 
+        
+        ##PHP 8.2 on Ubuntu 22.04|20.04|18.04        
+        sudo apt install php8.2 -y
+        sudo apt install php8.2-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
+        sudo apt install nginx php8.2-fpm
 
-        ##8.1 on Ubuntu 22.04|20.04|18.04
-
+        ##PHP 8.1 on Ubuntu 22.04|20.04|18.04
         sudo apt install php8.1 -y
         sudo apt install php8.1-fpm
         sudo apt install php8.1-{gd,zip,mysql,oauth,yaml,fpm,mbstring,memcache}
