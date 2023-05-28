@@ -375,3 +375,10 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
    Please do not hesitate to contact me don't worry about charge I try to help free on my little knowledge,
    if you need me to join your Magento project especially extension developer.
    My rate is $20/hour in Magento 1 and $25/hour in Magento 2x.
+   
+   
+   ### **Author:**
+
+#### _**Matin**_
+
+[![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matinr/)
