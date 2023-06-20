@@ -16,3 +16,4 @@
 ## Img Opt
 1.  ezgif- https://ezgif.com/optipng
 2.  iloveimg - https://www.iloveimg.com/compress-image
+3.  https://squoosh.app/editor 
