@@ -1,26 +1,26 @@
 # Ubuntu
 
 
-## Prerequisites 
+### Prerequisites 
 
 - RAM:4GB
 - HD : 30GB  
 
 
-## Installing
+### Installing
 
 - Bootable OS
 
 
-## check your current Ubuntu version
+### check your current Ubuntu version
 
         cat /etc/*release  
         
-## Fix Broken  Package 
+### Fix Broken  Package 
 
         sudo apt --fix-broken install
 
-## Change swap size in Ubuntu 18.04 or newer
+### Change swap size in Ubuntu 18.04 or newer
 
         sudo swapoff -a 
         sudo dd if=/dev/zero of=/swapfile bs=1G count=8 
@@ -93,5 +93,26 @@ sudo swapon /swapfile
 
         grep SwapTotal /proc/meminfo
 
-## Ref
--
+### Updating Ubuntu Kernel
+
+        cat /etc/apt/sources.list
+        uname -r
+        uname -mrs 
+        #Linux 4.4.0-64 generic
+        sudo add-apt-repository ppa:cappelikan/ppa -y
+        sudo apt install mainline -y
+        
+        sudo apt update && sudo apt upgrade -y
+        sudo apt-get dist-upgrade -y
+        update-manager –d
+        sudo reboot
+   
+
+
+
+### Ubuntu 23.04
+
+   
+
+### Ref
+- https://ubuntu.com/download/desktop
