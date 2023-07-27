@@ -11,6 +11,7 @@
  
 ### Step 2 – Securing MySQL server
 
+      sudo mysql
       ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'matin@123';
 
       sudo mysql_secure_installation
