@@ -5,6 +5,7 @@
 ## - Install phpMyAdmin 
 
     sudo apt install phpmyadmin -y
+    sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
   
  During the installation, it will ask you about the web server configuration for phpmyadmin.
  Choose none option and move the cursor to: 'OK'.
