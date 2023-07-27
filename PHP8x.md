@@ -16,6 +16,12 @@
          ##Ubuntu 22.04 PHP8.2
         sudo apt-get install software-properties-common
         #sudo add-apt-repository ppa:ondrej/php
+        #CAVEATS:
+        #1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+        #2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+        #3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+           or ppa:ondrej/nginx
+
 
         sudo add-apt-repository ppa:ppa:ondrej/nginx-mainline      
         sudo add-apt-repository ppa:ppa:ondrej/nginx
