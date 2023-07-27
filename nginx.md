@@ -34,12 +34,22 @@
       [ 3] 443/tcp (v6)               ALLOW IN    Anywhere (v6)
       [ 4] 80/tcp (v6)                ALLOW IN    Anywhere (v6)
       ```
-If you do not have a domain name pointed at your server and you do not know your server’s public IP address, you can find it by running the following command:
 
     ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//' 
     curl -4 icanhazip.com 
     http://server_domain_or_IP
-
+    
+    
+### Managing the Nginx Process
+    nginx -v
+    sudo nginx -t
+    sudo systemctl stop nginx
+    sudo systemctl start nginx
+    sudo systemctl restart nginx
+    sudo systemctl reload nginx
+    sudo systemctl disable nginx
+    sudo systemctl disable nginx
+    
 
 # Permission 
 
