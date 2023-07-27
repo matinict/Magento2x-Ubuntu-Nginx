@@ -7,7 +7,13 @@
         sudo apt upgrade
         
         sudo apt update && sudo apt -y upgrade
+
+        ##Ubuntu 22.04 PHP8.1
+        sudo apt install --no-install-recommends php8.1
+        php -v
+        sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
         
+         ##Ubuntu 22.04 PHP8.2
         sudo apt-get install software-properties-common
         #sudo add-apt-repository ppa:ondrej/php
 
