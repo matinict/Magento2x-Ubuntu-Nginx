@@ -7,7 +7,7 @@
       sudo apt search mysql-server
       sudo apt info mysql-server
       
-      sudo apt install mysql-server
+      sudo apt install mysql-server -y
  
 ### Step 2 – Securing MySQL server
 
