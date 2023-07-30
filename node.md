@@ -9,8 +9,17 @@
 
 ##  Installing
 
-- Installing Node.js with Apt from the Default Repositories
+## Installing Node.js with Apt Using a NodeSource PPA
+        cd ~
+        curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh
+        nano /tmp/nodesource_setup.sh
+        sudo apt install nodejs
+        node -v
 
+        
+
+- Installing Node.js with Apt from the Default Repositories
+  
         sudo apt -y update && sudo apt upgrade
         sudo apt -y install nodejs
         node -v
