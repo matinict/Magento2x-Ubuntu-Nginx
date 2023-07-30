@@ -13,7 +13,7 @@
         cd ~
         curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh
         nano /tmp/nodesource_setup.sh
-        sudo apt install nodejs
+        sudo apt -y install nodejs
         node -v
 
         
