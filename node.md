@@ -20,17 +20,26 @@
         # Short Way
         sudo apt -y update && sudo apt install nodejs npm 
 
-
-        
-        
-        
-        curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
         sudo apt-get install -y nodejs
-        npm install -g npm@latest
+  
+
+        curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+  
+        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+        sudo apt-get install -y nodejs
         
         curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
         sudo apt-get install -y nodejs
+        
+        curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+        sudo apt-get install -y nodejs
 
+        npm install -g npm@latest
+        
+ 
+            node -v
 
 
 - Installing Node.js with Apt Using a NodeSource PPA
