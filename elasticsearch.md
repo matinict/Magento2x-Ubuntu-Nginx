@@ -30,23 +30,45 @@ To install JDK 1.8 on Ubuntu, enter the following commands as a user with root p
       echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
       sudo apt-get update && sudo apt-get install elasticsearch
       
-      OR,
+      # OR,
       wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.11.1-amd64.deb
       wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.11.1-amd64.deb.sha512
       shasum -a 512 -c elasticsearch-7.11.1-amd64.deb.sha512 
       sudo dpkg -i elasticsearch-7.11.1-amd64.deb
 
+      # OR
+      curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg2
+      echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+      sudo apt update
+      sudo apt install elasticsearch      
+      sudo nano /etc/elasticsearch/elasticsearch.yml
+      #      network.host: localhost     . . .
+      
 
  
 
 ## 1.3 Start & Check Status Elasticsearch:
 
--Running with Service:
+      # Running with Service:
+      sudo systemctl start elasticsearch
+      sudo systemctl enable elasticsearch
 
-      sudo service elasticsearch start
-      sudo service elasticsearch status
+      # Securing 
+      sudo ufw allow from 198.51.100.0 to any port 9200
+      sudo ufw enable
+      sudo ufw status
+
+      # Testing
+      curl -X GET 'http://localhost:9200'
+      curl -X GET 'http://localhost:9200/_nodes?pretty'
+
+      # Using 
+      curl -XPOST -H "Content-Type: application/json" 'http://localhost:9200/tutorial/helloworld/1' -d '{ "message": "Hello World!" }'
+      curl -X GET -H "Content-Type: application/json" 'http://localhost:9200/tutorial/helloworld/1'
+
+ 
       
-- Running with Systemd: To configure Elasticsearch to start automatically when the system boots up, run the following commands:
+      # startup system boot:
 
       sudo /bin/systemctl daemon-reload
       sudo /bin/systemctl enable elasticsearch.service
