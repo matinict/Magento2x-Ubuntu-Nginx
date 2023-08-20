@@ -146,7 +146,19 @@ epoch      timestamp cluster       status node.total node.data shards pri relo i
         
 
 
-## Problem
+## Problem:: elasticsearch.service: Failed with result 'exit-code'.
+
+      sudo nano /etc/elasticsearch/elasticsearch.yml
+      Your network settings should be:
+      
+      # Set the bind address to a specific IP (IPv4 or IPv6):
+      #
+      network.host: 127.0.0.1
+      #
+      # Set a custom port for HTTP:
+      #
+      http.port: 9200
+
 
 #### Job for elasticsearch.service failed because the control process exited with error code.See "systemctl status elasticsearch.service" and "journalctl -xe" for details.
 
