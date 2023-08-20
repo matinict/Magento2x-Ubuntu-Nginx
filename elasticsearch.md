@@ -48,28 +48,29 @@ To install JDK 1.8 on Ubuntu, enter the following commands as a user with root p
  
 
 ## 1.3 Start & Check Status Elasticsearch:
-
+      
       # Running with Service:
       sudo systemctl start elasticsearch
       sudo systemctl enable elasticsearch
-
+      systemctl status elasticsearch.service
+      
       # Securing 
       sudo ufw allow from 198.51.100.0 to any port 9200
       sudo ufw enable
       sudo ufw status
-
+      
       # Testing
       curl -X GET 'http://localhost:9200'
       curl -X GET 'http://localhost:9200/_nodes?pretty'
-
+      
       # Using 
       curl -XPOST -H "Content-Type: application/json" 'http://localhost:9200/tutorial/helloworld/1' -d '{ "message": "Hello World!" }'
       curl -X GET -H "Content-Type: application/json" 'http://localhost:9200/tutorial/helloworld/1'
-
- 
+      
+      
       
       # startup system boot:
-
+      
       sudo /bin/systemctl daemon-reload
       sudo /bin/systemctl enable elasticsearch.service
       sudo systemctl start elasticsearch.service
