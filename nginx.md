@@ -227,6 +227,10 @@ Server showing EOF text , Posiiblbe cause as below
      fastcgi_buffer_size 32k;
 
 
+## Problem 05 : Downloading PHP File NGINX Server
+
+tst...
+
  
  ## Ref 
  
