@@ -166,6 +166,17 @@ This is the address for your PWA frontend. You can still use the old address to 
 Congratulations! You have set up your development environment for the Venia storefront project.
 
 
+### Problem 
+
+ #### Problem-1 Error from chokidar ( pwa/node_modules/@magento/venia-ui/lib/components/AccountMenu): Error: ENOSPC: System limit for number of file watchers reached
+
+ Solution:
+ 
+        sudo sysctl -w fs.inotify.max_user_watches=524288
+
+#### Problem2 Error: ENOENT: no such file or directory, stat ' /pwa/2f18a153658f03f6428e.hot-update.json'
+
+
    
 ### My Final Video: 
 
