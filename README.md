@@ -362,6 +362,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       git clone https://github.com/magento-research/pwa-studio.git
       cd pwa-studio/
       yarn install
+      # npx @magento/pwa-buildpack create-env-file packages/venia-concept
       cp packages/venia-concept/.env.dist packages/venia-concept/.env
       MAGENTO_BACKEND_URL="http://www.magento.lan/"
       yarn buildpack create-custom-origin packages/venia-concept
