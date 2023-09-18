@@ -10,14 +10,14 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
   
   
 
-# Step 1: Installing the server. 
+## Step 1.0: Installing the server. 
 
     - cat /etc/*release (check your current Ubuntu version)
     I have Ubuntu 18.04 on my localhost.
     - You can check the requirements system for Magento 2.3 in the 
     link https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html    
     
-   # 1.1- Install the softwares: [Advanced Nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
+## 1.1- Install the softwares: [Advanced Nginx](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/nginx.md) 
     
     
       sudo apt-get update
@@ -29,7 +29,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       sudo ufw allow 'Nginx HTTP'
       curl -4 icanhazip.com
       
-   # 1.2- Install PHP 7.2.x and the required PHP extensions: [PHP7x](PHP7x.md)
+## 1.2- Install PHP 7.2.x and the required PHP extensions: [PHP7x](PHP7x.md)
    
       sudo apt-get install software-properties-common
       sudo add-apt-repository ppa:ondrej/php
@@ -58,13 +58,13 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       sudo service php7.2-fpm start
       
            
-   # 1.3- Install Composer:
+## 1.3- Install Composer:
     
       curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       composer --version
       
       
-   # 1.4- Install MySQL 5.7  [mysql](mysql.md)
+## 1.4- Install MySQL 5.7  [mysql](mysql.md)
    
    [Mysql & PhpMyAdmin](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/phpmyadmin.md) 
     
@@ -83,7 +83,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
           systemctl enable mysql
 
           
-   # 1.5- Install phpMyAdmin
+## 1.5- Install phpMyAdmin
    
     install PHPMyAdmin using the apt command below.
      sudo apt install phpmyadmin -y
@@ -95,7 +95,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
      Enter a password: "PhpMyAdmin@123"
      Repeat the "PhpMyAdmin@123" password.
 
-   # 1.6-Create a new virtual host for accessing to phpmyadmin
+## 1.6-Create a new virtual host for accessing to phpmyadmin
     
         
          sudo  nano /etc/nginx/sites-available/default
@@ -139,7 +139,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
      http://127.0.0.1/phpmyadmin/
 
 
-# Step 2: Install and configure Magento 2.3.x
+## Step 2: Install and configure Magento 2.3.x
 
     - Create the Magento authentication keys: https://marketplace.magento.com/
     - Create the new database named magento2_3_0: http://localhost:9000
@@ -180,7 +180,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
  
 
 
-# Step 3: Nginx server blocks (Virtual Hosts)
+## Step 3: Nginx server blocks (Virtual Hosts)
           --Multiple Subdomain of Nginx Server
           
           
@@ -328,39 +328,52 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
           --use-rewrites=1
 
           
-# Step 4: Sample Data Install using Composer:  
+## Step 4: Sample Data Install using Composer:  
 
    [More Details sampledata](https://github.com/matinict/Magento2x-Ubuntu-Nginx/blob/master/sampledata.md) 
   
-    cd /var/www/html/magento.lan
-    php bin/magento sampledata:deploy
+     cd /var/www/html/magento.lan
+     php bin/magento sampledata:deploy
      Authentication required (repo.magento.com): if ask cmd
      Username: xxxxx
      Pasward: xxx
-
-    php bin/magento setup:upgrade
-    
-   For remove:
-   
-    php php bin/magento sampledata:remove
-
-          
-   [https://marketplace.magento.com/customer/accessKeys/ login then copy Public & private Key]
-   
-   Ex.
-   
+     
+     php bin/magento setup:upgrade
+     
+     #For remove:
+     
+     php php bin/magento sampledata:remove
+     
+     
+     [https://marketplace.magento.com/customer/accessKeys/ login then copy Public & private Key]
+     
+     Ex.
+     
      Public Key: 2c534578b8507d00e7f927af2591756d Copy
      Private Key: 8819e8bf8336c7ada213ee2df18f5c15 Copy
-          
 
 
-# Instruction *
+
  
- ** If Any Command not work or errror something use # sudo { sudo apt-get update }
- ** Sometime network & System issue some apt may not work properly check errorlog
+ 
+
+ ## Step 4: Install Magento 2 PWA Studio
+
+      git clone https://github.com/magento-research/pwa-studio.git
+      cd pwa-studio/
+      yarn install
+      cp packages/venia-concept/.env.dist packages/venia-concept/.env
+      MAGENTO_BACKEND_URL="http://www.magento.lan/"
+      yarn buildpack create-custom-origin packages/venia-concept
+      bash deployVeniaSampleData.sh
+      bin/magento setup:upgrade
+      bin/magento indexer:reindex
+      bin/magento cache:flush
 
 
 # Ref##
+
+  https://webkul.com/blog/magento2-3-pwa-studio-setup/
 
   https://devdocs.magento.com/guides/v2.3/install-gde/prereq/nginx.html
   
