@@ -358,6 +358,8 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
  
 
  ## Step 4: Install Magento 2 PWA Studio
+ 
+      composer require magento/pwa
 
       #git clone https://github.com/magento-research/pwa-studio.git
       yarn create @magento/pwa
@@ -368,6 +370,7 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       # npx @magento/pwa-buildpack create-env-file packages/venia-concept
       cp packages/venia-concept/.env.dist packages/venia-concept/.env
       MAGENTO_BACKEND_URL="http://www.magento.lan/"
+      CHECKOUT_BRAINTREE_TOKEN="sandbox_8yrzsvtm_s2bg8fs563crhqzk"
       
       yarn buildpack create-custom-origin packages/venia-concept
       bash deployVeniaSampleData.sh
@@ -378,6 +381,9 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
       yarn install
       yarn watch
 
+
+      
+### NPM
      npm run clean:all
      npm install
      npm run build
