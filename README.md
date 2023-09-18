@@ -186,7 +186,12 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
           
           - cd /var/www/html
           composer create-project --repository=https://repo.magento.com/ magento/project-community-edition magento.lan
-           cd magento.lan
+
+          sudo chown $USER:www-data /var/www/html/magento.lan
+          sudo chmod g+s /var/www/html/magento.lan
+          sudo chmod o-rwx /var/www/html/magento.lan
+          
+          cd magento.lan
           find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
           find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
           chown -R :www-data .
