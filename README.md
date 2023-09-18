@@ -311,6 +311,22 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
           
           [In your browser Complete Install]
 
+          php bin/magento setup:install \
+          --base-url=http://www.magento.lan \
+          --db-host=localhost \
+          --db-name=mag246db \
+          --db-user=matin \
+          --db-password=matin@123 \
+          --admin-firstname=Matin \
+          --admin-lastname=Admin \
+          --admin-email=matinict@gmail.com \
+          --admin-user=admin \
+          --admin-password=admin@123 \
+          --language=en_US \
+          --currency=USD \
+          --timezone=America/Chicago \
+          --use-rewrites=1
+
           
 # Step 4: Sample Data Install using Composer:  
 
