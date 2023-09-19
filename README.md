@@ -388,6 +388,9 @@ How to install Magento 2.3x or 2.4x on Ubuntu with Nginx. Development Environmen
      npm install
      npm run build
 
+     nvm use 17.5.0 
+     node --version 
+
 
 # Ref##
 
