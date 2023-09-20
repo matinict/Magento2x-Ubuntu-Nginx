@@ -351,8 +351,8 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     --admin-firstname=Matin \
     --admin-lastname=Admin \
     --admin-email=admin@admin.com \
-    --admin-user=admin \
-    --admin-password=admin@123 \
+    --admin-user=matin \
+    --admin-password=matin@123 \
     --language=en_US \
     --currency=BDT \
     --timezone=Asia/Dhaka \
@@ -365,5 +365,11 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
 
     sudo truncate -s 0 var/log/system.log
     sudo tail -n 10 var/log/system.log
+
+
+## Problem
+
+###  Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
+
 
 
