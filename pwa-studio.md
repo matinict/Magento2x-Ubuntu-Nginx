@@ -7,10 +7,97 @@
        - First install [Magento2.4](m24.md)
        - install [Node](node.md) or 
        - install [Yarn](yarn.md)
+ 
+        
+        
+### 1.1b Node
 
-
+        node -v
+        npm init @magento/pwa
+        
+        npm init @magento/pwa
+        
+       @magento/create-pwa v2.3.1
        
-### 1.1a Yarn
+       Creating a PWA Studio project
+       
+       ? Project root directory (will be created if it does not exist) pwa-spider
+       
+       ? Short name of the project to put in the package.json "name" field pwa-spider
+       
+       ? Name of the author to put in the package.json "author" field matin
+       
+       ? Which template would you like to use to bootstrap pwa-spider? Defaults to "@magento/venia-concept". @magento/venia-concept
+       
+       ? Magento instance to use as a backend (will be added to `.env` file) Other
+       
+       ? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost
+       
+       ? Edition of the magento store (Adobe Commerce or Magento Open Source) CE
+       
+       ? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
+       
+       ? NPM package management client to use npm
+       
+       ? Install package dependencies with npm after creating project No
+       
+       
+       Running command: 
+       
+       buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
+
+
+       npm run buildpack -- create-custom-origin .  
+       npm run watch   
+       npm run storybook      
+       npm run build     
+       npm start  
+
+       export NODE_OPTIONS=--openssl-legacy-provider
+
+
+    
+
+### Install Venia sample data
+
+       composer config --no-interaction --ansi repositories.venia-sample-data composer https://repo.magento.com
+       composer require --no-interaction --ansi magento/venia-sample-data:*
+       bin/magento setup:upgrade
+       bin/magento indexer:reindex
+
+         
+### Node 
+
+       nvm use 20.0.0 
+       
+       curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh
+       nano nodesource_setup.sh
+       sudo bash nodesource_setup.sh
+       sudo apt install nodejs
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+       source ~/.bashrc
+       nvm list-remote
+       nvm install v20.0.0
+       nvm list
+       nvm install lts/fermium
+       nvm install lts/Gallium
+       nvm install lts/Hydrogen
+
+       nvm alias default v20.0.0
+       nvm alias default node2
+
+       node -v
+
+
+       npm run clean:all
+       npm install
+       npm run build
+
+
+        
+        
+ ### 1.1a Yarn
 
        yarn -v
        yarn create @magento/pwa
@@ -63,112 +150,6 @@
        cd pwa-studio-fundamentals 
 
 
-
-
-        
-        
-### 1.1b Node
-
-        node -v
-        npm init @magento/pwa
-        
-        npm init @magento/pwa
-        
-       @magento/create-pwa v2.3.1
-       
-       Creating a PWA Studio project
-       
-       ? Project root directory (will be created if it does not exist) pwa-spider
-       
-       ? Short name of the project to put in the package.json "name" field pwa-spider
-       
-       ? Name of the author to put in the package.json "author" field matin
-       
-       ? Which template would you like to use to bootstrap pwa-spider? Defaults to "@magento/venia-concept". @magento/venia-concept
-       
-       ? Magento instance to use as a backend (will be added to `.env` file) Other
-       
-       ? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost
-       
-       ? Edition of the magento store (Adobe Commerce or Magento Open Source) CE
-       
-       ? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
-       
-       ? NPM package management client to use npm
-       
-       ? Install package dependencies with npm after creating project No
-       
-       
-       Running command: 
-       
-       buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
-
-
-       npm run buildpack -- create-custom-origin .  
-       npm run watch   
-       npm run storybook      
-       npm run build     
-       npm start  
-
-       export NODE_OPTIONS=--openssl-legacy-provider
-
-
-       
-       
-         ℹ  Finding @magento/venia-concept tarball on NPM
-         ℹ  Downloading and unpacking https://registry.npmjs.org/@magento/venia-concept/-/venia-concept-12.5.0.tgz
-         ℹ  Unpacked @magento/venia-concept
-         ℹ  Creating a new PWA project 'pwa-spider' in pwa-spider
-         ⚠  Created new PWA project pwa-spider. Next steps:
-
-            - cd pwa-spider && npm install before running the below commands.
-
-            - npm run buildpack -- create-custom-origin . to generate a unique, secure custom domain for your new project. Highly recommended.
-
-            - npm run watch to start the dev server and do real-time development.
-
-            - npm run storybook to start Storybook dev server and view available components in your app.
-
-            - npm run build to build the project into optimized assets in the '/dist' directory.
-
-            - npm start after build to preview the app on a local staging server.
-
-         ℹ  Successfully wrote a fresh configuration file to /srv/public_html/pwa-spider/.env
-
-
-         
-  ### Node 
-
-       nvm use 20.0.0 
-       
-       curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh
-       nano nodesource_setup.sh
-       sudo bash nodesource_setup.sh
-       sudo apt install nodejs
-       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-       source ~/.bashrc
-       nvm list-remote
-       nvm install v20.0.0
-       nvm list
-       nvm install lts/fermium
-       nvm install lts/Gallium
-       nvm install lts/Hydrogen
-
-       nvm alias default v20.0.0
-       nvm alias default node2
-
-       node -v
-
-
-       npm run clean:all
-       npm install
-       npm run build
-
-
-        
-        
- 
 
 
 # 1.2 Clone the PWA Studio repository 
@@ -233,6 +214,8 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 
 ## Ref
+
+https://developer.adobe.com/commerce/pwa-studio/guides/packages/venia/sample-data/
 
 https://developer.adobe.com/commerce/pwa-studio/tutorials/
 
