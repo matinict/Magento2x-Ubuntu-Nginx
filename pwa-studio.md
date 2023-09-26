@@ -181,12 +181,17 @@ Congratulations! You have set up your development environment for the Venia stor
 
        npm config set strict-ssl false
 
+       npm config set strict-ssl false
+       npm config get strict-ssl
+
 
    
 ### My Final Video: 
 
 https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
 export NODE_TLS_REJECT_UNAUTHORIZED=0
+
+
 
 
 [![M24 PWA](https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ)](https://youtu.be/_pUZZNBjj6Y "PWA")
