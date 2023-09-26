@@ -125,6 +125,36 @@
          ℹ  Successfully wrote a fresh configuration file to /srv/public_html/pwa-spider/.env
 
 
+         
+  ### Node 
+
+       nvm use 20.0.0 
+       
+       curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh
+       nano nodesource_setup.sh
+       sudo bash nodesource_setup.sh
+       sudo apt install nodejs
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+       source ~/.bashrc
+       nvm list-remote
+       nvm install v20.0.0
+       nvm list
+       nvm install lts/fermium
+       nvm install lts/Gallium
+       nvm install lts/Hydrogen
+
+       nvm alias default v20.0.0
+       nvm alias default node2
+
+       node -v
+
+
+       npm run clean:all
+       npm install
+       npm run build
+
+
         
         
  
@@ -158,33 +188,6 @@ Launching staging server...
 https://magento-venia-concept-abcde.local.pwadev:51828/
 
 
-## Node 
-
-       nvm use 20.0.0 
-       
-       curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh
-       nano nodesource_setup.sh
-       sudo bash nodesource_setup.sh
-       sudo apt install nodejs
-       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-       source ~/.bashrc
-       nvm list-remote
-       nvm install v20.0.0
-       nvm list
-       nvm install lts/fermium
-       nvm install lts/Gallium
-       nvm install lts/Hydrogen
-
-       nvm alias default v20.0.0
-       nvm alias default node2
-
-       node -v
-
-
-       npm run clean:all
-       npm install
-       npm run build
 
 
 ### Problem 
