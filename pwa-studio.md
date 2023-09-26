@@ -4,9 +4,9 @@
 
 ### 1. PWA Started Setup Storefront project
 
-- First install [Magento2.4](m24.md)
-- install [Node](node.md) or 
-- install [Yarn](yarn.md)
+       - First install [Magento2.4](m24.md)
+       - install [Node](node.md) or 
+       - install [Yarn](yarn.md)
 
 
        
@@ -139,16 +139,16 @@
        yarn buildpack create-custom-origin packages/venia-concept
 
  ## 1.4 Run the server
-Use any of the following commands from the project root directory to start the server:
-
+       #Use any of the following commands from the project root directory to start the server:
+       
        yarn run watch:venia
-Starts the Venia storefront development environment.
-
+       #Starts the Venia storefront development environment.
+       
        yarn run watch:all
-Runs the full PWA Studio developer experience, which include Venia hot-reloading and concurrent Buildpack/Peregrine rebuilds.
-
+       #Runs the full PWA Studio developer experience, which include Venia hot-reloading and concurrent Buildpack/Peregrine rebuilds.
+       
        yarn run build && yarn run stage:venia
-Generates build artifacts and runs the staging environment, which uses more compressed assets and more closely reflects production.
+       #Generates build artifacts and runs the staging environment, which uses more compressed assets and more closely reflects production.
 
 ## 1.5 Browsing to the application
 After the development server is up and running, look for a similar line in the terminal output (the port may differ for your instance):
@@ -180,6 +180,11 @@ https://magento-venia-concept-abcde.local.pwadev:51828/
        nvm alias default node2
 
        node -v
+
+
+       npm run clean:all
+       npm install
+       npm run build
 
 
 ### Problem 
