@@ -74,41 +74,41 @@
         
         npm init @magento/pwa
         
-@magento/create-pwa v2.3.1
-
-Creating a PWA Studio project
-
-? Project root directory (will be created if it does not exist) pwa-spider
-
-? Short name of the project to put in the package.json "name" field pwa-spider
-
-? Name of the author to put in the package.json "author" field matin
-
-? Which template would you like to use to bootstrap pwa-spider? Defaults to "@magento/venia-concept". @magento/venia-concept
-
-? Magento instance to use as a backend (will be added to `.env` file) Other
-
-? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost
-
-? Edition of the magento store (Adobe Commerce or Magento Open Source) CE
-
-? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
-
-? NPM package management client to use npm
-
-? Install package dependencies with npm after creating project No
-
-
-Running command: 
-
-buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
-
-
-  ℹ  Finding @magento/venia-concept tarball on NPM
-  ℹ  Downloading and unpacking https://registry.npmjs.org/@magento/venia-concept/-/venia-concept-12.5.0.tgz
-  ℹ  Unpacked @magento/venia-concept
-  ℹ  Creating a new PWA project 'pwa-spider' in pwa-spider
-  ⚠  Created new PWA project pwa-spider. Next steps:
+       @magento/create-pwa v2.3.1
+       
+       Creating a PWA Studio project
+       
+       ? Project root directory (will be created if it does not exist) pwa-spider
+       
+       ? Short name of the project to put in the package.json "name" field pwa-spider
+       
+       ? Name of the author to put in the package.json "author" field matin
+       
+       ? Which template would you like to use to bootstrap pwa-spider? Defaults to "@magento/venia-concept". @magento/venia-concept
+       
+       ? Magento instance to use as a backend (will be added to `.env` file) Other
+       
+       ? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost
+       
+       ? Edition of the magento store (Adobe Commerce or Magento Open Source) CE
+       
+       ? Braintree API token to use to communicate with your Braintree instance (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk
+       
+       ? NPM package management client to use npm
+       
+       ? Install package dependencies with npm after creating project No
+       
+       
+       Running command: 
+       
+       buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
+       
+       
+         ℹ  Finding @magento/venia-concept tarball on NPM
+         ℹ  Downloading and unpacking https://registry.npmjs.org/@magento/venia-concept/-/venia-concept-12.5.0.tgz
+         ℹ  Unpacked @magento/venia-concept
+         ℹ  Creating a new PWA project 'pwa-spider' in pwa-spider
+         ⚠  Created new PWA project pwa-spider. Next steps:
 
             - cd pwa-spider && npm install before running the below commands.
 
@@ -122,7 +122,7 @@ buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --templ
 
             - npm start after build to preview the app on a local staging server.
 
-  ℹ  Successfully wrote a fresh configuration file to /srv/public_html/pwa-spider/.env
+         ℹ  Successfully wrote a fresh configuration file to /srv/public_html/pwa-spider/.env
 
 
         
@@ -132,11 +132,11 @@ buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --templ
 
 # 1.2 Clone the PWA Studio repository 
 
-git clone https://github.com/magento/pwa-studio.git
-
-cd pwa-studio/
-yarn install
-yarn buildpack create-custom-origin packages/venia-concept
+       git clone https://github.com/magento/pwa-studio.git
+       
+       cd pwa-studio/
+       yarn install
+       yarn buildpack create-custom-origin packages/venia-concept
 
  ## 1.4 Run the server
 Use any of the following commands from the project root directory to start the server:
@@ -144,20 +144,17 @@ Use any of the following commands from the project root directory to start the s
        yarn run watch:venia
 Starts the Venia storefront development environment.
 
-yarn run watch:all
+       yarn run watch:all
 Runs the full PWA Studio developer experience, which include Venia hot-reloading and concurrent Buildpack/Peregrine rebuilds.
 
-yarn run build && yarn run stage:venia
+       yarn run build && yarn run stage:venia
 Generates build artifacts and runs the staging environment, which uses more compressed assets and more closely reflects production.
 
 ## 1.5 Browsing to the application
 After the development server is up and running, look for a similar line in the terminal output (the port may differ for your instance):
-
 PWADevServer ready at https://magento-venia-concept-abcde.local.pwadev:8001
 OR
-
-Launching staging server...
-
+Launching staging server... 
 https://magento-venia-concept-abcde.local.pwadev:51828/
 
 
@@ -178,6 +175,11 @@ https://magento-venia-concept-abcde.local.pwadev:51828/
        nvm install lts/fermium
        nvm install lts/Gallium
        nvm install lts/Hydrogen
+
+       nvm alias default v20.0.0
+       nvm alias default node2
+
+       node -v
 
 
 ### Problem 
