@@ -104,13 +104,13 @@
        buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
 
 
-       npm run buildpack -- create-custom-origin . to generate a unique, secure custom domain for your new project. Highly recommended.       
-       npm run watch to start the dev server and do real-time development.       
-       npm run storybook to start Storybook dev server and view available components in your app.       
-       npm run build to build the project into optimized assets in the '/dist' directory.       
-       npm start after build to preview the app on a local staging server.
+       npm run buildpack -- create-custom-origin .  
+       npm run watch   
+       npm run storybook      
+       npm run build     
+       npm start  
 
-              export NODE_OPTIONS=--openssl-legacy-provider
+       export NODE_OPTIONS=--openssl-legacy-provider
 
 
        
