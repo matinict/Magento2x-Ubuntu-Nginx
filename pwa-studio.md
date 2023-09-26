@@ -19,8 +19,8 @@
        @magento/create-pwa v2.2.0
        Creating a PWA Studio project
        ? Project root directory : pwa-studio-fundamentals  
-       ? Short name of the project to put in the package.json "name" field: pwa-studio-fundamentals  
-       ? Name of the author to put in the package.json "author" field: Matin<matinict@gmail.com>    
+       ? Short name of the project to put in the package.json "name" field:  [Press Enter]
+       ? Name of the author to put in the package.json "author" field:   [Press Enter]
        ? Which template would you like to use to bootstrap pwa-studio-fundamentals? 
        Defaults to "@magento/venia-concept". @magento/venia-concept: [Press Enter]
        ? Magento instance to use as a backend (will be added to `.env` file): 2.4-develop
@@ -177,10 +177,16 @@ Congratulations! You have set up your development environment for the Venia stor
 #### Problem2 Error: ENOENT: no such file or directory, stat ' /pwa/2f18a153658f03f6428e.hot-update.json'
 
 
+#### Problem2 Error: This package doesn't seem to be present in your lockfile; run "yarn install" to update the lockfile
+
+       npm config set strict-ssl false
+
+
    
 ### My Final Video: 
 
 https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
+export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 
 [![M24 PWA](https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ)](https://youtu.be/_pUZZNBjj6Y "PWA")
