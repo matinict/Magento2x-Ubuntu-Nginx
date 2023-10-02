@@ -196,6 +196,17 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 [![M24 PWA](https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ)](https://youtu.be/_pUZZNBjj6Y "PWA")
 
+## Problem
+
+### Problem-01: 
+   Error: error:0308010C:digital envelope routines::unsupportedat new Hash
+
+Solution:
+
+       export NODE_OPTIONS=--openssl-legacy-provider
+
+
+### Problem-01: 
 
 ## Ref
 
