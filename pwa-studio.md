@@ -186,15 +186,7 @@ https://magento-venia-concept-abcde.local.pwadev:51828/
 
 
    
-### My Final Video: 
 
-https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
-export NODE_TLS_REJECT_UNAUTHORIZED=0
-
-
-
-
-[![M24 PWA](https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ)](https://youtu.be/_pUZZNBjj6Y "PWA")
 
 ## Problem
 
@@ -206,7 +198,16 @@ Solution:
        export NODE_OPTIONS=--openssl-legacy-provider
 
 
-### Problem-01: 
+### Problem-02: 
+
+
+
+### My Final Video: 
+
+https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
+export NODE_TLS_REJECT_UNAUTHORIZED=0 
+
+[![M24 PWA]([https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ](https://www.youtube.com/embed/_pUZZNBjj6Y?si=k2ozWQjduzKye4G_))](https://youtu.be/_pUZZNBjj6Y "PWA")
 
 ## Ref
 
