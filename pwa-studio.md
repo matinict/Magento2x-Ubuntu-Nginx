@@ -198,7 +198,15 @@ Solution:
        export NODE_OPTIONS=--openssl-legacy-provider
 
 
-### Problem-02: 
+### Problem-02: Error: Cannot query field "newsletter_enabled" on type "StoreConfig". (... 1 errors total)
+
+Solution:
+
+       composer require magento/pwa
+       then :
+       php bin/magento module:enable --clear-static-content Magento_ContactGraphQlPwa
+       php bin/magento module:enable --clear-static-content Magento_NewsletterGraphQlPwa
+       php bin/magento module:enable --clear-static-content Magento_QuoteGraphQlPwa
 
 
 
