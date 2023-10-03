@@ -21,7 +21,7 @@
        ? Name of the author :  [Enter]        
        ? Which template :  [Enter]        
        ? Magento instance to use:  [Enter]        
-       ? URL of a Magento instance to use as a backend (will be added to `.env` file) https://magento2.localhost       
+       ? URL: https://magento2.localhost       
        ? Edition of the magento :MOS    
        ? Braintree API :[Enter]        
        ? NPM package: NPM    
