@@ -204,9 +204,7 @@ Solution:
 
        composer require magento/pwa
        then :
-       php bin/magento module:enable --clear-static-content Magento_ContactGraphQlPwa
-       php bin/magento module:enable --clear-static-content Magento_NewsletterGraphQlPwa
-       php bin/magento module:enable --clear-static-content Magento_QuoteGraphQlPwa
+       php bin/magento module:enable Magento_ContactGraphQlPwa Magento_NewsletterGraphQlPwa Magento_QuoteGraphQlPwa --clear-static-content  
 
 
 
