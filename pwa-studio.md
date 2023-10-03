@@ -86,33 +86,12 @@
        yarn -v
        yarn create @magento/pwa
 
-       # Comand promp         
-       @magento/create-pwa v2.2.0
-       Creating a PWA Studio project
-       ? Project root directory : pwa-studio-fundamentals  
-       ? Short name of the project to put in the package.json "name" field:  [Press Enter]
-       ? Name of the author to put in the package.json "author" field:   [Press Enter]
-       ? Which template would you like to use to bootstrap pwa-studio-fundamentals? 
-       Defaults to "@magento/venia-concept". @magento/venia-concept: [Press Enter]
-       ? Magento instance to use as a backend (will be added to `.env` file): 2.4-develop
-       ? Edition of the magento store (Enterprise Edition or Community Edition): CE
-       ? Braintree API token to use to communicate with your Braintree instance 
-       (will be added to `.env` file) sandbox_8yrzsvtm_s2bg8fs563crhqzk: [Press Enter]
-       ? NPM package management client to use: yarn [Select yarn]
-       ? Install package dependencies with yarn after creating project: Yes [Press Y]
-
-
-       ## Created new PWA project pwa-studio-fundamentals. Next steps:
-       cd pwa-studio-fundamentals
-       #to generate a unique, secure custom domain for your new project. Highly recommended.
-       - yarn run buildpack create-custom-origin 
-       #to start the dev server and do real-time development.
-       - yarn run watch 
-       #to start Storybook dev server and view available components in your app.
-       - yarn run storybook 
-       #to build the project into optimized assets in the '/dist' directory.
-       - yarn run build 
-       #after build to preview the app on a local staging server.
+       # check NPN   ...   
+       cd pwa-studio-fundamentals 
+       - yarn run buildpack create-custom-origin  
+       - yarn run watch  
+       - yarn run storybook  
+       - yarn run build  
        - yarn start 
 
        yarn buildpack create-custom-origin ./
@@ -157,64 +136,55 @@
        #Generates build artifacts and runs the staging environment, which uses more compressed assets and more closely reflects production.
 
 ## 1.5 Browsing to the application
-After the development server is up and running, look for a similar line in the terminal output (the port may differ for your instance):
-PWADevServer ready at https://magento-venia-concept-abcde.local.pwadev:8001
-OR
-Launching staging server... 
-https://magento-venia-concept-abcde.local.pwadev:51828/
+       After the development server is up and running, look for a similar line in the terminal output (the port may differ for your instance):
+       PWADevServer ready at https://magento-venia-concept-abcde.local.pwadev:8001
+       OR
+       Launching staging server... 
+       https://magento-venia-concept-abcde.local.pwadev:51828/
 
-
-
-
-### Problem 
-
- #### Problem-1 Error from chokidar ( pwa/node_modules/@magento/venia-ui/lib/components/AccountMenu): Error: ENOSPC: System limit for number of file watchers reached
-
- Solution:
  
-        sudo sysctl -w fs.inotify.max_user_watches=524288
-
-#### Problem2 Error: ENOENT: no such file or directory, stat ' /pwa/2f18a153658f03f6428e.hot-update.json'
-
-
-#### Problem2 Error: This package doesn't seem to be present in your lockfile; run "yarn install" to update the lockfile
-
-       npm config set strict-ssl false
-
-       npm config set strict-ssl false
-       npm config get strict-ssl
-
-
-   
-
-
 ## Problem
 
-### Problem-01: 
-   Error: error:0308010C:digital envelope routines::unsupportedat new Hash
+
+#### Problem-01: Error from chokidar ( pwa/node_modules/@magento/venia-ui/lib/components/AccountMenu): Error: ENOSPC: System limit for number of file watchers reached
 
 Solution:
 
-       export NODE_OPTIONS=--openssl-legacy-provider
+        sudo sysctl -w fs.inotify.max_user_watches=524288
+
+#### Problem-02: Error: ENOENT: no such file or directory, stat ' /pwa/2f18a153658f03f6428e.hot-update.json'
+
+Solution:
 
 
-### Problem-02: Error: Cannot query field "newsletter_enabled" on type "StoreConfig". (... 1 errors total)
+#### Problem-03 Error: This package doesn't seem to be present in your lockfile; run "yarn install" to update the lockfile
+
+npm config set strict-ssl false
+
+npm config set strict-ssl false
+npm config get strict-ssl
+
+### Problem-04: Error: error:0308010C:digital envelope routines::unsupportedat new Hash
+
+Solution:
+
+export NODE_OPTIONS=--openssl-legacy-provider
+
+
+### Problem-05: Error: Cannot query field "newsletter_enabled" on type "StoreConfig". (... 1 errors total)
 
 Solution:
 
        composer require magento/pwa
        then :
        php bin/magento module:enable Magento_ContactGraphQlPwa Magento_NewsletterGraphQlPwa Magento_QuoteGraphQlPwa --clear-static-content  
+       
+       
+### Problem-06: Product not showing on PWA  ex http://0.0.0.0:10000/kaffee.html?page=1
 
+Solution:
 
-
-### My Final Video: 
-
-https://www.youtube.com/watch?v=_pUZZNBjj6Y&feature=youtu.be
-export NODE_TLS_REJECT_UNAUTHORIZED=0 
-
-[![M24 PWA]([https://i9.ytimg.com/vi/_pUZZNBjj6Y/mq2.jpg?sqp=CNzYm_sF&rs=AOn4CLAvH7FeQDq3h-Ju-2vS5RsbreR-tQ](https://www.youtube.com/embed/_pUZZNBjj6Y?si=k2ozWQjduzKye4G_))](https://youtu.be/_pUZZNBjj6Y "PWA")
-
+ 
 ## Ref
 
 https://developer.adobe.com/commerce/pwa-studio/guides/packages/venia/sample-data/
