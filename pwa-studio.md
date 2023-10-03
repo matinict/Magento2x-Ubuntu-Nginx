@@ -184,6 +184,14 @@ Solution:
 
 Solution:
 
+       composer config --no-interaction --ansi repositories.venia-sample-data composer https://repo.magento.com
+       composer require --no-interaction --ansi magento/venia-sample-data:*
+       php bin/magento setup:upgrade
+       php bin/magento indexer:reindex
+
+       #composer require magento/venia-sample-data
+
+
  
 ## Ref
 
