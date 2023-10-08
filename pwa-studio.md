@@ -171,8 +171,9 @@
        composer require --no-interaction --ansi magento/venia-sample-data:*
        php bin/magento setup:upgrade
        php bin/magento indexer:reindex
-       
-       #composer require magento/venia-sample-data
+       ##OR
+       composer require magento/venia-sample-data
+       composer remove magento/venia-sample-data
 
 ### Problem-06:  Unable to apply data patch Magento\CustomerSampleDataVenia\Setup\Patch\Data\AddMultipleAddresses for module Magento_CustomerSampleDataVenia. Original exception message: Invalid value of "US" provided for the countryId field.
 
