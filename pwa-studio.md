@@ -37,19 +37,16 @@
        npm run build     
        npm start  
        
-       export NODE_OPTIONS=--openssl-legacy-provider
+       export NODE_OPTIONS=--openssl-legacy-provider 
        
-       
-       
-       
-       ### Install Venia sample data
+       #Install Venia sample data
        composer config --no-interaction --ansi repositories.venia-sample-data composer https://repo.magento.com
        composer require --no-interaction --ansi magento/venia-sample-data:*
        bin/magento setup:upgrade
        bin/magento indexer:reindex
        
        
-       ### Node  Vsersion 
+       #Node  Vsersion 
        nvm use 20.0.0        
        curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh
        nano nodesource_setup.sh
