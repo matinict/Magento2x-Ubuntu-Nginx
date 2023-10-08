@@ -131,33 +131,33 @@
 
 #### Problem-01: Error from chokidar ( pwa/node_modules/@magento/venia-ui/lib/components/AccountMenu): Error: ENOSPC: System limit for number of file watchers reached
 
-Solution:
-
-        sudo sysctl -w fs.inotify.max_user_watches=524288
+       Solution:
+       
+       sudo sysctl -w fs.inotify.max_user_watches=524288
 
 #### Problem-02: Error: ENOENT: no such file or directory, stat ' /pwa/2f18a153658f03f6428e.hot-update.json'
 
-Solution:
+       Solution:
 
 
 #### Problem-03 Error: This package doesn't seem to be present in your lockfile; run "yarn install" to update the lockfile
 
-npm config set strict-ssl false
-
-npm config set strict-ssl false
-npm config get strict-ssl
+       npm config set strict-ssl false
+       
+       npm config set strict-ssl false
+       npm config get strict-ssl
 
 ### Problem-04: Error: error:0308010C:digital envelope routines::unsupportedat new Hash
-
-Solution:
-
-export NODE_OPTIONS=--openssl-legacy-provider
+       
+       Solution:
+       
+       export NODE_OPTIONS=--openssl-legacy-provider
 
 
 ### Problem-05: Error: Cannot query field "newsletter_enabled" on type "StoreConfig". (... 1 errors total)
 
-Solution:
-
+       Solution:
+       
        composer require magento/pwa
        then :
        php bin/magento module:enable Magento_ContactGraphQlPwa Magento_NewsletterGraphQlPwa Magento_QuoteGraphQlPwa --clear-static-content  
@@ -165,14 +165,18 @@ Solution:
        
 ### Problem-06: Product not showing on PWA  ex http://0.0.0.0:10000/kaffee.html?page=1
 
-Solution:
-
+       Solution:
+       
        composer config --no-interaction --ansi repositories.venia-sample-data composer https://repo.magento.com
        composer require --no-interaction --ansi magento/venia-sample-data:*
        php bin/magento setup:upgrade
        php bin/magento indexer:reindex
-
+       
        #composer require magento/venia-sample-data
+
+### Problem-06:  Unable to apply data patch Magento\CustomerSampleDataVenia\Setup\Patch\Data\AddMultipleAddresses for module Magento_CustomerSampleDataVenia. Original exception message: Invalid value of "US" provided for the countryId field.
+
+       Solution:      
 
 
  
