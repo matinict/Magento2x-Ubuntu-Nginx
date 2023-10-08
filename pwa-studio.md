@@ -44,6 +44,16 @@
        composer require --no-interaction --ansi magento/venia-sample-data:*
        bin/magento setup:upgrade
        bin/magento indexer:reindex
+
+       ##OR 
+       composer require magento/pwa
+       composer require magento/module-quote-graph-ql-pwa
+       then :
+       php bin/magento module:enable --clear-static-content Magento_ContactGraphQlPwa
+       php bin/magento module:enable --clear-static-content Magento_NewsletterGraphQlPwa
+       php bin/magento module:enable --clear-static-content Magento_QuoteGraphQlPwa
+       
+       php bin/magento module:enable --clear-static-content Magento_EavGraphQlAux Magento_CatalogGraphQlAux Magento_PageBuilderPwa Magento_ReCaptchaGraphQlPwa Magento_ReCaptchaPwa Magento_SalesGraphQlAux Magento_UrlRewriteGraphQlPwa Magento_WeeeGraphQlAux
        
        
        #Node  Vsersion 
