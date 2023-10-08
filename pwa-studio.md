@@ -12,10 +12,10 @@
         
 ### 1.1b Node
 
-        node -v
-        npm init @magento/pwa        
-        npm init @magento/pwa     
+       node -v
+       nvm use 20.0.0   
        
+       npm init @magento/pwa  
        ? Project root directory: pwa-spider       
        ? Short name : [Enter]      
        ? Name of the author :  [Enter]        
@@ -29,31 +29,28 @@
        
        ##Running command:        
        buildpack create-project pwa-spider --name "pwa-spider" --author "matin" --template "@magento/venia-concept" --backend-url "https://magento2.localhost" --backend-edition "CE" --braintree-token "sandbox_8yrzsvtm_s2bg8fs563crhqzk" --npm-client "npm" --no-install
-
-
+       
+       
        npm run buildpack -- create-custom-origin .  
        npm run watch   
        npm run storybook      
        npm run build     
        npm start  
-
+       
        export NODE_OPTIONS=--openssl-legacy-provider
-
-
-    
-
-### Install Venia sample data
-
+       
+       
+       
+       
+       ### Install Venia sample data
        composer config --no-interaction --ansi repositories.venia-sample-data composer https://repo.magento.com
        composer require --no-interaction --ansi magento/venia-sample-data:*
        bin/magento setup:upgrade
        bin/magento indexer:reindex
-
-         
-### Node 
-
-       nvm use 20.0.0 
        
+       
+       ### Node  Vsersion 
+       nvm use 20.0.0        
        curl -sL https://deb.nodesource.com/setup_19.x -o nodesource_setup.sh
        nano nodesource_setup.sh
        sudo bash nodesource_setup.sh
@@ -67,13 +64,13 @@
        nvm install lts/fermium
        nvm install lts/Gallium
        nvm install lts/Hydrogen
-
+       
        nvm alias default v20.0.0
        nvm alias default node2
-
+       
        node -v
-
-
+       
+       
        npm run clean:all
        npm install
        npm run build
@@ -84,56 +81,42 @@
  ### 1.1a Yarn
 
        yarn -v
-       yarn create @magento/pwa
-
+       yarn create @magento/pwa       
        # check NPN   ...   
        cd pwa-studio-fundamentals 
        - yarn run buildpack create-custom-origin  
        - yarn run watch  
        - yarn run storybook  
        - yarn run build  
-       - yarn start 
-
+       - yarn start        
        yarn buildpack create-custom-origin ./
        yarn watch
-       yarn run watch:all
-
-     
-     
-     ## Issue body start top
-     "start": "react-scripts --openssl-legacy-provider start"
-     
-     
+       yarn run watch:all             
+       
+       ## Issue body start top
+       "start": "react-scripts --openssl-legacy-provider start"             
        # Isuue in magento root :
        composer require magento/pwa 
        php bin/magento module:enable --clear-static-content Magento_ContactGraphQlPwa
        php bin/magento module:enable --clear-static-content Magento_NewsletterGraphQlPwa
        php bin/magento module:enable --clear-static-content Magento_QuoteGraphQlPwa
        php bin/magento set:up
-       cd pwa-studio-fundamentals 
-
-
-
-
-# 1.2 Clone the PWA Studio repository 
-
-       git clone https://github.com/magento/pwa-studio.git
+       cd pwa-studio-fundamentals         
        
+       # Clone the PWA Studio repository 
+       git clone https://github.com/magento/pwa-studio.git       
        cd pwa-studio/
        yarn install
-       yarn buildpack create-custom-origin packages/venia-concept
-
- ## 1.4 Run the server
-      yarn run watch:venia        
+       yarn buildpack create-custom-origin packages/venia-concept       
+       ## 1.4 Run the server
+       yarn run watch:venia        
        yarn run watch:all
-       yarn run build && yarn run stage:venia
-
-## 1.5 Browsing to the application
+       yarn run build && yarn run stage:venia       
+       ## 1.5 Browsing to the application
        https://magento-venia-concept-abcde.local.pwadev:8001
-       OR
-       Launching staging server... 
+       #OR  Launching staging server... 
        https://magento-venia-concept-abcde.local.pwadev:51828/
-       or 
+       # or 
        http://0.0.0.0:44067
 
 
