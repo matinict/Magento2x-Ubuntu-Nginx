@@ -126,6 +126,14 @@ sudo swapon /swapfile
           #Git
           alias gb="git branch"
 
+### Search
+
+grep -R "what" "where"
+grep -R "78048 Villingen-Schwenningen" .
+grep -R "minicart.js" .
+grep -R "apple-black-logo-bFu.svg" .
+grep -R "catalog_product_index_eav_temp.PRIMARY" .
+
 ### Ubuntu 23.04
 
    
