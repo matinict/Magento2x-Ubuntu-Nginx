@@ -175,10 +175,22 @@
        composer require magento/venia-sample-data
        composer remove magento/venia-sample-data
 
-### Problem-06:  Unable to apply data patch Magento\CustomerSampleDataVenia\Setup\Patch\Data\AddMultipleAddresses for module Magento_CustomerSampleDataVenia. Original exception message: Invalid value of "US" provided for the countryId field.
+### Problem-07:  Unable to apply data patch Magento\CustomerSampleDataVenia\Setup\Patch\Data\AddMultipleAddresses for module Magento_CustomerSampleDataVenia. Original exception message: Invalid value of "US" provided for the countryId field.
 
        Solution:      
+       'Magento_ConfigurableSampleDataVenia' => 0,
 
+### Problem-08:   Error: ENOSPC: System limit for number of file watchers reached, watch
+
+       Solution:      
+       sudo gedit /etc/sysctl.conf
+       fs.inotify.max_user_watches=524288
+       sudo sysctl -p
+
+
+  ### Problem-099:    
+
+       Solution:        
 
  
 ## Ref
