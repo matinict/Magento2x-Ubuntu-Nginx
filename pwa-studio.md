@@ -136,6 +136,15 @@
        or 
        http://0.0.0.0:44067
 
+
+## Development 
+
+### Change Logo
+
+        ./node_modules/@magento/venia-ui/lib/components/Logo/logo.js:import logo from './apple-black-logo.svg';
+       pwa/node_modules/@magento/venia-ui/lib/components/Logo/logo.svg
+       pwa/node_modules/@magento/venia-ui/lib/components/Logo/logo.js
+
  
 ## Problem
 
