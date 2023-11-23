@@ -362,10 +362,11 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
  
     chmod +x deployfull.sh
     ./deployfull.sh 
-    #or 
-    sh sdeployfull.sh
-    #OR
-    bash sdeployfull.sh
+    or 
+    sh deployfull.sh
+    OR
+    
+    bash deployfull.sh
 
 
 
