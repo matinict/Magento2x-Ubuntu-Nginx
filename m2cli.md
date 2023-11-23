@@ -358,6 +358,17 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     --timezone=Asia/Dhaka \
     --use-rewrites=1
     
+ ##DeployFull
+ 
+    chmod +x deployfull.sh
+    ./deployfull.sh 
+    #or 
+    sh sdeployfull.sh
+    #OR
+    bash sdeployfull.sh
+
+
+
  ## Error Log
  
     sudo truncate -s 0 var/log/exception.log
