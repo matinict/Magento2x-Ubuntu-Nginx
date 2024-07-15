@@ -1,6 +1,6 @@
 # Run PhpStorm:
-cd  /home/matin/opt/PhpStorm-2021.1/bin
-./phpstorm.sh
+      cd  /home/matin/opt/PhpStorm-2021.1/bin
+      ./phpstorm.sh
 
 
 
