@@ -1,3 +1,9 @@
+#Kali Linux version
+
+    cat /etc/os-release
+    lsb_release -a
+    hostnamectl
+    cat /etc/issue
 
 
 # Add an Alias in Kali Linux    
