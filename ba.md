@@ -1,31 +1,6 @@
 
-
-
-error: target not found: youtube-dl
-error: target not found: xf86-video-openchrome
-error: target not found: visual-studio-code-bin
-error: target not found: valhalla
-error: target not found: python-utidylib
-
-
-sudo pacman -Rdd youtube-dl --noconfirm
-sudo pacman -Rdd xf86-video-openchrome --noconfirm
-sudo pacman -Rdd visual-studio-code-bin --noconfirm
-sudo pacman -Rdd valhalla --noconfirm
-sudo pacman -Rdd python-utidylib --noconfirm
-
-
-
-
-CLI:123  root@123 miska@123
-=================================================
-
-Username: root P: blackarch
-
-su - miska
-
-
-
+ # blackarch
+ 
 
 
     #Full System Update
@@ -330,6 +305,8 @@ sudo blockdev --getsize64 /dev/sda2
 
 =============================================================================
 =============================================================================
+
+https://blackarch.org/tools.html
 =============================================================================
 =============================================================================
 
