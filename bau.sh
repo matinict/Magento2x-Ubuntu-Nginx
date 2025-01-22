@@ -1,5 +1,6 @@
-    #!/bin/bash
 
+    #!/bin/bash
+    #Blackarch os Update in single cli
     # Update package database first
     sudo pacman -Syy
 
