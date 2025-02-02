@@ -16,6 +16,14 @@
 ## Remove/Clean
     sudo systemctl stop docker
     sudo apt-get remove --purge -y docker docker-engine docker.io containerd runc
+    sudo apt-get remove --purge -y docker-ce docker-ce-cli docker-ce-rootless-extras \
+    docker-buildx-plugin docker-compose-plugin docker-desktop
+    sudo apt-get remove --purge -y docker-ce docker-ce-cli docker-ce-rootless-extras \
+    docker-buildx-plugin docker-compose-plugin docker-desktop containerd.io runc
+    sudo snap remove docker  # Remove Docker if installed via Snap
+
+    sudo snap remove docker
+
     sudo rm -rf /var/lib/docker
     sudo rm -rf /etc/docker
     sudo rm -rf /var/run/docker.sock
@@ -26,6 +34,7 @@
 
     dpkg -l | grep -i docker
     dpkg -l | grep -E 'docker|containerd|runc'
+    
     which docker
     which dockerd
     
