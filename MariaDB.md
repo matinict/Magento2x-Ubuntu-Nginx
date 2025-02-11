@@ -1,6 +1,13 @@
 # MariaDB
 
+## Ubuntu 
 
+sudo apt update
+sudo apt install mariadb-server
+sudo mysql_secure_installation
+
+
+## CentOS
 ### Install the MariaDB package using the yum package manager:
 
       sudo yum install mariadb-server -y
