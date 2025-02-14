@@ -1,19 +1,14 @@
 # Play with Multi php 
 
 
-## Install PHP PHP 8.2/PHP 8.1/8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4
+## Install PHP PHP 8.3/8.2/8.1/8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4/24.04
 
         sudo apt update
-        sudo apt upgrade
-        
+        sudo apt upgrade        
         sudo apt update && sudo apt -y upgrade
 
-        ##Ubuntu 22.04 PHP8.1
-        sudo apt install --no-install-recommends php8.1
-        php -v
-        sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath php8.1-soap 
-        
-         ##Ubuntu 22.04 PHP8.2
+     
+         ##Ubuntu 22.04//24.04 PHP8.2
         sudo apt-get install software-properties-common
         #sudo add-apt-repository ppa:ondrej/php
         #CAVEATS:
@@ -44,7 +39,11 @@
         sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
         sudo apt-get -y install php8.1-intl
 
-
+        ##Ubuntu 22.04 PHP8.1
+        sudo apt install --no-install-recommends php8.1
+        php -v
+        sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath php8.1-soap 
+        
         ##8.0 on Ubuntu 22.04|20.04|18.04
 
         sudo apt install php8.0-mysql php8.0-gd
