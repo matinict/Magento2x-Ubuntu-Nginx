@@ -30,7 +30,7 @@
         # Once the PPA is enabled, you can install PHP 8. 
         
         ##PHP 8.2 on Ubuntu 22.04|20.04|18.04        
-        sudo apt -yinstall php8.2  
+        sudo apt -y install php8.2  
         sudo apt -y install php8.2-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
         sudo apt-get install -y php8.2-cli php8.2-common php8.2-fpm php8.2-mysql php8.2-zip php8.2-gd php8.2-mbstring php8.2-curl php8.2-xml php8.2-bcmath php8.2-soap 
         sudo apt -y install nginx php8.2-fpm
