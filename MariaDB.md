@@ -21,13 +21,10 @@
       GRANT ALL ON *.* TO 'matin'@'localhost' IDENTIFIED BY 'matin@123' WITH GRANT OPTION;
       FLUSH PRIVILEGES;
       exit
-      sudo systemctl status mariadb
-      sudo mysqladmin version
+      sudo systemctl status mariadb  
 
-
- 
-
-      sudo systemctl status mariadb
+      ##PHPMYADMIN
+      sudo apt -y install phpmyadmin  -y
       sudo mysqladmin version
       mysqladmin -u admin -p version
 
