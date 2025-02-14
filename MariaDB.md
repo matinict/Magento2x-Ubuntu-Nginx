@@ -1,14 +1,32 @@
 # MariaDB
 
-## Ubuntu 
+## Ubuntu 22.04/24.04
 
       sudo apt update
       sudo apt install mariadb-server
       sudo mysql_secure_installation
       sudo systemctl start mariadb.service
       sudo mariadb
-      GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+      CREATE USER 'matin'@'localhost' IDENTIFIED BY 'matin@123';
+      CREATE USER 'matin'@'127.0.0.1' IDENTIFIED BY 'matin@123';
+      CREATE USER 'matin'@'*' IDENTIFIED BY 'matin@123';
+      
+      GRANT ALL PRIVILEGES ON * . * TO 'matin'@'localhost';
+      GRANT ALL PRIVILEGES ON * . * TO 'matin'@'127.0.0.1';
+      GRANT ALL PRIVILEGES ON * . * TO 'matin'@'*'; 
       FLUSH PRIVILEGES;
+      
+      GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+      GRANT ALL ON *.* TO 'matin'@'localhost' IDENTIFIED BY 'matin@123' WITH GRANT OPTION;
+      GRANT ALL ON *.* TO 'matin'@'localhost' IDENTIFIED BY 'matin@123' WITH GRANT OPTION;
+      FLUSH PRIVILEGES;
+      exit
+      sudo systemctl status mariadb
+      sudo mysqladmin version
+
+
+ 
+
       sudo systemctl status mariadb
       sudo mysqladmin version
       mysqladmin -u admin -p version
