@@ -1,3 +1,21 @@
+
+
+## MariaDB
+      sudo apt update
+      sudo apt install mariadb-server -y
+      sudo mysql_secure_installation 
+
+      sudo mariadb
+      GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+      GRANT ALL ON *.* TO 'matin'@'localhost' IDENTIFIED BY 'matin@123' WITH GRANT OPTION;
+      GRANT ALL ON *.* TO 'matin'@'localhost' IDENTIFIED BY 'matin@123' WITH GRANT OPTION;
+      FLUSH PRIVILEGES;
+      exit
+      sudo systemctl status mariadb
+      sudo mysqladmin version
+
+
+
 ## MySQL  
 
 
