@@ -10,6 +10,9 @@
 
     #nano  ~/.bashrc
     #source ~/.bashrc
+    nano ~/.zshrc
+    source ~/.zshrc
+
     alias html="cd /var/www/html"
     alias shopify="cd /var/www/html/shopify"
     alias cl="clear"
@@ -24,4 +27,7 @@
     alias cui="composer update --ignore-platform-reqs"
     #Git
     alias gb="git branch"
+    #php
+    alias pvs="sudo update-alternatives --config php"
+
 
