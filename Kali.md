@@ -12,7 +12,9 @@
     #source ~/.bashrc
     alias html="cd /var/www/html"
     alias shopify="cd /var/www/html/shopify"
-    alias cl="clear"          alias u2="sudo apt update -y"
+    alias cl="clear"    
+    alias u1="sudo apt update"
+    alias u2="sudo apt update -y"
     alias u3="sudo apt update && sudo apt upgrade -y"
     alias ar="sudo apt autoremove -y"
     alias upg="apt list --upgradable -y"
