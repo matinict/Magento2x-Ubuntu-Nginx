@@ -161,16 +161,16 @@
 
 ## Remove PHP
 
-dpkg -l | grep php
-sudo apt-get purge php8.* php7.* php-common -y 
-sudo apt-get autoremove -y 
-sudo rm -rf /etc/php
-sudo rm -rf /var/lib/php
-sudo apt-get purge libapache2-mod-php*  -y u
-sudo rm -rf /etc/apache2/mods-enabled/php*
-sudo service nginx restart 
-
-php -v
+        dpkg -l | grep php
+        sudo apt-get purge php8.* php7.* php-common -y 
+        sudo apt-get purge libapache2-mod-php*  -y 
+        sudo apt-get purge php8.2-common php8.2-cli  -y 
+        sudo apt-get autoremove -y 
+        sudo rm -rf /etc/php
+        sudo rm -rf /var/lib/php
+        sudo rm -rf /etc/apache2/mods-enabled/php*
+        sudo service nginx restart 
+        php -v
 
         
      ## Issue 1.1: composer update  show below error
