@@ -136,10 +136,21 @@
       After upgrade, you can use "mysql" command to verify the MariaDB version running on your server
 
       mysql --version
-
+      mariadb --version
 
 
 http://127.0.0.1/phpmyadmin
+
+## Remove MariaDB
+
+      sudo systemctl stop mariadb
+      sudo apt remove --purge mariadb-server mariadb-client mariadb-common -y
+      sudo rm -rf /var/lib/mysql
+      sudo rm -rf /etc/mysql
+      sudo apt autoremove -y
+
+      
+
 
 
 ## Problem
