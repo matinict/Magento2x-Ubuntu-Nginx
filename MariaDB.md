@@ -138,6 +138,13 @@
       mysql --version
       mariadb --version
 
+      #mariadb-10.6
+      ls /etc/apt/sources.list.d/
+      echo "deb [signed-by=/usr/share/keyrings/mariadb-keyring.gpg] https://archive.mariadb.org/mariadb-10.6/repo/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/mariadb.list
+      
+      rm -rf archive_uri-https_mirror_mariadb_org_repo_10_6_ubuntu-noble.list
+      sudo rm /etc/apt/sources.list.d/mariadb.list
+
 
 http://127.0.0.1/phpmyadmin
 
@@ -145,9 +152,13 @@ http://127.0.0.1/phpmyadmin
 
       sudo systemctl stop mariadb
       sudo apt remove --purge mariadb-server mariadb-client mariadb-common -y
+      sudo apt remove --purge mysql-server mysql-client mysql-common mariadb-server mariadb-client -y
       sudo rm -rf /var/lib/mysql
       sudo rm -rf /etc/mysql
+      sudo rm -rf /var/lib/mysql /etc/mysql 
       sudo apt autoremove -y
+    
+
 
       
 
