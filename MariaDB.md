@@ -137,6 +137,10 @@
 
       mysql --version
 
+https://127.0.0.1/phpmyadmin
+
+
+
 
 ### Ref
 https://linuxize.com/post/install-mariadb-on-centos-7/
