@@ -401,5 +401,12 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
 
 ###  Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
 
+To enable extensions, verify that they are enabled in your .ini files:
+    - /etc/php/8.2/cli/php.ini
+    - /etc/php/8.2/cli/conf.d/10-opcache.ini
+    - /etc/php/8.2/cli/conf.d/10-pdo.ini
+
+
+# php --ini
 
 
