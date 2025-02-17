@@ -160,18 +160,40 @@
 
 
 ## Remove PHP
+        sudo systemctl stop php8.2-fpm
+        sudo systemctl disable php8.2-fpm
+        sudo systemctl stop php-fpm
+        sudo systemctl disable php-fpm
 
         dpkg -l | grep php
         sudo apt-get purge php8.* php7.* php-common -y 
         sudo apt-get purge libapache2-mod-php*  -y 
         sudo apt-get purge php8.2-common php8.2-cli  -y 
         sudo apt-get autoremove -y 
+        sudo snap remove php
+
         sudo rm -rf /etc/php
         sudo rm -rf /var/lib/php
         sudo rm -rf /etc/apache2/mods-enabled/php*
-        sudo service nginx restart 
+        sudo rm -rf /usr/bin/php
+        sudo rm -rf /usr/local/bin/php
+        sudo rm -rf /usr/lib/php
+        sudo rm -rf /usr/include/php
+        sudo rm -rf /usr/share/php
+        sudo rm -rf /var/lib/php       
+        whereis php
+        #php: /usr/bin/php /usr/local/bin/php /usr/lib/php
+        sudo service nginx restart         
         php -v
 
+        #php83
+        sudo systemctl stop php8.3-fpm
+        sudo systemctl disable php8.3-fpm
+        sudo systemctl stop php-fpm
+        sudo systemctl disable php-fpm
+
+
+        
         
      ## Issue 1.1: composer update  show below error
 
