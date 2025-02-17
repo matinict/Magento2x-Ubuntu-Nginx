@@ -121,6 +121,13 @@
         
         sudo service php8.2-fpm restart      
         sudo systemctl status php8.2-fpm  
+        
+        sudo service php8.3-fpm restart      
+        sudo systemctl status php8.3-fpm  
+
+        sudo service php8.4-fpm restart      
+        sudo systemctl status php8.4-fpm  
+        
         sudo systemctl restart nginx
         php -v 
 
