@@ -137,7 +137,9 @@
 
       mysql --version
 
-https://127.0.0.1/phpmyadmin
+
+
+http://127.0.0.1/phpmyadmin
 
 
 
