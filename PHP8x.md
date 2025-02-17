@@ -206,7 +206,11 @@
        - /etc/php/8.1/cli/conf.d/10-opcache.ini 
        
 
-Solution:
+        Solution:
 
     composer update --ignore-platform-reqs
     nano /etc/php/8.1/fpm/php.ini
+
+
+    Problem:: Curl enable 
+    solution sudo nano /etc/php/8.2/cli/php.ini search curl & other missingg 
