@@ -408,5 +408,13 @@ To enable extensions, verify that they are enabled in your .ini files:
 
 
 # php --ini
+sudo apt install php8.2-mysql
+sudo apt install php8.3-mysql
+ls -l /etc/php/8.1/mods-available/ | grep pdo
+ls -l /etc/php/8.2/mods-available/ | grep pdo
+sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/cli/conf.d/20-pdo_mysql.ini
+sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/fpm/conf.d/20-pdo_mysql.ini
+
+
 
 
