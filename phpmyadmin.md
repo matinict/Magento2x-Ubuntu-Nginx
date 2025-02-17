@@ -132,6 +132,10 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
     sudo apt autoremove
 
 
+Problem phpMyAdmin - Error The mysqli extension is missing
 
 
+
+
+#Ref
 
