@@ -142,7 +142,17 @@
 http://127.0.0.1/phpmyadmin
 
 
+## Problem
 
+
+P: Current version of RDBMS is not supported. Used Version: 10.11.8-MariaDB-0ubuntu0.24.04.1. Supported versions: MySQL-8, M  
+  ySQL-5.7, MariaDB-(10.2-10.6)   
+
+  sudo apt-get remove mariadb-server -y
+  sudo apt-get install mariadb-server-10.6 -y
+
+
+  
 
 ### Ref
 https://linuxize.com/post/install-mariadb-on-centos-7/
