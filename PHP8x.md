@@ -9,7 +9,7 @@
         sudo apt install --no-install-recommends php8.3
         sudo apt-get install -y php8.3-cli php8.3-common php8.3-mysql php8.3-zip php8.3-gd php8.3-mbstring php8.3-curl php8.3-xml php8.3-bcmath
 
-## Install PHP PHP 8.3/8.2/8.1/8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4/24.04
+## Install PHP PHP 8.3/8.2/8.1/8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4/24.04 
        
         sudo apt update && sudo apt -y upgrade
         
