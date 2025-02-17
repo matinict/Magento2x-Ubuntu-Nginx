@@ -130,10 +130,10 @@ sudo swapon /swapfile
         #PHP
         alias pv=" php -v"
         alias pvs="sudo update-alternatives --config php"
-        alias p81="sudo service php8.1-fpm restart"
-        alias p82="sudo service php8.2-fpm restart"
-        alias p83="sudo service php8.3-fpm restart"
-        alias p84="sudo service php8.3-fpm restart"
+        alias p81="sudo systemctl daemon-reload && sudo service php8.1-fpm restart"
+        alias p82="sudo systemctl daemon-reload && sudo service php8.2-fpm restart"
+        alias p83="sudo systemctl daemon-reload && sudo service php8.3-fpm restart"
+        alias p84="sudo systemctl daemon-reload && sudo service php8.3-fpm restart"
 
         #nginx
         alias nr="sudo service nginx restart"
