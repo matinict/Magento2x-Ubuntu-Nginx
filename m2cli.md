@@ -399,27 +399,34 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
 
 ## Problem
 
-###  Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
+### problem: Could not validate a connection to Elasticsearch. No alive nodes found in your cluster
 
-Maridb issue 
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo tee /etc/apt/trusted.gpg.d/elastic.asc
+sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'
+sudo apt install elasticsearch
+sudo systemctl start elasticsearch
+curl -X GET "localhost:9200"
+
+
+### problem: Maridb issue 
 composer require reessolutions/db-override:*
 
+ 
 
-
-To enable extensions, verify that they are enabled in your .ini files:
+### problem: To enable extensions, verify that they are enabled in your .ini files:
     - /etc/php/8.2/cli/php.ini
     - /etc/php/8.2/cli/conf.d/10-opcache.ini
     - /etc/php/8.2/cli/conf.d/10-pdo.ini
 
 
-# php --ini
-    sudo apt install php8.2-mysql
-    sudo apt install php8.3-mysql
-    ls -l /etc/php/8.1/mods-available/ | grep pdo
-    ls -l /etc/php/8.2/mods-available/ | grep pdo
-    sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/cli/conf.d/20-pdo_mysql.ini
-    sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/fpm/conf.d/20-pdo_mysql.ini
-    
+    # php --ini
+        sudo apt install php8.2-mysql
+        sudo apt install php8.3-mysql
+        ls -l /etc/php/8.1/mods-available/ | grep pdo
+        ls -l /etc/php/8.2/mods-available/ | grep pdo
+        sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/cli/conf.d/20-pdo_mysql.ini
+        sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/fpm/conf.d/20-pdo_mysql.ini
+        
 
 
 
