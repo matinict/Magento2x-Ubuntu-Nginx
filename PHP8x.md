@@ -101,6 +101,7 @@
         sudo sed -i "s/realpath_cache_size = .*/realpath_cache_size = 8000/" /etc/php/8.4/fpm/php.ini
         
         ##sudo nano /etc/php/8.x/fpm/php.ini
+        ##sudo nano  /etc/php/8.2/cli/php.ini
         ; Increase realpath cache size
         realpath_cache_size = 10M
         ; Increase realpath cache ttl
@@ -168,6 +169,7 @@
    
        - /etc/php/8.1/cli/php.ini
        - /etc/php/8.1/cli/conf.d/10-opcache.ini 
+       
 
 Solution:
 
