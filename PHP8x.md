@@ -60,8 +60,7 @@
         sudo apt install php8.0-common php8.0-mysql php8.0-xml php8.0-curl php8.0-gd php8.0-imagick php8.0-cli php8.0-dev php8.0-imap php8.0-mbstring php8.0-opcache php8.0-soap php8.0-zip -y
         
         
-        ## configurations php8.1
-        
+        ## configurations php8.1        
         sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
@@ -70,6 +69,36 @@
         sudo sed -i "s/max_input_vars = .*/max_input_vars = 18000/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
         sudo sed -i "s/realpath_cache_size = .*/realpath_cache_size = 8000/" /etc/php/8.1/fpm/php.ini
+
+        ## configurations php8.2        
+        sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/session.gc_maxlifetime = .*/session.gc_maxlifetime = 180000/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/max_input_time = .*/max_input_time = 18000/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/max_input_vars = .*/max_input_vars = 18000/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.2/fpm/php.ini
+        sudo sed -i "s/realpath_cache_size = .*/realpath_cache_size = 8000/" /etc/php/8.2/fpm/php.ini
+
+        ## configurations php8.3       
+        sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/session.gc_maxlifetime = .*/session.gc_maxlifetime = 180000/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/max_input_time = .*/max_input_time = 18000/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/max_input_vars = .*/max_input_vars = 18000/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.3/fpm/php.ini
+        sudo sed -i "s/realpath_cache_size = .*/realpath_cache_size = 8000/" /etc/php/8.3/fpm/php.ini
+
+        ## configurations php8.4       
+        sudo sed -i "s/memory_limit = .*/memory_limit = 4768M/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/session.gc_maxlifetime = .*/session.gc_maxlifetime = 180000/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/max_input_time = .*/max_input_time = 18000/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/max_input_vars = .*/max_input_vars = 18000/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/max_execution_time = .*/realpath_cache_size = 8000/" /etc/php/8.4/fpm/php.ini
+        sudo sed -i "s/realpath_cache_size = .*/realpath_cache_size = 8000/" /etc/php/8.4/fpm/php.ini
         
         ##sudo nano /etc/php/8.x/fpm/php.ini
         ; Increase realpath cache size
@@ -89,8 +118,23 @@
         
         sudo service php8.1-fpm restart      
         sudo systemctl status php8.1-fpm  
+        
+        sudo service php8.2-fpm restart      
+        sudo systemctl status php8.2-fpm  
         sudo systemctl restart nginx
         php -v 
+
+
+
+
+
+
+
+
+
+
+
+        
                 
 ## Switch/change between Multiple PHP8
         #CLi
