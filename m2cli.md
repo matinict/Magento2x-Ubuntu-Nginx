@@ -358,6 +358,23 @@ SELECT *, DATE_FORMAT(FROM_UNIXTIME(session_expires), '%e %b %Y %H:%i:%s') FROM 
     --currency=BDT \
     --timezone=Asia/Dhaka \
     --use-rewrites=1
+
+    LanBDT::  
+    php bin/magento setup:install \
+    --base-url=http://www.magento.lan \
+    --db-host=localhost \
+    --db-name=magdb \
+    --db-user=matin \
+    --db-password=matin@123 \
+    --admin-firstname=Matin \
+    --admin-lastname=Admin \
+    --admin-email=admin@admin.com \
+    --admin-user=matin \
+    --admin-password=matin@123 \
+    --language=en_US \
+    --currency=BDT \
+    --timezone=Asia/Dhaka \
+    --use-rewrites=1
     
  ##DeployFull
  
