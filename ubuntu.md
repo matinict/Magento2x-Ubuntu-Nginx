@@ -127,6 +127,11 @@ sudo swapon /swapfile
         #Git
         alias gb="git branch"
         
+        #PHP
+        alias pv=" php -v"
+        alias pvs="sudo update-alternatives --config php"
+        
+        
 
 ### Search
 
