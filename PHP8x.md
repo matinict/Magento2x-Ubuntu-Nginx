@@ -10,9 +10,7 @@
         sudo apt-get install -y php8.3-cli php8.3-common php8.3-mysql php8.3-zip php8.3-gd php8.3-mbstring php8.3-curl php8.3-xml php8.3-bcmath
 
 ## Install PHP PHP 8.3/8.2/8.1/8.0/7.3/7.2/7.1/7.0 on Ubuntu 18.04/20.4/24.04
-
-        sudo apt update
-        sudo apt upgrade        
+       
         sudo apt update && sudo apt -y upgrade
         
         
@@ -159,6 +157,21 @@
 
         sudo service nginx restart 
         sudo service php8.1-fpm restart
+
+
+## Remove PHP
+
+dpkg -l | grep php
+sudo apt-get purge php8.* php7.* php-common -y 
+sudo apt-get autoremove -y 
+sudo rm -rf /etc/php
+sudo rm -rf /var/lib/php
+sudo apt-get purge libapache2-mod-php*  -y u
+sudo rm -rf /etc/apache2/mods-enabled/php*
+sudo service nginx restart 
+
+php -v
+
         
      ## Issue 1.1: composer update  show below error
 
