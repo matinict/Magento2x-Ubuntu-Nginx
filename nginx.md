@@ -52,7 +52,13 @@
     
 
 # Permission 
+    #Global
+    ls -ld /var/www/html/
+    sudo chmod -R 775 /var/www/html/
+    sudo chown -R $USER:www-data /var/www/html/
+    sudo chmod -R 775 /var/www/html/
 
+    #Site If issue
     sudo mkdir /var/www/html/mysite
     sudo chown $USER:www-data /var/www/html/mysite
     sudo chmod g+s /var/www/html/mysite
