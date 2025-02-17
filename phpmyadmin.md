@@ -3,39 +3,9 @@
 
 
 ## - Install phpMyAdmin 
-
-    sudo apt install phpmyadmin -y
-    sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
-  
- During the installation, it will ask you about the web server configuration for phpmyadmin.
- Choose none option and move the cursor to: 'OK'.
- For the phpmyadmin database configuration: choose 'Yes'
- And type new 'STRONG' phpmyadmin admin such as 'Hakaselabs001@#'.
-
- Enter a password: "phpmyadmin@123"
- Repeat the "phpmyadmin@123" password.
-
-
  
- #Install PhpMyAdmin
- 
- 
-PhpMyAdmin is a PHP based application to manage MySQL or MariaDB databases from a web browser.In this step, we will install and configure phpmyadmin under the LEMP (Linux, Nginx, MySQL, and PHP-FPM) stack.Install PHPMyAdmin using the apt command below.
-
-    sudo apt install phpmyadmin -y
-
-During the installation, it will ask you about the web server configuration for phpmyadmin.
-
-Choose none option and move the cursor to 'OK'.
-
-For the phpmyadmin database configuration, choose 'Yes'.
-
-And type new 'STRONG' phpmyadmin admin such as 'phpmyadmin'.
-
-Repeat the 'phpmyadmin' password.
-
-
-And the phpmyadmin installation is complete.
+    sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y 
+    sudo apt install phpmyadmin -y 
 
 #Configure PhpMyAdmin
 
@@ -119,11 +89,20 @@ And below is all information about PHP server configuration.
 
 
 ## Remove 
-
-    sudo apt-get remove phpmyadmin
-    sudo apt-get purge phpmyadmin
+    sudo apt remove --purge phpmyadmin -y
+    sudo dpkg --remove --force-remove-reinstreq phpmyadmin
+    sudo apt autoremove -y
+    sudo apt autoremove -y
+    sudo apt clean
+    sudo dpkg --configure -a
+    sudo apt --fix-broken install
+    sudo rm -rf /usr/share/phpmyadmin
+    sudo rm -rf /etc/phpmyadmin
+    sudo rm -rf /var/lib/phpmyadmin
     
-    sudo apt-get autoremove
+    sudo apt-get remove phpmyadmin -y
+    sudo apt-get purge phpmyadmin -y
+    
 
 ## issue javascript-common
 E: Sub-process /usr/bin/dpkg returned an error code (1)
@@ -134,7 +113,7 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 Problem phpMyAdmin - Error The mysqli extension is missing
 
-
+404 Not Found
 
 
 #Ref
