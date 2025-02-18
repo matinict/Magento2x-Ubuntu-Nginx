@@ -408,12 +408,12 @@ sudo systemctl start elasticsearch
 curl -X GET "localhost:9200"
 
 
-### problem: Current version of RDBMS is not supported. Used Version: 10.11.8-MariaDB-0ubuntu0.24.04.1. Supported versions: MySQL-8, MySQL-5.7, MariaDB-(10.2-10.6)
+#### problem: Current version of RDBMS is not supported. Used Version: 10.11.8-MariaDB-0ubuntu0.24.04.1. Supported versions: MySQL-8, MySQL-5.7, MariaDB-(10.2-10.6)
 composer require reessolutions/db-override:*
 
  
 
-### problem: To enable extensions, verify that they are enabled in your .ini files:
+#### problem: To enable extensions, verify that they are enabled in your .ini files:
     - /etc/php/8.2/cli/php.ini
     - /etc/php/8.2/cli/conf.d/10-opcache.ini
     - /etc/php/8.2/cli/conf.d/10-pdo.ini
@@ -425,17 +425,29 @@ composer require reessolutions/db-override:*
         sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/cli/conf.d/20-pdo_mysql.ini
         sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/fpm/conf.d/20-pdo_mysql.ini
         
-### PHP's phar extension is missing. Composer requires it to run. Enable the extension or recompile php without --disable-phar then try again.
+#### PHP's phar extension is missing. Composer requires it to run. Enable the extension or recompile php without --disable-phar then try again.
     #  Add line no matter empty
      sudo nano /etc/php/8.2/cli/conf.d/20-phar.ini 
      extension=phar.so
      sudo systemctl restart nginx  
 
-### - magento/product-community-edition 2.4.6 requires ext-iconv * -> it is missing from your system. Install or enable PHP's iconv extension.
+#### - magento/product-community-edition 2.4.6 requires ext-iconv * -> it is missing from your system. Install or enable PHP's iconv extension.
     php -m | grep iconv
     sudo apt-get install php8.x-iconv 
-### Composer is operating significantly slower than normal because you do not have the PHP curl extension enabled.
+#### Composer is operating significantly slower than normal because you do not have the PHP curl extension enabled.
     sudo apt install php8.2-curl -y
     sudo systemctl restart php8.2-fpm
     php -m | grep curl
-                                              
+
+####  - magento/product-community-edition 2.4.6 requires ext-bcmath * -> it is missing from your system. Install or enable PHP's bcmath extension.
+    sudo apt install php8.2-bcmath -y
+    sudo apt install php8.2-xml -y
+    php -m | grep bcmath
+    php -i | grep bcmath  
+    sudo nano /etc/php/8.2/cli/php.ini
+
+#### - magento/product-community-edition 2.4.6 requires ext-dom * -> it is missing from your system. Install or enable PHP's dom extension.
+    sudo apt install php8.0-xml
+
+
+                                                  
