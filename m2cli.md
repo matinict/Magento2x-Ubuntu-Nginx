@@ -432,4 +432,10 @@ composer require reessolutions/db-override:*
      sudo systemctl restart nginx  
 
 ### - magento/product-community-edition 2.4.6 requires ext-iconv * -> it is missing from your system. Install or enable PHP's iconv extension.
-
+    php -m | grep iconv
+    sudo apt-get install php8.x-iconv 
+### Composer is operating significantly slower than normal because you do not have the PHP curl extension enabled.
+    sudo apt install php8.2-curl -y
+    sudo systemctl restart php8.2-fpm
+    php -m | grep curl
+                                              
