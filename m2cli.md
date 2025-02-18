@@ -408,7 +408,7 @@ sudo systemctl start elasticsearch
 curl -X GET "localhost:9200"
 
 
-### problem: Maridb issue 
+### problem: Current version of RDBMS is not supported. Used Version: 10.11.8-MariaDB-0ubuntu0.24.04.1. Supported versions: MySQL-8, MySQL-5.7, MariaDB-(10.2-10.6)
 composer require reessolutions/db-override:*
 
  
