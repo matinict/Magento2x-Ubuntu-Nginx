@@ -455,6 +455,11 @@ composer require reessolutions/db-override:*
 #### Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
     sudo systemctl status opensearch
     sudo apt install opensearch
+    [opensearch.md]
 
+
+
+
+## Ref
 
                                                   
