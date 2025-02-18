@@ -426,14 +426,9 @@ composer require reessolutions/db-override:*
         sudo ln -s /etc/php/8.1/mods-available/pdo_mysql.ini /etc/php/8.2/fpm/conf.d/20-pdo_mysql.ini
         
 ### PHP's phar extension is missing. Composer requires it to run. Enable the extension or recompile php without --disable-phar then try again.
-    sudo apt install php8.2-phar -y
-    sudo apt install --reinstall php8.2-common -y
-    sudo apt update -y
-    sudo nano /etc/php/8.2/cli/php.ini  
-    ls /usr/lib/php/20220829/phar.so
-    sudo nano /etc/php/8.2/cli/conf.d/20-phar.ini 
-    php -m | grep phar    
-    sudo systemctl restart php8.2-fpm 
-    sudo systemctl restart nginx 
+    #  Add line no matter empty
+     sudo nano /etc/php/8.2/cli/conf.d/20-phar.ini 
+     extension=phar.so
+
 
 
