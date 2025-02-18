@@ -444,10 +444,17 @@ composer require reessolutions/db-override:*
     sudo apt install php8.2-xml -y
     php -m | grep bcmath
     php -i | grep bcmath  
+
+
+
     sudo nano /etc/php/8.2/cli/php.ini
 
 #### - magento/product-community-edition 2.4.6 requires ext-dom * -> it is missing from your system. Install or enable PHP's dom extension.
     sudo apt install php8.0-xml
+    
+#### Could not validate a connection to the OpenSearch. No alive nodes found in your cluster
+    sudo systemctl status opensearch
+    sudo apt install opensearch
 
 
                                                   
