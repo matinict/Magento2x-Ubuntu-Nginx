@@ -23,9 +23,9 @@ Elasticsearch 7.11 and later is not supported for Adobe Commerce on cloud infras
     plugins.security.disabled: false
     plugins.security.ssl.http.enabled: false
     
-    systemctl daemon-reload
-    systemctl restart opensearch
-      systemctl status opensearch
+    sudo systemctl daemon-reload
+    sudo systemctl restart opensearch
+    sudosystemctl status opensearch
 
 #Install OpenSearch Dashboard
 
