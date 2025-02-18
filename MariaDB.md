@@ -173,6 +173,9 @@ P: Current version of RDBMS is not supported. Used Version: 10.11.8-MariaDB-0ubu
         #sudo apt-get remove mariadb-server -y
         #sudo apt-get install mariadb-server-10.6 -y
         composer require reessolutions/db-override:*
+        
+        nano vendor/magento/framework/DB/Adapter/SqlVersionProvider.php
+
 
 
 
