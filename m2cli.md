@@ -429,6 +429,7 @@ composer require reessolutions/db-override:*
     #  Add line no matter empty
      sudo nano /etc/php/8.2/cli/conf.d/20-phar.ini 
      extension=phar.so
+     sudo systemctl restart nginx  
 
 
 
