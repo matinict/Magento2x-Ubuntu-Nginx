@@ -431,5 +431,5 @@ composer require reessolutions/db-override:*
      extension=phar.so
      sudo systemctl restart nginx  
 
-
+### - magento/product-community-edition 2.4.6 requires ext-iconv * -> it is missing from your system. Install or enable PHP's iconv extension.
 
