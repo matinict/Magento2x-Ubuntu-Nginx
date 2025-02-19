@@ -121,7 +121,7 @@ sudo swapon /swapfile
         alias uf="sudo apt --fix-broken install -y"
         alias ur="sudo apt autoremove -y"
         alias upg="apt list --upgradable -y"
-        alias h="history"
+        alias hs="history"
         alias cu="composer update"
         alias cui="composer update --ignore-platform-reqs"
         #Git
@@ -137,7 +137,16 @@ sudo swapon /swapfile
 
         #nginx
         alias nr="sudo service nginx restart"
+        alias nt="sudo nginx -t"
         
+        #magento
+        alias msu="php bin/magento s:up && bin/magento s:d:c && bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
+        alias mdc="php bin/magento s:d:c && bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
+        alias mcd="php bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
+        alias mcf="php bin/magento c:c && php bin/magento c:f"
+        alias mc="php bin/magento c:c"
+        alias mf="php php bin/magento c:f"
+                
     
         
         
