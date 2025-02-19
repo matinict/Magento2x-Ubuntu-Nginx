@@ -62,6 +62,9 @@ Elasticsearch 7.11 and later is not supported for Adobe Commerce on cloud infras
 
 
 ## Ref
+
+https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/
+
 https://medium.com/@doriankno/setting-up-and-testing-opensearch-on-ubuntu-22-04-5fb481786466
 https://www.atlantic.net/dedicated-server-hosting/how-to-install-opensearch-on-ubuntu-22-04/
 https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch
