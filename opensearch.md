@@ -8,6 +8,7 @@ Elasticsearch 7.11 and later is not supported for Adobe Commerce on cloud infras
 ##Install and Configure OpenSearch
     
     curl -fsSL https://artifacts.opensearch.org/publickeys/opensearch.pgp| gpg --dearmor -o /etc/apt/trusted.gpg.d/opensearch.gpg
+    
     ## OR
     curl -fsSL https://artifacts.opensearch.org/publickeys/opensearch.pgp | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/opensearch.gpg
     
@@ -38,6 +39,9 @@ Elasticsearch 7.11 and later is not supported for Adobe Commerce on cloud infras
     sudo systemctl daemon-reload
     sudo systemctl restart opensearch
     sudo systemctl status opensearch
+
+    cat /etc/opensearch/opensearch.yml | grep -v '^#' | grep -v '^$'
+
 
 #Install OpenSearch Dashboard
 
