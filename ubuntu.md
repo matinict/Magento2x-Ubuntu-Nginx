@@ -140,6 +140,7 @@ sudo swapon /swapfile
         alias nt="sudo nginx -t"
         
         #magento
+        alias mrm="rm -rf var/cache/* var/tmp/_cache var/composer_home/cache/* var/view_preprocessed/* var/page_cache/* var/report/* var/log/* generated/code/*  pub/static/* "
         alias msu="php bin/magento s:up && bin/magento s:d:c && bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
         alias mdc="php bin/magento s:d:c && bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
         alias mcd="php bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
