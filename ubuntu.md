@@ -126,6 +126,10 @@ sudo swapon /swapfile
         alias cui="composer update --ignore-platform-reqs"
         #Git
         alias gb="git branch"
+
+        #Python
+        alias gTD=" python3.12 /var/www/GenAi/Translator/gTD.py"
+        alias gTT=" python3.12 /var/www/GenAi/Translator/gTT.py"
         
         #PHP
         alias pv=" php -v"
