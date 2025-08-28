@@ -128,8 +128,9 @@ sudo swapon /swapfile
         alias gb="git branch"
 
         #Python
-        alias gTD=" python3.12 /var/www/GenAi/Translator/gTD.py"
-        alias gTT=" python3.12 /var/www/GenAi/Translator/gTT.py"
+        alias genAi="cd /var/www/GenAi"
+        alias gTD=" python3.12 Translator/gTD.py"
+        alias gTT=" python3.12 Translator/gTT.py"
         
         #PHP
         alias pv=" php -v"
