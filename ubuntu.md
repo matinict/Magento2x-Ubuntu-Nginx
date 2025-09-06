@@ -153,6 +153,41 @@ sudo swapon /swapfile
         alias mc="php bin/magento c:c"
         alias mf="php php bin/magento c:f"
                 
+        ##CustomStart
+        alias html="cd /var/www/html"
+        alias shopify="cd /var/www/html/shopify"
+        alias cl="clear"
+        alias u2="sudo apt update -y"
+        alias u3="sudo apt update && sudo apt upgrade -y"
+        alias uf="sudo apt --fix-broken install -y"
+        alias ur="sudo apt autoremove -y"
+        alias upg="apt list --upgradable -y"
+        alias h="history"
+        alias cu="composer update"
+        alias cui="composer update --ignore-platform-reqs"
+        #Git
+        alias gb="git branch"
+        #PHP
+        alias pv=" php -v"
+        alias pvs="sudo update-alternatives --config php"
+        alias p81="sudo systemctl daemon-reload && sudo service php8.1-fpm restart"
+        alias p82="sudo systemctl daemon-reload && sudo service php8.2-fpm restart"
+        alias p83="sudo systemctl daemon-reload && sudo service php8.3-fpm restart"
+        alias p84="sudo systemctl daemon-reload && sudo service php8.3-fpm restart"
+        #nginx
+        alias nr="sudo service nginx restart"
+        alias nt="sudo nginx -t"
+        #magento
+        alias mrm="rm -rf var/cache/* var/tmp/_cache var/composer_home/cache/* var/view_preprocessed/* var/page_cache/* var/report/* var/log/* generated/code/*  pub/static/* "
+        alias msu="php bin/magento s:up && bin/magento s:d:c && bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
+        alias mdc="php bin/magento s:d:c && bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
+        alias mcd="php bin/magento s:s:d -f &&  bin/magento c:f && bin/magento i:rei"
+        alias mcf="php bin/magento c:c && php bin/magento c:f"
+        
+        #VmFix
+        alias vmp="ls -l '/media/matin/MHDD500/VDI/Penetration/ParrotS/'"
+        
+        ##CustomEnd
     
         
         
