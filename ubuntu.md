@@ -189,7 +189,9 @@ sudo swapon /swapfile
         
         ##CustomEnd
     
-        
+        echo 'alias ags="autogenstudio ui"' >> ~/.bashrc
+        source ~/.bashrc
+
         
 
 ### Search
